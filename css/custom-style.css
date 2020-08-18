@@ -1,0 +1,699 @@
+
+.loader {
+	display: none;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('/assets/loader.gif') 50% 50% no-repeat rgb(249,249,249);
+    opacity: .8;
+}
+.fa_change {
+	color : #85CE36;
+}
+.pages-row {
+	background-color: white;
+	padding: 27px;
+	border-radius: 30px;
+	border: 1px solid #85ce36;
+}
+.white {
+	color: white;
+}
+
+.btn-lg {
+	font-size: 15px;
+	line-height: 1.33;
+	border-radius: 6px;
+}
+
+.box > .icon {
+	text-align: center;
+	position: relative;
+}
+
+.box > .icon > .image {
+	position: relative;
+	z-index: 2;
+	margin: auto;
+	width: 88px;
+	height: 88px;
+	border: 7px solid white;
+	line-height: 88px;
+	border-radius: 50%;
+	background: #85CE36;
+	vertical-align: middle;
+}
+
+.box > .icon:hover > .image {
+	border: 4px solid black;
+}
+
+.box > .icon > .image > i {
+	font-size: 40px !important;
+	color: #fff !important;
+}
+
+.box > .icon:hover > .image > i {
+	color: white !important;
+}
+
+.box > .icon > .info {
+	margin-top: -24px;
+	background: rgba(0, 0, 0, 0.04);
+	border: 1px solid #e0e0e0;
+	padding: 15px 0 10px 0;
+}
+
+	.box > .icon > .info > h3.title {
+		color: #222;
+		font-weight: 500;
+	}
+
+	.box > .icon > .info > p {
+		color: #666;
+		line-height: 1.5em;
+		margin: 20px;
+	}
+
+.box > .icon:hover > .info > h3.title, .box > .icon:hover > .info > p, .box > .icon:hover > .info > .more > a {
+	color: #222;
+}
+
+.box > .icon > .info > .more a {
+	color: #222;
+	line-height: 12px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.box > .icon:hover > .info > .more > a {
+	color: #000;
+	padding: 6px 8px;
+	border-bottom: 4px solid black;
+}
+
+.box .space {
+	height: 30px;
+}
+.red
+{
+	position: relative;
+	z-index: 2;
+	margin: auto;
+	width: 88px;
+	height: 88px;
+	border: 7px solid white;
+	line-height: 88px;
+	border-radius: 50%;
+	background: #f50e0e;
+	vertical-align: middle;
+}
+.pay
+{
+	border: #2411c1 0px solid;
+	background-color: #d7dde4;
+	font-weight: bold;
+}
+
+
+/*
+Invoice Table 
+*/
+    .invoice-box {
+        max-width: 100%;
+       
+       
+        border: 1px solid #eee;
+        box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+        font-size: 16px;
+        line-height: 24px;
+        font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        color: #555;
+    }
+    
+    .invoice-box table {
+        width: 100%;
+        line-height: inherit;
+        text-align: left;
+    }
+    
+    .invoice-box table td {
+        padding: 5px;
+        vertical-align: top;
+    }
+    
+    .invoice-box table tr td:nth-child(2) {
+        text-align: right;
+    }
+    
+    .invoice-box table tr.top table td {
+        padding-bottom: 20px;
+    }
+    
+    .invoice-box table tr.top table td.title {
+        font-size: 45px;
+        line-height: 45px;
+        color: #333;
+    }
+    
+    .invoice-box table tr.information table td {
+        padding-bottom: 40px;
+    }
+    
+    .invoice-box table tr.heading td {
+        background: #eee;
+        border-bottom: 1px solid #ddd;
+        font-weight: bold;
+    }
+    
+    .invoice-box table tr.details td {
+        padding-bottom: 20px;
+    }
+    
+    .invoice-box table tr.item td{
+        border-bottom: 1px solid #eee;
+		font-size: 14px;
+    }
+    
+    .invoice-box table tr.item.last td {
+        border-bottom: none;
+    }
+    
+    .invoice-box table tr.total td:nth-child(2) {
+        font-weight: bold;
+    }
+    @media only screen and (max-width: 768px) {
+    .paypal-button
+    {
+        height: 68px !Important;
+           
+        width:49% !Important;
+    }
+    
+    .craditcar
+    {
+        height: 68px !Important;
+      
+        width:49% !Important;
+    }
+        
+    }
+    @media only screen and (min-width: 768px) {
+    .paypal-button
+    {
+         height: 114px !Important;
+        width:49% !Important;
+    }
+    .craditcar
+    {
+         height: 114px !Important;
+        width:49% !Important;
+    }
+        
+    }
+ 
+    @media only screen and (max-width: 600px) {
+        
+        .invoice-box table tr.top table td {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+        
+        .invoice-box table tr.information table td {
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+    }
+ 
+ .confirm {
+	float: left;
+    margin-top: 17px !important;
+    font-size: 16px;
+    font-weight: bold !important;
+}
+.modal-footer-level{
+	margin-top: 35px;
+}
+
+/*
+custom check box
+*/
+/* The custom-check-box */
+.custom-check-box {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.custom-check-box input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.custom-check-box:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.custom-check-box input:checked ~ .checkmark {
+    background-color: #85ce36;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.custom-check-box input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.custom-check-box .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/*.img-thumbnail {*/
+/*	height: 400px !important;*/
+/*}*/
+   ul#sidebar-menu li {
+    width: 100%;
+}
+.transaction_table tr:hover
+{
+ background-color: #d4d4d4;   
+}
+.transaction_table tr
+{
+     border-bottom: 2px solid #c4c4c4;  
+}
+.paypal-button:active,
+.paypal-button:focus
+{
+    border:5px solid #85CE36 !important;
+}
+#paypal_btn_show:active,
+#paypal_btn_show:focus
+{
+    border:5px solid #85CE36 !important;
+}
+
+.separator {
+  width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #e4e4e4;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+    color: #c4c4c4;
+    margin-top:35px;
+} 
+
+.separator span { 
+    background:#fff; 
+    padding:0 10px; 
+}
+.dash {
+    padding: 20px 0;
+    font-family: myriadprosemibold,helvetica,arial,sans-serif;
+}
+.dash, .well {
+    border: 1px solid #ddd;
+    background: #f5f5f5;
+    border-radius: 5px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.dash ul {
+    list-style: none;
+    padding: 0;
+}
+.dash.dash-4 li {
+    width: 20%;
+}
+.dash li {
+    float: left;
+    display: block;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+    font-size: 1.6em;
+    text-align: center;
+    line-height: 1.2em;
+}
+.dash .dash-label {
+    font-size: .6em;
+    text-transform: uppercase;
+    color: #888;
+    font-family: myriad_pro_lightregular,helvetica,arial,sans-serif;
+}
+
+
+.twitter-account-select-box-wrapper {
+text-align: right;
+    padding-top: 10px;    
+
+}
+
+
+.tweeter-avatar {
+    width: 100%;
+    border-radius: 4px;
+    padding: 3px;
+    border: 1px solid #d4d4d4;
+}
+
+
+.twitter-account-table thead th {
+     text-align:center;
+    vertical-align:middle;
+    height:40px;
+}
+
+.twitter-account-table-body tr {
+    
+    border-bottom: 3px solid #85ce36 !important;
+}
+
+.twitter-account-table-body tr td {
+    text-align:center;
+    vertical-align:middle;
+    
+}
+.icon-edit {
+    border: 1px solid #ADD8E6;
+    padding: 3px;
+    color: #fff !important;
+        margin-left:2px;
+    background-color: #ADD8E6;
+        border-radius: 4px;
+}
+
+.icon-delete {
+    border: 1px solid red;
+    padding: 3px;
+    color: #fff !important;
+    margin-left:2px;
+    background-color: red;
+        border-radius: 4px;
+}
+
+a.asicon-services {
+        border: 1px solid #85ce36;
+    background-color: #85ce36;
+    color: #fff !important;
+    padding: 3px;
+    margin-left:2px;
+    border-radius: 4px;
+}
+
+.twitter-account-table-body tr:hover {
+    background: #e4e4e4;
+}
+.card {
+    padding-top:20px;
+}
+.card-block {
+    text-align: center;
+}
+
+.service-box-sub-list {
+  list-style: none;
+}
+
+.service-box-sub-list li:before {
+  content: '✓';
+  margin-right:2px;
+  color: #85ce36;
+}
+
+ul.followers-tabs {
+    display: flex;
+    /* justify-content: space-between; */
+}
+ul.followers-tabs li:hover {
+    background-color: #ffasda;
+    background-color: #85ce36;
+    color: #fff;
+    border: 1px solid #85ce36;
+}
+
+ul.followers-tabs li.active {
+    background-color: #ffasda;
+    background-color: #85ce36;
+    color: #fff;
+    border: 1px solid #85ce36;
+}
+
+
+ul.followers-tabs li {
+    padding: 6px;
+    /* border-bottom: none; */
+    border: 1px solid #d4d4d4;
+    border-bottom: none;
+    margin-right: 2px;
+    cursor:pointer;
+}
+ul.typetabs
+{
+    display: flex;
+    /*border: 1px solid #85ce3696;*/
+    cursor:pointer;
+}
+
+ul.typetabs li
+{
+    padding: 6px;
+    font-size:15px;
+    padding-left:10px;
+    padding-right:10px;
+    border: 1px solid #85ce3696;
+}
+.tabs
+{
+   width:auto;
+}
+@media(min-width:756px)
+{
+ul.typetabs {
+    width:auto;
+    border-radius: 4px;
+    border: 1px solid #85ce3696;
+}
+}
+
+ul.typetabs li.active
+{
+ background-color: #85ce36;
+    color: #fff;   
+}
+.search-criteria
+  {  background-color: #85ce36;
+   
+    margin: 0;
+    padding: 0px;
+    padding-top: 17px;
+    padding-bottom: 10px;
+    margin-bottom:2%;
+    }
+.criteria-btn {
+color: #fff;
+background-color: #598b22 !important;
+    border-color: #446b1a !important;
+}
+
+.criteria-btn:hover, .criteria-btn.active:focus, .criteria-btn:focus, .open>.dropdown-toggle.criteria-btn {
+color: #fff;
+background-color: #3d6315;
+border-bottom:2px solid #395d13;
+outline: none;
+}
+
+
+.follower-user-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 7px;
+}
+.delete-field
+{
+    cursor: pointer;
+    font-size: 12px;
+    background-color: #618c327a;
+    padding: 4px;
+    border-radius: 17px;
+    padding-left: 9px;
+    margin-left: 1%;
+    padding-right: 9px;
+    margin-top: 3%;
+    margin-right: 2%;
+    color: #fff;
+    box-shadow: 1px 1px 5px rgba(126, 142, 159, 0.1);
+}
+@media(min-width: 756px)
+{
+.search-inputs
+{
+ margin-left :-2%;   
+}
+.filter-type
+{
+    margin-left:-1%;
+}
+}
+
+
+ .twitter-follower-table tr td {
+    min-width:150px;
+}
+
+.tweeter-follower-table-pagination {
+    margin-top: 13px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.table-pagination-arrows {
+    width: 30px;
+    border: 1px solid #85ce36;
+    padding: 5px;
+    margin-right: 3px;
+}
+.table-pagination-text {
+    
+        min-width: 250px;
+    border: 1px solid #85ce36;
+    padding: 5px;
+    text-align: center;
+    margin-right: 3px;
+}
+
+p.corner-head {
+    font-size: 17px !important;
+}
+.btn-modal
+{
+    color: #fff ;
+width: 111px !important;
+padding: 7px;
+border-radius: 20px;
+display: inline-block;
+border: none;
+transition: all 0.4s ease 0s;
+}
+.btn-modal:hover {
+text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+}
+.filter-search::placeholder 
+{
+     font-size: 13px;
+}   
+
+.filter-search
+{
+    width: 83%;
+
+}
+.table_head
+{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.icons-scroll
+{
+    padding-left: 9px;
+    padding-right: 9px;
+    border-radius: 3px;
+}
+.btn-view-detail:hover
+{
+    color: #fff !important;
+    background: #85ce36;
+}
+.deletemedia
+{
+        margin-top: -7px;
+        background: #85ce36;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 11px;
+    color: #fff;
+    top: 0px;
+    cursor: pointer;
+    vertical-align: top;
+    margin-left: -11px;
+}
+.media
+{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 3px;
+}
+.media:hover
+{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.savelibrary
+{
+    color:#85ce36 !important;
+}
+.savelibrary:hover
+{
+    color:#fff !important;
+}
+.heighlight
+{
+     background:#fff; 
+    padding:0 10px; 
+}
+.heighlight-text
+{
+    color: #7f7f7f;
+      width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid #7f7f7f; 
+   line-height: 0.1em;
+   margin: 10px 0 20px;
+   font-size:1rem;
+}

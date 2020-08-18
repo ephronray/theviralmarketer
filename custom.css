@@ -1,0 +1,99 @@
+.modal-content{
+    border-radius: 15px;
+}
+
+.modal-header{
+    border-radius: 13px 13px 0 0;
+}
+
+.modal-footer {
+    border-top-color: #eae8e8;
+    display: block;
+    padding: 10px 0 ;
+}
+
+.transaction_page [type="checkbox"]:checked, [type="checkbox"]:not(:checked) {
+    position: revert;
+
+}
+
+.referral_link_page .fa-whatsapp{
+    color: white;
+}
+.referral_link_page .fa-whatsapp:hover{
+}
+
+.referral_link_page .fa-copy{
+    color: white;
+}
+.referral_link_page .fa-copy:hover{
+    color: #1b4f93;
+}
+
+.panel-group .panel-heading {
+    border-bottom: 0;
+    background-color: #398bf7;
+}
+
+.my_referrals .panel-group .panel-title::before,
+.my_referrals .panel-group .panel-title::after,
+.matrix_4_page .panel-group .panel-title::before,
+.matrix_4_page .panel-group .panel-title::after {
+    position: absolute;
+    top: 15px;
+    display: none;
+    right: 30px;
+    font-family: "Material Design Icons";
+    transition: all 300ms linear 0s;
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+}
+
+.main-header .logo .logo-mini {
+    line-height: 60px;
+    display: block;
+}
+
+.fade:not(.show) {
+    opacity: 1;
+}
+
+.transaction_page .modal-dialog {
+    width: auto;
+}
+
+@media (max-width: 600px) {
+
+    .modal-dialog {
+        width: 90%;
+    }
+
+    .transaction_page .modal-dialog {
+        width: 65%;
+    }
+
+    .transaction_page .modal-body {
+        margin-left: 0px;
+    }
+
+    .transaction_page .modal-footer {
+        margin-right: 0px;
+    }
+
+    .transaction_page .password input {
+        text-align: center;
+    }
+
+
+
+}
+
+.modal-dialog {
+    margin: 150px auto;
+}
+
+.panel-group .panel-title{
+    padding: 15px;
+}

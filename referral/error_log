@@ -1,0 +1,12 @@
+[01-Jul-2018 17:07:19 UTC] PHP Fatal error:  Uncaught Error: Class 'dbConnect' not found in /home3/ephronon/public_html/theviralmarketer/referral/index.php:3
+Stack trace:
+#0 {main}
+  thrown in /home3/ephronon/public_html/theviralmarketer/referral/index.php on line 3
+[09-Jul-2018 00:26:09 UTC] PHP Parse error:  syntax error, unexpected '$GLOBALS' (T_VARIABLE) in /home3/ephronon/public_html/theviralmarketer/_libs/dbConnect.php on line 12
+[09-Jul-2018 00:26:40 UTC] PHP Parse error:  syntax error, unexpected '$GLOBALS' (T_VARIABLE) in /home3/ephronon/public_html/theviralmarketer/_libs/dbConnect.php on line 12
+[09-Jul-2018 00:26:46 UTC] PHP Parse error:  syntax error, unexpected '$GLOBALS' (T_VARIABLE) in /home3/ephronon/public_html/theviralmarketer/_libs/dbConnect.php on line 12
+[09-Jul-2018 00:27:01 UTC] PHP Parse error:  syntax error, unexpected '$GLOBALS' (T_VARIABLE) in /home3/ephronon/public_html/theviralmarketer/_libs/dbConnect.php on line 12
+[09-Jul-2018 00:27:31 UTC] PHP Parse error:  syntax error, unexpected '$GLOBALS' (T_VARIABLE) in /home3/ephronon/public_html/theviralmarketer/_libs/dbConnect.php on line 12
+[09-Jul-2018 00:27:36 UTC] PHP Parse error:  syntax error, unexpected '$GLOBALS' (T_VARIABLE) in /home3/ephronon/public_html/theviralmarketer/_libs/dbConnect.php on line 12
+[09-Jul-2018 00:31:54 UTC] PHP Parse error:  syntax error, unexpected '$GLOBALS' (T_VARIABLE) in /home3/ephronon/public_html/theviralmarketer/_libs/dbConnect.php on line 12
+[28-Oct-2018 05:10:05 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'ephronon_viral'@'localhost' (using password: YES) in /home3/ephronon/public_html/theviralmarketer/_libs/dbConnect.php on line 35
