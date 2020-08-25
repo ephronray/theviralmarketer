@@ -81,7 +81,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
-	    <link rel="icon" href="assets/icon.ico">
+	    <link rel="icon" href="assets/favicon.ico">
     <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.0/css/ionicons.min.css">
   <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     <title>REFERRAL SIGNUP | THE VIRAL MARKETER</title>
@@ -119,7 +119,7 @@
                 <header class="auth-header">
                         <h3 class="auth-title">
                             <div class="logo" style="text-align:center"> 
-                            <img src="assets/logo.png"  style="width:25%" />  
+                            <img src="assets/logo_black.png"   />  
                           </div>  </h3>
 
                           <p class="login-box-msg">Signup to get instant access</p>

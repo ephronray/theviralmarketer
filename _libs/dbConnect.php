@@ -1,6 +1,7 @@
 <?php
 require_once (__DIR__.'/../_libs/twitterApi/dbip-client.class.php');
 require_once (__DIR__.'/../_libs/bitcoinSetting.php');
+require_once (__DIR__.'/../_libs/environment.php');
 if(!session_id()) session_start();
 /*
  *Author: Hadi
@@ -17,10 +18,10 @@ $GLOBALS = array(
 class dbConnect
 {
 
- private $host = "localhost";
- private $user = "admin_viraldb";
- private $pass = "pb55d5S*";
- private $db_name = "admin_viraldb";
+ private $host = Environemnt:: DB_HOST;
+ private $user = Environemnt::DB_USER;
+ private $pass = Environemnt::DB_PASSWORD;
+ private $db_name = Environemnt::DB_NAME;
  private $bitcoinSetting;
  public $dbCon;
  public $base_url   = 'https://www.theviralmarketer.biz/';
@@ -30,6 +31,7 @@ class dbConnect
 
  public function __construct()
  {
+	 
 	 $this->bitcoinSetting = new bitcoinSetting();
   global $GLOBALS;
   $this->glob =& $GLOBALS;
@@ -125,14 +127,14 @@ public function registerNewUser($data)
     $rand_id = rand(100,999);
     $wallet_value = $data['email'].$rand_id;
 	
-	//$response = $this->bitcoinSetting->createWallet($wallet_value);
-    if(true) {
-        $wallet_adress = 'asdae123123asda';
-         $wallet_xpub = '19231moasmio123m1i23j1j039130913';
+	$response = $this->bitcoinSetting->createWallet($wallet_value);
+    //if(true) {
+      //  $wallet_adress = 'asdae123123asda';
+        // $wallet_xpub = '19231moasmio123m1i23j1j039130913';
 
-         // if($response['status'] == true) {
-	// $wallet_adress = $response['wallet_address']['user_wallet_address'];
-	//  $wallet_xpub = $response['wallet_address']['wallet_xpub'];
+         if($response['status'] == true) {
+	 $wallet_adress = $response['wallet_address']['user_wallet_address'];
+	 $wallet_xpub = $response['wallet_address']['wallet_xpub'];
 	
      $password = md5($data['password']);
       $dbQuery = "INSERT INTO `members` 
@@ -179,7 +181,7 @@ public function registerNewUser($data)
         $headers .= "From: info@theviralmarketer.biz"; 
 			 
 			
-	  if(mail($email, 'The Viral Marketer Signup | Email Verification', $message, $headers)) {
+	  if(mail($user_data['user_email'], 'The Viral Marketer Signup | Email Verification', $message, $headers)) {
             
             $_SESSION['register_new_user'] = array(
              'email' => $user_data['user_email'] ,
@@ -1299,7 +1301,7 @@ public function send_welcome_email($name , $email , $ibm)
     $headers = 'MIME-Version: 1.0'."\r\n";
     $headers .= 'Content-type: text/html; charset=iso-8859-1'."\r\n";
     $headers .= "From: info@theviralmarketer.biz"; 
-    mail($email, 'Welcome To The Viral Marketer', $content, $headers); 
+    mail( $email, 'Welcome To The Viral Marketer', $content, $headers); 
   }  
   
   
@@ -1333,16 +1335,20 @@ public function send_email_for_receiver($receiverEmail , $receiverName , $lavelN
  
 }
 
-public function send_otp_code()
+public function send_otp_code($action)
 {
+  // Action Level Upgrade = 1  ,   Buy bitcoins = 2  ,  Pay Paypal = 3
   $memberID 	= $_SESSION['user']['u_id'];
   $memberInfo = $this->get_memeber_by_id($memberID);
   $memberInfo['email'];
   $memberInfo['name'];
   $otp_code = rand(100000,999999);
-  $dbQuery = "INSERT INTO `members_otp_codes` ( `member_id`, `otp_code`) 
-  VALUES ('".$memberID."', '".$otp_code."')";   
-  $otp_insert = db_insert($dbQuery);
+  $dbQuery = "INSERT INTO `members_otp_codes` ( `member_id`, `otp_code` , `actions` ) 
+  VALUES ('".$memberID."', '".$otp_code."' , '".$action."')";   
+	
+$otp_insert = mysqli_query($this->dbCon, $dbQuery);
+        
+  
   if($otp_insert)
   {  
 		  $template_sender  = $this->db_select("SELECT `template_content` FROM `tbl_email_templates` WHERE `id` = 19");
@@ -1360,15 +1366,28 @@ public function send_otp_code()
 			$headers .= "From: info@theviralmarketer.biz"; 
 			mail($memberInfo['email'], 'OTP Payment Verification | The Viral Marketer', $content, $headers); 
 		  }  
-	  return true;
+	    return $response = array('success'=> true,
+          'message' => 'OTP has been sent to email. Check Spam Folder if not received in inbox.',
+		  'otp_code' => $otp_code,
+          'error' => false
+        );        
+        
+	 
   }
   else
   {
-     return false;
+       return $response = array('success'=> false,
+          'message' => 'Invalid Request. Please close Popup and Try Again',
+          'error' => true
+        );        
+        
   }
   
 }	
-
+function validate_otp($otp_code , $action)
+{
+}
+	
 public function buy_bitcoin_through_paypal($amount)
 {
   
@@ -2179,7 +2198,85 @@ return $data['level'] ?? 0;
    
      
  }
-
+public function insertPaid($data){
+   
+    $dbQuery = "INSERT INTO `paid_memberships` 
+      (`name`, `slug`, `is_show`) 
+      VALUES ('".$data['name']."', '".$data['slug']."', '".$data['is_show']."')";        
+   
+      try {
+        if (mysqli_query($this->dbCon, $dbQuery)) {
+         $last_id = mysqli_insert_id($this->dbCon);
+         $addmember = "INSERT INTO `paid_member_relationship` (`member_id`, `paid_id`)
+         VALUES ('". $_SESSION['user']["u_id"] ."','".$last_id."')";
+         $addresult = mysqli_query($this->dbCon, $addmember);
+        if ($addresult) {
+            return  array(
+                    'success' => 1,
+                    'message' => 'Insert Successfully',                         
+                    'error' => 0
+                  );
+                        }
+          else{
+            return  array(
+                    'success' => 0,
+                    'message' => 'Insert Faliure!',                          
+                    'error' => 1
+                  );
+              
+                      
+              }
+            
+      }
+        else{
+            return  array(
+                    'success' => 0,
+                    'message' => 'Insert Faliure !',                          
+                    'error' => 1
+                  );
+              
+                      
+              }
+    
+    
+}
+catch (Exception $e) {
+    echo $e->getMessage();
+  }
 
 }
+ public function paidmembers(){
+     
+   $uid = $_SESSION['user']["u_id"];
+	 
+    $query = "SELECT * FROM `paid_member_relationship` AS `PMR` ,`paid_memberships` AS `PM` WHERE `member_id` = '$uid'  AND PMR.paid_id = PM.id";
+     $response = array();
+   $result = mysqli_query($this->dbCon, $query);
+while ($paidlist = mysqli_fetch_assoc($result)) {
+    
+    $response[] = array('slug'=> $paidlist['slug'] , 'is_show'=>$paidlist['is_show']);
+}
 
+  return $response;
+	 
+}
+public function updatePaid($data){
+	$user_id = $_SESSION['user']["u_id"];
+	 $query = "UPDATE `paid_member_relationship` ,`paid_memberships`  SET 
+  `is_show` = '".$data['is_show']."'
+  WHERE 
+  `member_id` = '".$user_id."' AND
+  `slug`= '".$data['slug']."' ";
+  if (mysqli_query($this->dbCon, $query)){
+    return [
+      'success' => true,
+      'message' => 'Premium Facilty has been updated!!'
+    ];
+  }else {
+    return [
+      'success' => false,
+      'message' => 'Premium Facilty  update operation failed!!'
+    ];
+  }
+}
+}

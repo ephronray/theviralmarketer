@@ -61,7 +61,7 @@ if(isset($_POST['logIn'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="assets/icon.ico">
+    <link rel="icon" href="assets/favicon.ico">
 	<link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.0/css/ionicons.min.css">
   <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
     <title>The Viral Marketer| LOGIN </title>
@@ -89,7 +89,7 @@ if(isset($_POST['logIn'])) {
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="#"><b><?=(isset($_GET['ref']))?'CONNECT WITH US': '<img src="assets/logo.png" style=" width: 25%;">'?>  </b></a>
+    <a href="#"><b><?=(isset($_GET['ref']))?'CONNECT WITH US': '<img src="assets/logo_black.png" >'?>  </b></a>
   </div>
         <div class="auth">
             <div class="auth-container">

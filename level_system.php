@@ -402,12 +402,12 @@ $transection_password = get_transaction_password($email , $ibm );
 
 
 
-                    <div class="modal-content">
+                       <div class="modal-content">
                         <div class="modal-header">
 
 
                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h4 class="modal-title">Complete Transaction Password</h4>
+                            <h4 class="modal-title">OTP Verification</h4>
 
                         </div>
 
@@ -417,7 +417,12 @@ $transection_password = get_transaction_password($email , $ibm );
                                 There Is Something Went Wrong. Try Again Later.
                             </div>
                             <?php
-                              $newsifyObj->send_otp_code();
+                             $otp_response =  $newsifyObj->send_otp_code("1");
+					         $otp_code = '';
+					         if($otp_response['success'])
+							 {
+                               $otp_code = $otp_response['otp_code'];
+							 }
                                 ?>
                                 <p style="text-transform: uppercase; font-size: 16px; text-decoration: underline; font-weight: 600;">
                                     OTP Verification
@@ -446,7 +451,7 @@ $transection_password = get_transaction_password($email , $ibm );
                                 </div>
 
                                 <?php
-                            }
+                            
                             ?>
 
                         </div>
@@ -699,30 +704,21 @@ $(document).ready(function(){
  
     
 })
+
 $('#trensection_password_check').click(function(){
     var input_all_value = '';
     var get_id = $('#get_id').val();
+	var otp_code_in = $('#otp_code').val();
     var parent_modal = $('#transaction-password-'+get_id);
+	var otp_code = '<?php echo $otp_code; ?>';
 
-    
-    var transection_password = '<?php echo $transection_password; ?>';
   
-  
- for (i = 1; i <= transection_password.length; ++i) {
-         
-    var single_value =   $('#index_'+i).val();
 
-    var input_all_value = input_all_value+single_value;
-       
- 
-    
-}  
-
-if(input_all_value ==  transection_password)
+if(otp_code_in ==  otp_code)
 {
   
     $('#transection-close-'+get_id).trigger('click');
-  $('#pay_now_btn_'+get_id).trigger('click');
+      $('#pay_now_btn_'+get_id).trigger('click');
 
   
 }
@@ -741,6 +737,13 @@ else
    
     
 })
+	
+	
+	
+	
+	
+	
+
 </script>
 
 <?php //include_once 'includes/footer.php'; ?>

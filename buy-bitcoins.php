@@ -976,88 +976,62 @@ top: 51.4%;
         <div class="modal fade" id="transaction-password" role="dialog">
             <div class="modal-dialog">
 
-                <!-- Modal content-->
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Complete Transaction Password</h4>
-                    </div>
-                    <div class="modal-body">
-                    <div  class="emptyinput alert alert-danger alert-dismissable">
-					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><div id="transection_notification"></div>  </div>              
-                    
-                        
-                        <?php
-                        if ($transection_password == null) {
-                        ?>
-                            <p style="text-transform: font-size: 16px; text-decoration: font-weight: 600;">You need to register for a Transactional password in order to do transactions.</p>
-                            <br>
-                            <div  class="col-md-12 col-xs-12  col-sm-12">
-                                <a class="btn btn-primary wp-100" style="width:100%" href="https://www.theviralmarketer.biz/profile.php">  REGISTER NOW </a>
+                        <div class="modal-header">
+
+
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">OTP Verification</h4>
+
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div id="transection_notification" class="alert alert-danger  mb-3" style="display: none">
+                                There Is Something Went Wrong. Try Again Later.
                             </div>
-                        <?php
-                        } else {
-                        ?>
+                            <?php
+                             $otp_response =  $dbobject->send_otp_code("2");
+					         $otp_code = '';
+					         if($otp_response['success'])
+							 {
+                               $otp_code = $otp_response['otp_code'];
+							 }
+                                ?>
+                                <p style="text-transform: uppercase; font-size: 16px; text-decoration: underline; font-weight: 600;">
+                                    OTP Verification
+                                </p>
 
-                            <p style="text-transform: uppercase; font-size: 16px; text-decoration: underline; font-weight: 600;">
-                                Please Complete Transaction Password
-                            </p>
 
+                                <div class="form-group password">
 
-                            <div class="form-group">
+                                    <label for="Inputpassword">Enter 6 digits OTP Code sent your Email Address</label>
+                                        <input type="hidden" id="get_id" value="<?=$data['id']; ?>" >
+                                <div class="row">
 
-                                <label for="Inputpassword">Enter 3 hidden Digits of Password:</label>
-                                 <div class="row">
-                                        <div class="password-div">
-                                            <span style="margin-left: 34%;">1</span>
-                                            <input id="index_1" type="password" step="any" class="form-control" name="index_1">
-                                        </div>
-                                        <div class="password-div">
-                                            <span style="margin-left: 34%;">2</span>
-                                            <input id="index_2" type="password" step="any" class="form-control" name="index_2">
-                                        </div>
-                                    
-                                        <div class="password-div">
-                                            <span style="margin-left: 34%;">3</span>
-                                            <input id="index_3" type="password" step="any" class="form-control" name="index_3">
-                                        </div>
-                                        <div class="password-div">
-                                            <span style="margin-left: 34%;">4</span>
-                                            <input id="index_4" type="password" step="any" class="form-control" name="index_4">
-                                        </div>
-                                    <div class="password-div">
-                                            <span style="margin-left: 34%;">5</span>
-                                            <input id="index_5" type="password" step="any" class="form-control" name="index_5">
-                                        </div>
-                                        <div class="password-div">
-                                            <span style="margin-left: 34%;">6</span>
-                                            <input id="index_6" type="password" step="any" class="form-control" name="index_6">
-                                        </div>
-                                     <div class="password-div">
-                                            <span style="margin-left: 34%;">7</span>
-                                            <input id="index_7" type="password" step="any" class="form-control" name="index_7">
-                                        </div>
-                                        <div class="password-div">
-                                            <span style="margin-left: 34%;">8</span>
-                                            <input id="index_8" type="password" step="any" class="form-control" name="index_8">
-                                        </div>
-                                  
-
-                                  
-                                  
+                                        <div class="col-6 col-md-6 col-lg-6">
+											<input type="text" id="otp_code" value="" >
+									</div>
+									<div class="col-6 col-md-6 col-lg-6">
+										<a href="#" > Resend OTP Rquest </a>
+									</div>
+									</div>
+                                   
                                 </div>
-                            </div>
-                            <div style="float: right;" class="modal-footer">
-                                <button id="trensection_password_check" name="trensection_password_check" class="btn btn-success">Submit</button>
+                                <div class="modal-footer">
+                                    <button id="trensection_password_check" name="trensection_password_check" class="btn btn-primary">Submit</button>
 
-                                <button type="button" id="transection-close" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                        <?php
-                        }
-                        ?>
+                                    <button type="button" id="transection-close-<?=$data['id']; ?>" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+
+                                <?php
+                            
+                            ?>
+
+                        </div>
+
+
                     </div>
-
-                </div>
             </div>
         </div>
         <!--end model box for transection Password-->
@@ -1163,39 +1137,46 @@ $(document).ready(function(){
         }
     });
 
-    $('#trensection_password_check').click(function() {
-        var input_all_value = '';
-        var get_id = $('#get_id').val();
+    
+	
+	$('#trensection_password_check').click(function(){
+    var input_all_value = '';
+    var get_id = $('#get_id').val();
+	var otp_code_in = $('#otp_code').val();
+    var parent_modal = $('#transaction-password-'+get_id);
+	var otp_code = '<?php echo $otp_code; ?>';
 
-        var transection_password = '<?php
-                                    echo $transection_password;
-                                    ?>';
+  
 
-
-        for (i = 1; i <= transection_password.length; ++i) {
-
-            var single_value = $('#index_' + i).val();
-
-            var input_all_value = input_all_value + single_value;
-
-
-
-        }
-
-        if (input_all_value == transection_password) {
-
-            $('#transection-close').trigger('click');
+if(otp_code_in ==  otp_code)
+{
+    $('#transection-close-'+get_id).trigger('click');
             $('#paynow_paypal').css('display', 'block');
           
             $('.transaction_model_show').css('display', 'none');
             $('#buy_bitcoin_craditcard').css('display', 'block');
-        } else {
-            $('.emptyinput').css('display', 'block');
+  
+}
+else
+{
+    $('#transection_notification').show();
+
+    setTimeout(function(){
+
+        $('#transection_notification').fadeOut();
+		  $('.emptyinput').css('display', 'block');
             $('#transection_notification').html('<div style="text-align:center;">There Is Something Went Wrong. Try Again Later.</div>');
-        }
 
-    })
 
+    }, 5000)
+}
+
+   
+    
+})
+													
+													
+													
     function transactionFeePaypal() {
         var x = document.getElementById("InputAmountPaypal").value;
         two_point_nine_percent = (x / 100) * 2.9
@@ -1208,13 +1189,14 @@ $(document).ready(function(){
         }
         var total = parseFloat(x) + parseFloat(two_point_nine_percent) + parseFloat(six_point_nine_percent) + parseFloat(percentage) + 0.3;
         var miner_fee = percentage + 0.5
-        var transaction_fee = parseFloat(two_point_nine_percent) + parseFloat(six_point_nine_percent) + parseFloat(percentage) + parseFloat(percentage);
+        var transaction_fee = parseFloat(two_point_nine_percent) + parseFloat(six_point_nine_percent) + parseFloat(percentage) + 0.3;
         if(x == ''){
             x=0;
             total = 0;
+			transaction_fee = 0;
         }       
        $('.amountdiv').css('display','flex');
-        document.getElementById("transaction-fee-for-paypal").innerHTML ="<p class='transationfee'>Total amount : $" +x + "</p> <p class='transationfee'>Transaction fee($3.0): $" + parseFloat(transaction_fee).toFixed(2) +"</p> <div class='total-payment'><h3 style=' width: 95%;'><b>Total :</b>  $"+  parseFloat(total).toFixed(2)+"</h3></div>" ;
+        document.getElementById("transaction-fee-for-paypal").innerHTML ="<p class='transationfee'>Total amount : $" +x + "</p> <p class='transationfee'>Transaction fee: $" + parseFloat(transaction_fee).toFixed(2) +"</p> <div class='total-payment'><h3 style=' width: 95%;'><b>Total :</b>  $"+  parseFloat(total).toFixed(2)+"</h3></div>" ;
     }
 
     function paypalTotalAmount() {
@@ -1229,7 +1211,7 @@ $(document).ready(function(){
         }
         var total = parseFloat(x) + parseFloat(two_point_nine_percent) + parseFloat(six_point_nine_percent) + parseFloat(percentage) + 0.3;
         var miner_fee = percentage + 0.5
-        var transaction_fee = parseFloat(two_point_nine_percent) + parseFloat(six_point_nine_percent) + parseFloat(percentage) + parseFloat(percentage);
+        var transaction_fee = parseFloat(two_point_nine_percent) + parseFloat(six_point_nine_percent) + parseFloat(percentage) + 0.3;
         return +parseFloat(total).toFixed(2);
     }
 

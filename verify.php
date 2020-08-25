@@ -63,42 +63,66 @@ else
 <html class="no-js" lang="en">
 
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>The Viral Marketer| LOGIN </title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-        <link rel="stylesheet" href="css/vendor.css">
-		  <link rel="stylesheet" href="css/app-green.css">
-        <!-- Theme initialization -->
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/favicon.ico">
+	<link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.0/css/ionicons.min.css">
+  <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <title>The Viral Marketer| LOGIN </title>
   
-    </head>
+	<!-- Bootstrap 4.0-->
+	<link rel="stylesheet" href="assets/vendor_components/bootstrap/dist/css/bootstrap.min.css">
+	
+	<!-- Bootstrap extend-->
+	<link rel="stylesheet" href="css/css/bootstrap-extend.css">
+	
+	<!-- Theme style -->
+	<link rel="stylesheet" href="css/css/master_style.css">
 
-    <body>
+	<!-- Crypto_Admin skins -->
+	<link rel="stylesheet" href="css/css/skins/_all-skins.css">	
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body class="hold-transition login-page">
+<div class="login-box">
+  <div class="login-logo">
+    <a href="#"><b><?=(isset($_GET['ref']))?'CONNECT WITH US': '<img src="assets/logo_black.png" >'?>  </b></a>
+  </div>
         <div class="auth">
             <div class="auth-container">
                 <div class="card">
-                    <header class="auth-header">
-                        
-                        <h1 class="auth-title">
-                            <div class="logo">
-                                <span class="l l1"></span> <span class="l l2"></span> <span class="l l3"></span>
-                                <span class="l l4"></span> <span class="l l5"></span>
-                            </div><?=(isset($_GET['ref']))?'CONNECT WITH US': $head; ?>  </h1>
-                            
-                    </header>
-                    <div class="auth-content">
+                         <div class="auth-content">
+                <div class="login-box-body">
+					<div class="col-12 text-center">  
+<h1>		<?=(isset($_GET['ref']))?'CONNECT WITH US': $head; ?>  </h1>
+					<div class="auth-content">
                         <?php if($message != '') { ?>
                             <p class="text-xs-center error "><b><?php echo $message; ?></b></p>
                         <?php  }?>
                         <a href="http://www.theviralmarketer.biz/" class="btn btn-block btn-primary">Click to login</a>
                     </div>
+                 </div>
+    <!-- /.social-auth-links -->
+  
+  </div>
+                           
+                        
+                    </div>
                 </div>
 
             </div>
         </div>
+	</div>
         <!-- Reference block for JS -->
         <div class="ref" id="ref">
             <div class="color-primary"></div>

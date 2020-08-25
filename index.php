@@ -106,6 +106,7 @@
 </div>
     <!---->
     <!----levels--->
+		
     <div class="row">
                         <div class="col-lg-4 col-12">
             <div class="box box-solid bg-black">
@@ -334,10 +335,14 @@ var proto = document.location.protocol, host = "whatshelp.io", url = proto + "//
 var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
 s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
 var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
-})();</script>
+})();
 	
-<script>
-
+ var copyRefferalLink = '<?=$baseUrl.'/referral/?ref='.$_SESSION['user']['ibm'].'' ?>';
+   document.getElementById("copyButtonReferral").addEventListener("click", function() {
+    
+	   copyToClipboard(copyRefferalLink);
+});
+ 
    function copyToClipboard(elem) {
 	  // create hidden text element, if it doesn't already exist
     var targetId = "_hiddenCopyText_";
@@ -406,10 +411,4 @@ $(document).ready(function(){
 });
 </script>
     
-    <script>
-        var copyRefferalLink = '<?=$baseUrl.'/referral/?ref='.$_SESSION['user']['ibm'].'' ?>';
-   document.getElementById("copyButtonReferral").addEventListener("click", function() {
-    copyToClipboard(copyRefferalLink);
-});
-    </script>
-	
+   

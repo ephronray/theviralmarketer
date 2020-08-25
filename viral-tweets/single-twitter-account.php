@@ -5,7 +5,23 @@
  *, *:before, *:after {
 	 box-sizing: border-box;
 }
+.follower-tweet-count{
+    height: 62px;
+    flex-direction: row;
+    z-index: 2;
+    position: relative;
+    display: flex;
+
+    
+}
 @media(max-width: 756px){
+.follower-tweet-count{
+  padding: 0px 23px;    
+
+}
+.single-data-count{
+    padding: 0px 6px;
+}
 .tweetMedia{
     width:33%;
 }
@@ -17,6 +33,14 @@
 }
 }
 @media(min-width: 756px){
+ .single-data-count{
+    padding: 0px 12px;
+}
+    .follower-tweet-count{
+ 
+    padding-left: 36px !important ;
+}
+
     .border_right{
             height: 68px;
         border-right:1px solid #e4e4e4;
@@ -37,7 +61,6 @@
 	width: 100%;
     height: 153px;
     min-height: 100px;
-    display: flex;
     padding: 7px 20px;
     border-radius: 3px;
     background-color: white;
@@ -85,7 +108,7 @@
 }
  .firstinfo .profileinfo {
      width:100%;
-	 padding: 0px 20px;
+	 padding: 0px 17px;
 }
  .firstinfo .profileinfo h1 {
 	 font-size: 1.8em;
@@ -152,36 +175,38 @@
             <div class="avetar_img"><img  src="<?php echo $twitterSingleDetail['avatar'];  ?>" /></div>
             <div class="profileinfo">
                 <h1><?php echo $twitterSingleDetail['data_profile']->name;  ?></h1>
-                <div class="row" style="display: flex;">
-                    <div class="border_right tweetMedia col-md-4 col-xs-4 col-sm-4">
-                        <div style="display:flex;">
+                
+                    </div>
+          
+                        
+        </div>
+          <ul class="follower-tweet-count flexbox flex-justified  ">
+                <li class="br-1 border-light">
+                 <div style="display:flex;" class="single-data-count">
                     
-                         <span class="ion ion-social-twitter" style="color: #00aced;font-size: 35px;"></span>
+                         <span class="ion ion-social-twitter" style="color: #fff;font-size: 35px;"></span>
                      <p style="padding: 0px 9px;font-size: 28px;font-weight: 700;margin-bottom:0;"  id="account-statuses-count" ><?php echo $twitterSingleDetail['data_profile']->statuses_count; ?></p>
                            </div>
-                        <p style=" padding: 0px 13px; " class="text-muted">Tweets</p>
-                    </div>
-                    <div  class="border_right tweetMedia col-md-4 col-xs-4 col-sm-4">
-                        <div style="display:flex;">
+                    <p style=" padding: 0px 13px; " class="text-muted">Tweets</p>
+                </li>
+                <li class="br-1 border-light">
+                   <div style="display:flex;" class="single-data-count">
                             <i class="fa fa-signal" style="color: #8faae8;font-size: 35px;"></i>
      <p style="padding: 0px 9px;font-size: 28px;font-weight: 700;margin-bottom:0;" id="account-follower-count" ><?php echo $twitterSingleDetail['data_profile']->followers_count; ?></p>
                        
                         </div>
-                        
-                        <p style=" padding: 0px 13px; " class="text-muted">Followers</p>
-                    </div>
-                      <div  class="col-md-4 tweetMedia col-xs-4 col-sm-4">
-                        <div style="display:flex;">
+                                                <p style=" padding: 0px 13px; " class="text-muted">Followers</p>
+
+                </li>
+                <li>
+                   <div style="display:flex;" class="single-data-count">
 <i class="fa fa-heart" style="    color: #ff8298;font-size: 35px;"></i>     
                         <p style="padding: 0px 9px;font-size: 28px;font-weight: 700;margin-bottom:0;"  id="account-friends-count" ><?php echo $twitterSingleDetail['data_profile']->friends_count; ?></p>
                         </div>
                         
                         <p style=" padding: 0px 13px; " class="text-muted">Following</p>
-                    </div>
-                       
-                </div>
-                    </div>
-        </div>
+                </li>
+              </ul>
     </div>
    
 </div>

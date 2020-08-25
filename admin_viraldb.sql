@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 03, 2020 at 05:01 PM
+-- Generation Time: Aug 25, 2020 at 06:47 AM
 -- Server version: 10.1.44-MariaDB-0ubuntu0.18.04.1
--- PHP Version: 7.3.16
+-- PHP Version: 7.3.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -117,11 +117,31 @@ CREATE TABLE `members` (
 --
 
 INSERT INTO `members` (`u_id`, `ibm`, `level`, `first_name`, `last_name`, `btc_add`, `user_password`, `user_email`, `date_register`, `refer_ibm`, `passad_up_to`, `4_by_4`, `matrix_level`, `is_root`, `user_role`, `is_active`, `gender`, `wallet_number`, `wallet_email`, `wallet_xpub`, `transaction_password`, `hash`, `accept_emails`, `newsletter_hash`) VALUES
-(1, 'IBM1', NULL, 'Viral', 'Marketer', '1K96WUYfbzPX2Dvm8B4npLkK4zaUo3Grwk', '1fa0c443971f95127522b9af6ce7e13d', 'theviralmarketer2015@gmail.com', '2020-07-15 07:15:23', '', NULL, NULL, NULL, 'true', 0, '1', NULL, '1PjzYXPVpsB8jRKBUQKbA8XpKVWSbUpQgT', 'theviralmarketer2015@gmail.com', 'xpub6DGV4HMDgvFM2ceF9HHrgEe8fvcqqXqQ89pHQxgzTEQFtJaJNzS1w8TjADWLhrFEXA4N9zDTEZ9G6kDaZfbmprK8AW2URaVGNB5a3bqXWr8', 'Mar@1969', '', '', ''),
-(235, 'IBM5', NULL, 'test', 'user', '', '7c5fe1eae38b7853e5ae1c9c2e6511f5', 'test@gmail.com', '2020-07-11 16:08:38', 'IBM1', '', 'IBM1', NULL, 'false', 0, '0', NULL, 'asdae123123asda', 'test@gmail.com402', '19231moasmio123m1i23j1j039130913', '', '9QiD3IpL3bcb34lx49r5UwydTRfYoHL1', '1', 'jkAuP7pWCel24Mn2Sr4UYSGiX8k1PDhk'),
+(1, 'IBM1', NULL, 'Viral', 'Marketer', '1K96WUYfbzPX2Dvm8B4npLkK4zaUo3Grwk', '1fa0c443971f95127522b9af6ce7e13d', 'theviralmarketer2015@gmail.com', '2020-08-18 18:49:17', '', NULL, NULL, NULL, 'true', 0, '1', NULL, '1PjzYXPVpsB8jRKBUQKbA8XpKVWSbUpQgT', 'theviralmarketer2015@gmail.com', 'xpub6DGV4HMDgvFM2ceF9HHrgEe8fvcqqXqQ89pHQxgzTEQFtJaJNzS1w8TjADWLhrFEXA4N9zDTEZ9G6kDaZfbmprK8AW2URaVGNB5a3bqXWr8', 'XH5MDh2D', '', '', ''),
+(250, 'IBM20', NULL, 'Abdul', 'Razzaq', '', '036cf57cde8102417ce584a42a142ce8', 'a.razzaq4085@gmail.com', '2020-08-19 05:39:50', 'IBM1', '', 'IBM4', NULL, 'false', 0, '1', NULL, '', 'a.razzaq4085@gmail.com110', '19231moasmio123m1i23j1j039130913', '', 'GLAyjuSW4XlWNgEzSFt9GLGjy0GC7pJC', '1', 'S7eXff14dKn7N8apSmqMfs1zwttsXuX6'),
+(235, 'IBM5', NULL, 'test', 'user', '', '1fa0c443971f95127522b9af6ce7e13d', 'mfaizan044@gmail.com', '2020-08-19 05:39:50', 'IBM1', '', 'IBM1', NULL, 'false', 0, '1', NULL, '', 'test@gmail.com402', '19231moasmio123m1i23j1j039130913', '123456', '9QiD3IpL3bcb34lx49r5UwydTRfYoHL1', '1', 'jkAuP7pWCel24Mn2Sr4UYSGiX8k1PDhk'),
+(236, 'IBM6', NULL, 'Muhammad', 'Raza', '', '33d403e86a266347fe3d264951eb0720', 'muhammad.r8040@gmail.com', '2020-08-19 05:39:50', 'IBM1', '', 'IBM5', NULL, 'false', 0, '0', NULL, '', 'muhammad.r8040@gmail.com867', '19231moasmio123m1i23j1j039130913', '', 'EnSWkrbqpmlgOYTiIh1aGd0Uo5trGjf0', '1', 'Q6k1foe77bqsAYIBfa5eTJQuHcXI8SB9'),
+(237, 'IBM7', NULL, 'Muhammad', 'Raza', '', '33d403e86a266347fe3d264951eb0720', 'ssdasd123a@gmail.com', '2020-08-19 05:39:50', 'ibm1', '', 'IBM5', NULL, 'false', 0, '0', NULL, '', 'ssdasd123a@gmail.com548', '19231moasmio123m1i23j1j039130913', '', 'AKQM6bwaX5ROnCJaEtkQg0di5DF4Ol36', '1', 'yy5QMObCiwhWFFDHxGTSzbb0Fx6LHUCe'),
+(238, 'IBM8', NULL, 'Muhammad', 'Raza', '', '33d403e86a266347fe3d264951eb0720', 'ssdadaasd123a@gmail.com', '2020-08-19 05:39:50', 'ibm1', '', 'IBM5', NULL, 'false', 0, '0', NULL, '', 'ssdadaasd123a@gmail.com665', '19231moasmio123m1i23j1j039130913', '', 'ZzbKshro614nehHwmJSacwrcIuIoejho', '1', '7CPZT7ZSL74ueOMgcKDoabqXwizrHwGg'),
+(239, 'IBM9', NULL, 'Muhammad', 'Raza', '', '33d403e86a266347fe3d264951eb0720', 'asdassadoas@gmail.com', '2020-08-19 05:39:50', 'ibm1', '', 'IBM5', NULL, 'false', 0, '0', NULL, '', 'asdassadoas@gmail.com531', '19231moasmio123m1i23j1j039130913', '', 'LPGuARyaQre3krAmjf4Ia4m0dDQDULxB', '1', 'PaZ8oKpb5jGmKfezCflyOAlzQ0dQMx5o'),
+(257, 'IBM24', NULL, 'Saad', 'Awan', '', '25f9e794323b453885f5181f1b624d0b', 'saadraza.official@gmail.com', '2020-08-21 12:29:57', 'IBM24', 'IBM1', 'IBM24', NULL, 'false', 0, '1', NULL, '15oPxLtHHiYWLXK8UXujU2A4w5v36vA5Fn', 'saadraza.official@gmail.com163', 'xpub6DGV4HMDgvFMbBkLxx4g1F7FF45KEFVxq5kYHm5tAfxH487AtuSJWpSxZEW4GcTrajaSu6e8NHovLFkpcJb2V8VeHy5To4wj5vjH18EsbFF', '', 'qeSnCWmlj6L6PHiawuXlynxRBeyQIl5k', '1', 'OZfEgHJtP2jJ7hMUUe3qTKBttl06LoWL'),
+(241, 'IBM11', NULL, 'Saad', 'Raza', '', '969b01addd342a54e3afc9252b0cad3d', 'bitf18a038@pucit.edu.pk', '2020-08-19 05:39:50', 'IBM1', '', 'IBM2', NULL, 'false', 0, '0', NULL, '', 'bitf18a038@pucit.edu.pk763', '19231moasmio123m1i23j1j039130913', '', '41jfqMNKG5YxGyqUCufb7P1KAXIxK7Ke', '1', 'bQJYtcydQyEQLohCW5kTxj4oGBzRdKbl'),
+(242, 'IBM12', NULL, 'Demo ', 'Account', '', '33d403e86a266347fe3d264951eb0720', 'geval86577@aenmail.net', '2020-08-19 05:39:50', 'IBM1', '', 'IBM2', NULL, 'false', 0, '0', NULL, '', 'geval86577@aenmail.net714', '19231moasmio123m1i23j1j039130913', '', '3lSU9W6jeZS3moefqPGmtg2dpkqT8fx0', '1', 'S0KIAuyqhH7fcxp2rbZ15EBtQ7b5PMkd'),
+(243, 'IBM13', NULL, 'Saad', 'Ali', '', '33d403e86a266347fe3d264951eb0720', 'saadrazaza771@gmail.com', '2020-08-19 05:39:50', 'IBM1', '', 'IBM2', NULL, 'false', 0, '0', NULL, '', 'saadrazaza771@gmail.com401', '19231moasmio123m1i23j1j039130913', '', 'Ri6l8HyDx52Qw1E2xtm254bLKhTnDye8', '1', 'X25c895jdjBaNISFZL1cKuoNa1IKsXZZ'),
+(244, 'IBM14', NULL, 'Demo', 'asd', '', '33d403e86a266347fe3d264951eb0720', 'rtyygsnbvufs@novaemail.com', '2020-08-19 05:39:50', 'IBM1', '', 'IBM3', NULL, 'false', 0, '0', NULL, '', 'rtyygsnbvufs@novaemail.com996', '19231moasmio123m1i23j1j039130913', '', 'pU2QyOKRCo8m1BjXfc1FheSKlufdmwc6', '1', 'mrhlnBkS03N2fia1josUSAOpYAwDRXoQ'),
+(245, 'IBM15', NULL, 'Muhammad', 'Raza', '', '25f9e794323b453885f5181f1b624d0b', 'saadi@accordmail.net', '2020-08-19 05:39:50', 'IBM5', 'IBM1', 'IBM6', NULL, 'false', 0, '1', NULL, '', 'saadi@accordmail.net159', '19231moasmio123m1i23j1j039130913', '', 'Q8o5xrlQhgjCFZmdbw2Qr3PQqaKR6Pzc', '1', '5esjZInQdg0waylbmgIMWHSN8f5JhhGI'),
+(246, 'IBM16', NULL, 'Muhammad', 'Raza', '', '25f9e794323b453885f5181f1b624d0b', 'asdasd@arasj.net', '2020-08-19 05:39:50', 'IBM1', '', 'IBM3', NULL, 'false', 0, '0', NULL, '', 'asdasd@arasj.net160', '19231moasmio123m1i23j1j039130913', '', '1rlufYmbcwhgyQ4HqN9bxZJkHJNHMnDX', '1', 'd9ajR5r3WeKWUf2oRlUg5Jcl1L6ky6Np'),
+(247, 'IBM17', NULL, 'Saad', 'Raza', '', '25f9e794323b453885f5181f1b624d0b', 'amirjut7890@gmail.com', '2020-08-19 05:39:50', 'IBM1', '', 'IBM3', NULL, 'false', 0, '0', NULL, '', 'amirjut7890@gmail.com373', '19231moasmio123m1i23j1j039130913', '', 'SJyqopncIbMFyyp7IROYu1LQcu3ktyGb', '1', 'BzApG3I1mT4ZJXrwjHU18P1IsW3Eog8w'),
+(252, 'IBM21', NULL, 'Saad', 'Raza', '', '25f9e794323b453885f5181f1b624d0b', 'saadraza351@gmail.com', '2020-08-21 10:12:15', 'IBM1', '', 'IBM3', NULL, 'false', 0, '1', NULL, '', 'saadraza351@gmail.com334', '19231moasmio123m1i23j1j039130913', '12345678', '7uKdYBkAIiEI1bRDlRtP7awfAfGs6Ocx', '1', 'omOSUBrdZiqxhQeqMWeXprzcijI1B0KA'),
+(249, 'IBM19', NULL, 'Muhammad', 'Raza', 'asdae123123asda', '123456789', 'fatima.altaf7786@gmail.com', '2020-08-19 05:39:50', 'IBM1', '', 'IBM4', NULL, 'false', 0, '1', NULL, '', 'fatima.altaf7786@gmail.com802', '19231moasmio123m1i23j1j039130913', '12345678', 'pgehMobISazE7y5cdQzkDpLj3DcFfEI8', '1', 'zuKEAdb4rro9bQFcAdgid4ABat4EaFLD'),
+(251, 'IBM21', NULL, 'Abdul', 'Razzaq', '', '01ec974f91ae972f0f135cf21b42d776', 'abdulrazzaq4085@gmail.com', '2020-08-19 05:39:50', 'IBM20', 'IBM1', 'IBM20', NULL, 'false', 0, '1', NULL, '', 'abdulrazzaq4085@gmail.com249', '19231moasmio123m1i23j1j039130913', '', 'YgL59leJ7XCnCKaKwy8gYIjryoCWmfCQ', '1', 'hTigkf7dtDCf4Ue0aD3lrLdXGn5wFXf8'),
+(254, 'IBM22', NULL, 'Amir', 'Jutt', '', '25f9e794323b453885f5181f1b624d0b', 'amirjutt.official1@gmail.com', '2020-08-21 11:55:38', 'IBM22', '', 'IBM22', NULL, 'false', 0, '1', NULL, '', 'amirjutt.official1@gmail.com151', '19231moasmio123m1i23j1j039130913', 'd3JcCDJl', 'FGwp9flSax86PxdWalIU8a3sP8gcTMBU', '1', 'WrZBFegu58ohwbHltwHucOyqfgu9NHHM'),
+(260, 'IBM25', NULL, 'DEmo', 'Account', '', '25f9e794323b453885f5181f1b624d0b', 'fakeali771@gmail.com', '2020-08-21 14:39:28', 'IBM25', 'IBM1', 'IBM25', NULL, 'false', 0, '1', NULL, '19c3ftXV4yagdz3iRMasusswUKTsMtVPcc', 'fakeali771@gmail.com708', 'xpub6DGV4HMDgvFMjPb2S59esnbYDW8KwM6LiUGntUrqx88Ja69NV1Gdr84phjyWZnQQ4hSQtCGcuAgDUfLJybquCTjZFW4jsAoapwYa71McAr3', '', '6CDi7XFdpXDsKxFnwFZi38Gw7ttxLus8', '1', 'GzXJYW28hFDsW8sm10puSjr6E6GjjI4K'),
+(255, 'IBM23', NULL, 'Asim', 'asd', '', '25f9e794323b453885f5181f1b624d0b', 'asim56101@gmail.com', '2020-08-21 11:46:34', 'IBM22', '', 'IBM22', NULL, 'false', 0, '0', NULL, '12FspmFp5uMDp4E8hSsAbmCVeGt1fMErrV', 'asim56101@gmail.com404', 'xpub6DGV4HMDgvFMX8CwWqjEy4jKBRqsf1LPA3By3yMiwa32NTiggBJppw121RdhZjtdjBtC2bfPi1DErm67dGrWZLEPDfkRWbX3B49V66CQroR', '', 'N1LO0bt32kWSuQZM13pt4ql0dlYYIsj1', '1', 'sErwi3sPtIKhObRBZ7a83yYrg2BQs3j5'),
+(259, 'IBM25', NULL, 'SAmi', 'Khan', '', '25f9e794323b453885f5181f1b624d0b', 'samiraza7091@gmail.com', '2020-08-21 14:33:07', 'IBM1', '', 'IBM4', NULL, 'false', 0, '1', NULL, '1G2FphSjM84Vp86FxzDfCM5PL9gFDtcBRb', 'samiraza7091@gmail.com532', 'xpub6DGV4HMDgvFMi6KMY2ig1k3yoVvwF9FMJCMipwCDg8Yjfhyb4FKZxHCpkz6fBSbCgRkpMGPDsxtekzCULKahm23wQXeQ35RZJpW4uAenG25', '', '3a5h9JQucwhBFFj11dhOw7Bcg2a2JLQY', '1', '1Za7kcOD1DiwS4OFkNiikHUYhJST7rTc'),
 (230, 'IBM2', NULL, 'Ephron', 'Maralack', '', '1fa0c443971f95127522b9af6ce7e13d', 'ermaralack@gmail.com', '2020-07-01 19:45:52', 'IBM1', '', 'IBM1', NULL, 'false', 0, '1', NULL, '1CdcUkhY1tezLWg2i1MZ6hFrqoL1JfRTcH', 'ermaralack@gmail.com341', 'xpub6DGV4HMDgvFMT47WMjmuE6LjcUda6bTpyZtt1odLtsLmRDAbYpaAg7mcCsgAiyATgvMYYdTbd12BD87m5crFFK8GZFHEk7fZggtfqkUDuw2', 'qarKCRO4', 'jhhYlEpwQbjy3ayARBKmNfoxKFbYWYGj', '1', 'pxwsmD9ALd2RYIHMlGjDNIr7gF1lECXa'),
-(233, 'IBM3', NULL, 'muhammad', 'Raza', '', '33d403e86a266347fe3d264951eb0720', 'mraza8040@gmail.com', '2020-07-04 13:03:29', 'IBM1', '', 'IBM1', NULL, 'false', 0, '0', NULL, 'asdae123123asda', 'mraza8040@gmail.com893', '19231moasmio123m1i23j1j039130913', '', 'cxAbzA1uBMXiYbiNkdycNaPs1gUOhHe8', '1', '4ZE20Yhi1feI9qZCAsXuCd0obdbcwg1t'),
-(234, 'IBM4', NULL, 'live', 'admin', '', '946b3c8c3af70bb9bbd61dd3cfd72f37', 'live2@gmail.com', '2020-07-11 15:23:08', 'IBM1', '', 'IBM1', NULL, 'false', 0, '0', NULL, 'asdae123123asda', 'live2@gmail.com130', '19231moasmio123m1i23j1j039130913', '', 'qUlpSxg5kDOlMaxrIQXHE4Pen4ale7WJ', '1', 'yhFAY5LboEOhRawymMyzSfWCcw6YmNfD');
+(233, 'IBM3', NULL, 'muhammad', 'Raza', '', '33d403e86a266347fe3d264951eb0720', 'mraza8040@gmail.com', '2020-08-19 05:39:50', 'IBM1', '', 'IBM1', NULL, 'false', 0, '0', NULL, '', 'mraza8040@gmail.com893', '19231moasmio123m1i23j1j039130913', '', 'cxAbzA1uBMXiYbiNkdycNaPs1gUOhHe8', '1', '4ZE20Yhi1feI9qZCAsXuCd0obdbcwg1t'),
+(234, 'IBM4', NULL, 'live', 'admin', '', '946b3c8c3af70bb9bbd61dd3cfd72f37', 'live2@gmail.com', '2020-08-19 05:39:50', 'IBM1', '', 'IBM1', NULL, 'false', 0, '0', NULL, '', 'live2@gmail.com130', '19231moasmio123m1i23j1j039130913', '', 'qUlpSxg5kDOlMaxrIQXHE4Pen4ale7WJ', '1', 'yhFAY5LboEOhRawymMyzSfWCcw6YmNfD');
 
 -- --------------------------------------------------------
 
@@ -298,6 +318,108 @@ INSERT INTO `members-test` (`u_id`, `ibm`, `level`, `first_name`, `last_name`, `
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `members_otp_codes`
+--
+
+CREATE TABLE `members_otp_codes` (
+  `otp_id` int(11) NOT NULL,
+  `member_id` int(11) NOT NULL,
+  `otp_code` varchar(50) NOT NULL,
+  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `actions` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `members_otp_codes`
+--
+
+INSERT INTO `members_otp_codes` (`otp_id`, `member_id`, `otp_code`, `created_date`, `actions`) VALUES
+(1, 1, '647596', '2020-08-18 18:39:05', ''),
+(2, 1, '139243', '2020-08-18 18:40:07', ''),
+(3, 235, '636503', '2020-08-18 18:40:27', ''),
+(4, 1, '282924', '2020-08-18 20:16:28', ''),
+(5, 250, '218882', '2020-08-19 07:15:11', ''),
+(6, 1, '390005', '2020-08-19 08:58:23', ''),
+(7, 1, '973861', '2020-08-19 14:58:17', ''),
+(8, 235, '498112', '2020-08-20 00:20:14', ''),
+(9, 235, '715120', '2020-08-20 00:32:53', ''),
+(10, 235, '125255', '2020-08-20 00:34:39', ''),
+(11, 1, '953614', '2020-08-20 09:30:25', ''),
+(12, 235, '697690', '2020-08-20 15:32:29', ''),
+(13, 235, '286215', '2020-08-20 15:35:42', '1'),
+(14, 235, '110051', '2020-08-20 16:13:05', '1'),
+(15, 1, '615091', '2020-08-20 16:13:45', '1'),
+(16, 1, '941632', '2020-08-20 16:15:08', '1'),
+(17, 1, '580944', '2020-08-20 16:39:27', '1'),
+(18, 1, '521647', '2020-08-20 16:39:35', '1'),
+(19, 235, '666113', '2020-08-20 16:39:52', '1'),
+(20, 1, '462164', '2020-08-20 17:24:44', '1'),
+(21, 1, '227582', '2020-08-21 09:12:05', '1'),
+(22, 1, '599834', '2020-08-21 09:31:14', '1'),
+(23, 235, '201724', '2020-08-21 09:36:06', '1'),
+(24, 252, '945784', '2020-08-21 10:10:28', '1'),
+(25, 252, '803649', '2020-08-21 10:12:28', '1'),
+(26, 252, '643633', '2020-08-21 10:16:14', '1'),
+(27, 252, '220986', '2020-08-21 10:16:14', '1'),
+(28, 252, '425823', '2020-08-21 10:17:10', '1'),
+(29, 253, '235230', '2020-08-21 10:29:37', '1'),
+(30, 1, '463283', '2020-08-21 10:58:33', '1'),
+(31, 1, '346221', '2020-08-21 11:02:36', '1'),
+(32, 235, '176550', '2020-08-21 11:20:11', '1'),
+(33, 235, '260056', '2020-08-21 11:20:35', '1'),
+(34, 1, '835261', '2020-08-21 11:21:54', '1'),
+(35, 1, '836155', '2020-08-21 11:22:00', '1'),
+(36, 1, '815379', '2020-08-21 12:18:11', '1'),
+(37, 1, '345373', '2020-08-21 12:18:29', '1'),
+(38, 256, '912707', '2020-08-21 12:18:38', '1'),
+(39, 1, '994893', '2020-08-21 12:43:29', '1'),
+(40, 1, '918394', '2020-08-21 12:47:33', '1'),
+(41, 1, '616301', '2020-08-21 12:47:41', '1'),
+(42, 1, '654604', '2020-08-21 12:48:22', '1'),
+(43, 1, '131492', '2020-08-21 12:51:16', '1'),
+(44, 1, '505230', '2020-08-21 12:51:24', '1'),
+(45, 1, '892741', '2020-08-21 14:04:02', '1'),
+(46, 1, '545670', '2020-08-21 14:33:15', '1'),
+(47, 1, '803101', '2020-08-21 14:33:41', '1'),
+(48, 259, '547446', '2020-08-21 14:33:52', '1'),
+(49, 259, '532194', '2020-08-21 14:36:06', '1'),
+(50, 259, '191491', '2020-08-21 15:14:26', '1'),
+(51, 254, '177801', '2020-08-21 15:18:09', '1'),
+(52, 1, '805447', '2020-08-21 17:02:07', '1'),
+(53, 1, '565674', '2020-08-21 17:16:18', '1'),
+(54, 1, '892080', '2020-08-21 17:27:14', '1'),
+(55, 1, '258127', '2020-08-21 17:28:43', '1'),
+(56, 1, '750550', '2020-08-21 17:28:47', '1'),
+(57, 235, '203734', '2020-08-21 17:32:15', '1'),
+(58, 1, '899830', '2020-08-21 17:50:24', '1'),
+(59, 259, '597715', '2020-08-21 18:01:13', '2'),
+(60, 1, '567626', '2020-08-21 19:47:52', '2'),
+(61, 1, '335057', '2020-08-21 20:02:17', '2'),
+(62, 1, '702224', '2020-08-22 12:58:39', '2'),
+(63, 1, '379084', '2020-08-22 12:59:01', '2'),
+(64, 1, '749891', '2020-08-22 16:03:14', '2'),
+(65, 235, '662404', '2020-08-22 18:09:42', '2'),
+(66, 1, '773925', '2020-08-22 18:16:44', '2'),
+(67, 1, '527230', '2020-08-23 06:53:27', '2'),
+(68, 235, '478923', '2020-08-23 10:16:58', '1'),
+(69, 235, '476201', '2020-08-23 10:41:54', '2'),
+(70, 235, '503745', '2020-08-23 10:44:16', '2'),
+(71, 235, '349011', '2020-08-23 10:47:26', '2'),
+(72, 1, '945808', '2020-08-23 11:30:07', '1'),
+(73, 1, '515007', '2020-08-23 13:17:48', '2'),
+(74, 1, '757007', '2020-08-23 13:18:04', '2'),
+(75, 1, '726654', '2020-08-23 13:18:14', '1'),
+(76, 1, '700737', '2020-08-24 21:03:16', '1'),
+(77, 259, '349847', '2020-08-24 21:12:44', '2'),
+(78, 259, '523803', '2020-08-24 21:16:38', '2'),
+(79, 257, '214684', '2020-08-24 21:16:53', '2'),
+(80, 257, '930521', '2020-08-24 21:17:11', '2'),
+(81, 257, '998185', '2020-08-24 21:18:01', '2'),
+(82, 257, '246941', '2020-08-24 21:19:11', '2');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `members_tweets_category`
 --
 
@@ -345,7 +467,7 @@ CREATE TABLE `members_twitter_accounts` (
 --
 
 INSERT INTO `members_twitter_accounts` (`id`, `uid`, `pid`, `screen_name`, `avatar`, `access_token`, `changed`, `created`, `status`, `data_profile`, `data_logs`, `list_data`, `followed_list_data`) VALUES
-(1, 1, '3569406679', 'mraza8040', 'https://pbs.twimg.com/profile_images/643699146168242176/exHKw0h4_normal.jpg', '{\"oauth_token\":\"3569406679-wW5zUjlPZ17DRv8dbfVSi0Adh1encbYruHqeBki\",\"oauth_token_secret\":\"bvb3D8XKqkMAj0nSDuErqPzb15SNO8DBsT78ZdEqg9jCM\",\"user_id\":\"3569406679\",\"screen_name\":\"mraza8040\"}', NULL, '2020-03-02 01:32:26', 1, '{\"followers_count\":4,\"friends_count\":74,\"statuses_count\":67,\"name\":\"MUhammad Raza\"}', NULL, '{\"id\":1239286068098281475,\"name\":\"viral-pending-follow\",\"uri\":\"/mraza8040/lists/viral-pending-follow\",\"slug\":\"viral-pending-follow\"}', '{\"id\":1240757770380619778,\"name\":\"viral-followed-list\",\"uri\":\"/mraza8040/lists/viral-followed-list2\",\"slug\":\"viral-followed-list\"}'),
+(1, 1, '3569406679', 'mraza8040', 'https://pbs.twimg.com/profile_images/643699146168242176/exHKw0h4_normal.jpg', '{\"oauth_token\":\"3569406679-wW5zUjlPZ17DRv8dbfVSi0Adh1encbYruHqeBki\",\"oauth_token_secret\":\"bvb3D8XKqkMAj0nSDuErqPzb15SNO8DBsT78ZdEqg9jCM\",\"user_id\":\"3569406679\",\"screen_name\":\"mraza8040\"}', NULL, '2020-03-02 01:32:26', 1, '{\"followers_count\":4,\"friends_count\":75,\"statuses_count\":72,\"name\":\"MUhammad Raza\"}', NULL, '{\"id\":1239286068098281475,\"name\":\"viral-pending-follow\",\"uri\":\"/mraza8040/lists/viral-pending-follow\",\"slug\":\"viral-pending-follow\"}', '{\"id\":1240757770380619778,\"name\":\"viral-followed-list\",\"uri\":\"/mraza8040/lists/viral-followed-list2\",\"slug\":\"viral-followed-list\"}'),
 (2, 1, '19438656', 'ephron1969', 'https://pbs.twimg.com/profile_images/960783565012291584/nML_sxOk_normal.jpg', '{\"oauth_token\":\"19438656-Af2zYaBwlZsJlf0DmaPOuyK7Nr37JYeWaLJBnEXQO\",\"oauth_token_secret\":\"2OTth9KKlN841TJ63HFbie1V5hGLHVtYIFAFBkHjcdFjy\",\"user_id\":\"19438656\",\"screen_name\":\"ephron1969\"}', NULL, '2020-03-07 12:21:36', 1, '{\"followers_count\":951,\"friends_count\":2449,\"statuses_count\":566,\"name\":\"Ephron Maralack\"}', NULL, '{\"id\":1239286339662741504,\"name\":\"viral-pending-follow\",\"uri\":\"/ephron1969/lists/viral-pending-follow\",\"slug\":\"viral-pending-follow\"}', '{\"id\":1240758031455043588,\"name\":\"viral-followed-list\",\"uri\":\"/ephron1969/lists/viral-followed-list\",\"slug\":\"viral-followed-list\"}\r\n');
 
 -- --------------------------------------------------------
@@ -378,7 +500,8 @@ INSERT INTO `members_twitter_logs` (`id`, `uid`, `twitter_user_id`, `twitter_acc
 (14, 1, 228518368, 1, 'Followed', '2020-03-28 06:00:00'),
 (15, 1, 1054413451018162177, 1, 'Followed', '2020-03-30 06:00:00'),
 (16, 1, 1105821946451648517, 1, 'Followed', '2020-03-30 06:00:00'),
-(17, 1, 25830688, 1, 'Followed', '2020-03-31 06:00:00');
+(17, 1, 25830688, 1, 'Followed', '2020-03-31 06:00:00'),
+(18, 0, 1294907930420981760, 1, 'Followed', '2020-08-16 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -410,7 +533,7 @@ INSERT INTO `members_twitter_posts` (`id`, `uid`, `account_id`, `category_id`, `
 (262, 1, 1, 15, 1246476157744222211, 'text', '{\"media\":[],\"caption\":\"good night. \",\"url\":\"null\"}', 1, 'Published Successfully', NULL, '2020-04-04 10:34', '2020-04-04 16:34:09', '2020-04-04 16:34:09'),
 (263, 1, 1, 15, 1246477717253619712, 'text', '{\"media\":[],\"caption\":\"hello gd nit\",\"url\":\"null\"}', 1, 'Published Successfully', NULL, '2020-04-04 10:40', '2020-04-04 16:40:20', '2020-04-04 16:40:20'),
 (264, 1, 1, 15, 1246478179545550849, 'text', '{\"media\":[],\"caption\":\"hello  working\",\"url\":\"null\"}', 1, 'Published Successfully', NULL, '2020-04-04 10:42', '2020-04-04 16:42:11', '2020-04-04 16:42:11'),
-(269, 1, 1, 15, 1246483541082415109, 'image', '{\"media\":[\"../../assets/Twitter/images/15860198090.png\"],\"caption\":\"good night\",\"url\":\"null\"}', 1, 'Published Successfully', NULL, '2020-04-04 11:03', '2020-04-04 17:03:29', '2020-04-04 17:03:29'),
+(269, 1, 1, 15, 1246483541082415109, 'image', '\"269\"', 1, 'Published Successfully', NULL, '2020-04-04 11:03', '2020-04-04 17:03:29', '2020-04-04 17:03:29'),
 (271, 1, 1, 15, 1246540553006788610, 'text', '{\"media\":[],\"caption\":\"good night . :) and...\",\"url\":\"null\"}', 1, 'Published Successfully', NULL, '2020-04-04 14:50', '2020-04-04 17:54:13', '2020-04-04 17:54:13'),
 (272, 1, 2, 1, 1246778166905057281, 'text', '{\"media\":[],\"caption\":\"# corona fighter https://t.co/NKOOCs4sSB\"}', 1, 'Successfully retweet', NULL, '2020-04-05 06:34', '2020-04-05 12:34:13', '2020-04-05 12:34:13'),
 (273, 1, 1, 15, 1246779148925898752, 'text', '{\"media\":[],\"caption\":\"@Aaoux Is forcing me to pause mine because you donu2019t have a computer your final solution?\",\"url\":\"null\"}', 1, 'Published Successfully', NULL, '2020-04-05 06:38', '2020-04-05 12:38:07', '0000-00-00 00:00:00'),
@@ -426,7 +549,35 @@ INSERT INTO `members_twitter_posts` (`id`, `uid`, `account_id`, `category_id`, `
 (288, 1, 1, 1, 1247553995880779784, 'text', '{\"media\":[],\"caption\":\"There is a theory now that 5G network might be the cause of the Corona virus. Who agrees with me...Would like your feedback.\"}', 1, 'Successfully retweet', NULL, '2020-04-07 09:57', '2020-04-07 15:57:05', '2020-04-07 15:57:05'),
 (289, 1, 1, 16, 1248691523375509504, 'text', '{\"media\":[],\"caption\":\"adsad\",\"url\":\"null\"}', 1, 'Published Successfully', NULL, '2020-04-10 12:15', '2020-04-10 19:17:13', '2020-04-10 19:17:13'),
 (292, 1, 1, 17, 0, 'text', '{\"media\":[],\"caption\":\"Stop Corona\",\"url\":\"null\"}', 1, 'Published Successfully', NULL, '2020-04-12 11:33', '2020-04-12 18:32:11', '0000-00-00 00:00:00'),
-(293, 1, 1, 17, 0, 'text', '{\"media\":[],\"caption\":\"We Want Semester Break with Enjoyment\",\"url\":\"null\"}', 1, 'Unpublished', NULL, '2020-04-16 05:51', '2020-04-16 12:51:02', '2020-04-16 11:51:00');
+(293, 1, 1, 17, 0, 'text', '{\"media\":[],\"caption\":\"We Want Semester Break with Enjoyment\",\"url\":\"null\"}', 1, 'Unpublished', NULL, '2020-04-16 05:51', '2020-04-16 12:51:02', '2020-04-16 11:51:00'),
+(294, 1, 1, 1, 1293872786566504450, 'text', '{\"media\":[],\"caption\":\"10 Legit Ways To Make Money Online During This Lockdown https://t.co/CWECeLMAVW #LayconandVee #QueenErica #ATAPSGu2026 https://t.co/f88bp51bf2\"}', 1, 'Successfully retweet', NULL, '2020-08-13 11:31', '2020-08-13 11:31:26', '2020-08-13 11:31:26'),
+(295, 1, 1, 16, 1297500604076642306, 'text', '{\"media\":[],\"caption\":\"Never Stop Learing Bcz life never stop Teaching\",\"url\":\"null\"}', 1, 'Published Successfully', NULL, '2020-08-23 04:47', '2020-08-23 11:47:05', '2020-08-23 11:47:05'),
+(296, 1, 1, 16, 1297501789487587328, 'text', '{\"media\":[],\"caption\":\"it Cost $0.00 to treat someone with respect\",\"url\":\"null\"}', 1, 'Published Successfully', NULL, '2020-08-23 04:50', '2020-08-23 11:51:47', '2020-08-23 11:51:47');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `paid_memberships`
+--
+
+CREATE TABLE `paid_memberships` (
+  `id` int(11) NOT NULL,
+  `name` varchar(300) NOT NULL,
+  `slug` varchar(300) NOT NULL,
+  `is_show` tinyint(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `paid_member_relationship`
+--
+
+CREATE TABLE `paid_member_relationship` (
+  `id` int(11) NOT NULL,
+  `member_id` int(11) NOT NULL,
+  `paid_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -448,7 +599,9 @@ CREATE TABLE `paypal_Transaction` (
 --
 
 INSERT INTO `paypal_Transaction` (`id`, `user_id`, `amount`, `amount_with_tax`, `status`, `token`) VALUES
-(1, 1, 0, 'NaN', 0, 'eea9de7509e9f9db928db2fbf9d7b683c91bee8e8fa01d1739a21baed9a2855a8a5862bc43ca14aba13003f62242c11b8d4c1d423d77588249ab84f193de06cf');
+(1, 1, 0, 'NaN', 0, 'eea9de7509e9f9db928db2fbf9d7b683c91bee8e8fa01d1739a21baed9a2855a8a5862bc43ca14aba13003f62242c11b8d4c1d423d77588249ab84f193de06cf'),
+(2, 1, 100, '111.7', 0, '69a4410ce10457d9f5b827d74013e4a6e491dd7ffae96b99e2a2fbfca5ad58770698bcec46886bf3b68bfe71cc577a3157f23575bb65562c3fb805d65389a578'),
+(3, 235, 10, '12.69', 0, '71ce2374c19104f957dd9876b0f2c9f2aa6a407188081fcfaae17048d03992117362c41cf9bae666e88dba02195772d9bb5e8207cbe899088c811b1afc136af0');
 
 -- --------------------------------------------------------
 
@@ -1106,7 +1259,8 @@ INSERT INTO `tbl_email_templates` (`id`, `template_name`, `time_delay`, `templat
 INSERT INTO `tbl_email_templates` (`id`, `template_name`, `time_delay`, `template_type`, `template_content`, `created_at`, `updated_at`, `is_active`) VALUES
 (16, 'welcome to theviralmarketer', 0, '1', '<blockquote xss=\"removed\"><blockquote xss=\"removed\">Hi <b>{#first_name#}</b><br></blockquote><div>Trust all is well.<br></div><div><br></div><div><b>A Big Welcome to TheViralMarketer!</b></div><div><b><br></b></div><div>Your IBM is <b>{#ibm#}</b></div><div>Your username is <b>{#email#}</b></div><div>You can login to your admin area by going to www.theviralmarketer.biz </div><div><br></div><div>Let\'s get you off to a quick start...</div><div><br></div><div>First, TheViralMarketer is not in competition with any other MLM company. In fact, it is designed to assist you in your primary MLM business that you are currently building. On the contrary, it is also very newbie friendly and allows the complete novice to explore the world of MLM before seriously committing. </div><div>And then the best part of all, You can make money in the process!!! </div><div><br></div><div>By now you should be able to access your member\'s area which is accessible on your computer OR in the form of an APP in the IOS or Android stores. So no more excuses, you have a business in your pocket. We have a created video presentations which are placed within the member\'s area on strategic places. The very first one that you should watch is TheViralMarketer Explained and can be found on your dashboard in the member\'s area. We recommend that you watch this video carefully in order to avoid confusion. Watch it AGAIN and AGAIN until all things are clear.</div><div><br></div><div>Finally, your success in using this powerful tool as well generating an income from it will be a result of your CONSISTENCY. </div><div><br></div><div>We are a positive community of people and want to change the world one person at a time, BE PART OF THE MOVEMENT. </div><div><br></div><div>See you on the inside.</div><div><br></div><div>Have a SUPERDAY!</div><div><br></div><div>Yours in business</div><div><br></div><div>TheViralMarketer TEAM</div><div>P.S. Please join our <u>Facebook group</u> where we share best practices, tricks and tips that can help you on your path. </div></blockquote><div><br></div><div><br></div><br><br>', '2018-07-12 17:11:28', '2018-07-13 07:59:49', '0'),
 (17, 'welcome to theviralmarketer', 0, '1', '<blockquote xss=\"removed\"><blockquote xss=\"removed\">Hi <b>{#first_name#}</b><br></blockquote><div>Trust all is well.<br></div><div><br></div><div><b>A Big Welcome to TheViralMarketer!</b></div><div><b><br></b></div><div>Your IBM is <b>{#ibm#}</b></div><div>Your username is <b>{#email#}</b></div><div>Click <u>HERE</u> to download the app. </div><div>You can login to your admin area by going to www.theviralmarketer.biz </div><div><br></div><div>Let\'s get you off to a quick start...</div><div><br></div><div>First, TheViralMarketer is not in competition with any other MLM company. In fact, it is designed to assist you in your primary MLM business that you are currently building. On the contrary, it is also very newbie friendly and allows the complete novice to explore the world of MLM before seriously committing. </div><div>And then the best part of all, You can make money in the process!!! </div><div><br></div><div>By now you should be able to access your member\'s area which is accessible on your computer OR in the form of an APP in the IOS or Android stores. So no more excuses, you have a business in your pocket. We have a created video presentations which are placed within the member\'s area on strategic places. The very first one that you should watch is TheViralMarketer Explained and can be found on your dashboard in the member\'s area. We recommend that you watch this video carefully in order to avoid confusion. Watch it AGAIN and AGAIN until all things are clear.</div><div><br></div><div>Finally, your success in using this powerful tool as well generating an income from it will be a result of your CONSISTENCY. </div><div><br></div><div>We are a positive community of people and want to change the world one person at a time, BE PART OF THE MOVEMENT. </div><div><br></div><div>See you on the inside.</div><div><br></div><div>Have a SUPERDAY!</div><div><br></div><div>Yours in business</div><div><br></div><div>TheViralMarketer TEAM</div><div>P.S. Please join our <u>Facebook group</u> where we share best practices, tricks and tips that can help you on your path. </div></blockquote><div><br></div><div><br></div><br><br>', '2018-07-13 12:49:20', '2018-07-13 07:59:32', '0'),
-(18, 'welcome to viral-marketer', 0, '1', '<blockquote xss=\"removed\"><blockquote xss=\"removed\">Hi <b>{#first_name#}</b><br></blockquote><div>Trust all is well.<br></div><div><br></div><div><b>A Big Welcome to TheViralMarketer!</b></div><div><b><br></b></div><div>Your IBM is <b>{#ibm#}</b></div><div>Your username is <b>{#email#}</b></div><div>You can login to your admin area by going to www.theviralmarketer.biz</div><div><br></div><div>Let\'s get you off to a quick start...</div><div><br></div><div>First, TheViralMarketer is not in competition with any other MLM company. In fact, it is designed to assist you in your primary MLM business that you are currently building. On the contrary, it is also very newbie friendly and allows the complete novice to explore the world of MLM before seriously committing. </div><div>And then the best part of all, You can make money in the process!!! </div><div><br></div><div>By now you should be able to access your member\'s area which is accessible on your computer OR in the form of an APP in the IOS or Android stores. So no more excuses, you have a business in your pocket. We have a created video presentations which are placed within the member\'s area on strategic places. The very first one that you should watch is TheViralMarketer Explained and can be found on your dashboard in the member\'s area. We recommend that you watch this video carefully in order to avoid confusion. Watch it AGAIN and AGAIN until all things are clear.</div><div><br></div><div>Should you decide to UPGRADE your membership, it is required that you fund TheViralMarketer bitcoin wallet in your member\'s area. If you do not have an existing bitcoin wallet already, we suggest that you register with luno.com and transfer from your Luno wallet to your TheViralMarketer wallet that will enable you to UPGRADE. If Luno is not available in your country, you need to find a bitcoin exchanger that operates in your country. We are also working aggressively to make the funding of wallets available on the website. </div><div><br></div><div>Finally, your success in using this powerful tool as well as generating an income from it will be a result of your CONSISTENCY. </div><div><br></div><div>We are a positive community of people and want to change the world one person at a time, BE PART OF THE MOVEMENT. </div><div><br></div><div>See you on the inside.</div><div><br></div><div>Have a SUPERDAY!</div><div><br></div><div>Yours in business</div><div><br></div><div>TheViralMarketer TEAM</div><div>P.S. Please join our <a href=\"https://www.facebook.com/groups/414090752418384/\" title=\"\" target=\"_blank\"><u>Facebook Group</u> </a>where we share best practices, tricks and tips that can help you on your path. </div><div><br></div><div>Please Click on the link below to install TheViralMarketer on your phone:</div><div><br></div><a href=\"https://itunes.apple.com/DE/app/id1397141987\" title=\"\" target=\"_blank\"><img src=\"https://i.imgur.com/ZVNWhiM.jpg\" width=\"100\"></a>   <a href=\"https://play.google.com/store/apps/details?id=com.maralack.theviralmarketer\" title=\"\" target=\"_blank\"><img src=\"https://i.imgur.com/ocUmysp.jpg\" width=\"100\"></a><br><div><br></div></blockquote><div><br></div><div><br></div><br><br><br>', '2018-10-16 23:27:54', '0000-00-00 00:00:00', '1');
+(18, 'welcome to viral-marketer', 0, '1', '<blockquote xss=\"removed\"><blockquote xss=\"removed\">Hi <b>{#first_name#}</b><br></blockquote><div>Trust all is well.<br></div><div><br></div><div><b>A Big Welcome to TheViralMarketer!</b></div><div><b><br></b></div><div>Your IBM is <b>{#ibm#}</b></div><div>Your username is <b>{#email#}</b></div><div>You can login to your admin area by going to www.theviralmarketer.biz</div><div><br></div><div>Let\'s get you off to a quick start...</div><div><br></div><div>First, TheViralMarketer is not in competition with any other MLM company. In fact, it is designed to assist you in your primary MLM business that you are currently building. On the contrary, it is also very newbie friendly and allows the complete novice to explore the world of MLM before seriously committing. </div><div>And then the best part of all, You can make money in the process!!! </div><div><br></div><div>By now you should be able to access your member\'s area which is accessible on your computer OR in the form of an APP in the IOS or Android stores. So no more excuses, you have a business in your pocket. We have a created video presentations which are placed within the member\'s area on strategic places. The very first one that you should watch is TheViralMarketer Explained and can be found on your dashboard in the member\'s area. We recommend that you watch this video carefully in order to avoid confusion. Watch it AGAIN and AGAIN until all things are clear.</div><div><br></div><div>Should you decide to UPGRADE your membership, it is required that you fund TheViralMarketer bitcoin wallet in your member\'s area. If you do not have an existing bitcoin wallet already, we suggest that you register with luno.com and transfer from your Luno wallet to your TheViralMarketer wallet that will enable you to UPGRADE. If Luno is not available in your country, you need to find a bitcoin exchanger that operates in your country. We are also working aggressively to make the funding of wallets available on the website. </div><div><br></div><div>Finally, your success in using this powerful tool as well as generating an income from it will be a result of your CONSISTENCY. </div><div><br></div><div>We are a positive community of people and want to change the world one person at a time, BE PART OF THE MOVEMENT. </div><div><br></div><div>See you on the inside.</div><div><br></div><div>Have a SUPERDAY!</div><div><br></div><div>Yours in business</div><div><br></div><div>TheViralMarketer TEAM</div><div>P.S. Please join our <a href=\"https://www.facebook.com/groups/414090752418384/\" title=\"\" target=\"_blank\"><u>Facebook Group</u> </a>where we share best practices, tricks and tips that can help you on your path. </div><div><br></div><div>Please Click on the link below to install TheViralMarketer on your phone:</div><div><br></div><a href=\"https://itunes.apple.com/DE/app/id1397141987\" title=\"\" target=\"_blank\"><img src=\"https://i.imgur.com/ZVNWhiM.jpg\" width=\"100\"></a>   <a href=\"https://play.google.com/store/apps/details?id=com.maralack.theviralmarketer\" title=\"\" target=\"_blank\"><img src=\"https://i.imgur.com/ocUmysp.jpg\" width=\"100\"></a><br><div><br></div></blockquote><div><br></div><div><br></div><br><br><br>', '2018-10-16 23:27:54', '0000-00-00 00:00:00', '1'),
+(19, 'OTP Verification', 0, '1', '<blockquote xss=\"removed\"><blockquote xss=\"removed\">Hi <b>{#first_name#}</b><br></blockquote><div>Trust all is well.<br></div><div><br></div><div><b>Your One Time Password (OTP) for Payment on The Viral Marketer is {#otp_code#}.</b></div><div><b><br></b></div><div>Please do not share this OTP with anyone.</b></div><div>This code will expire in 10 minutes.</b></div><div><br></div><div><br></div></blockquote><div><br></div><div><br></div><br><br><p>Thanks,  <br>\r\n                        <strong>The Viral Marketer Team</strong>\r\n                        <a href=\"https://www.theviralmarketer.biz\">The Viral Marketer</a>\r\n                      </p><br>', '2020-08-16 02:10:12', '0000-00-00 00:00:00', '1');
 
 -- --------------------------------------------------------
 
@@ -1328,7 +1482,12 @@ INSERT INTO `tbl_last_login` (`id`, `userId`, `sessionData`, `machineIp`, `userA
 INSERT INTO `tbl_last_login` (`id`, `userId`, `sessionData`, `machineIp`, `userAgent`, `agentString`, `platform`, `createdDtm`) VALUES
 (170, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}', '197.229.1.49', 'Chrome 71.0.3578.98', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', 'Mac OS X', '2019-01-25 10:11:25'),
 (171, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}', '197.229.1.56', 'Chrome 71.0.3578.98', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', 'Mac OS X', '2019-01-26 05:56:02'),
-(172, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}', '197.229.1.160', 'Chrome 71.0.3578.98', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', 'Mac OS X', '2019-01-28 02:29:18');
+(172, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}', '197.229.1.160', 'Chrome 71.0.3578.98', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36', 'Mac OS X', '2019-01-28 02:29:18'),
+(173, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}', '39.37.139.181', 'Chrome 79.0.3945.88', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36', 'Linux', '2020-08-19 18:34:31'),
+(174, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}', '41.193.49.71', 'Chrome 84.0.4147.105', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36', 'Mac OS X', '2020-08-19 18:38:23'),
+(175, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}', '39.37.139.181', 'Chrome 79.0.3945.88', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36', 'Linux', '2020-08-19 18:41:09'),
+(176, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}', '39.37.139.181', 'Chrome 79.0.3945.88', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36', 'Linux', '2020-08-19 18:41:18'),
+(177, 1, '{\"role\":\"1\",\"roleText\":\"System Administrator\",\"name\":\"System Administrator\"}', '39.37.139.181', 'Chrome 79.0.3945.88', 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36', 'Linux', '2020-08-19 18:50:12');
 
 -- --------------------------------------------------------
 
@@ -1359,7 +1518,7 @@ INSERT INTO `tbl_member_landingpage` (`id`, `member_id`, `member_ibm`, `page_id`
 (21, 128, 'IBM4', 3, '2018-08-14 16:55:34', '2018-08-14 11:55:34'),
 (20, 127, 'IBM3', 3, '2018-08-14 16:53:03', '2018-08-14 11:53:03'),
 (19, 126, 'IBM2', 3, '2018-08-14 16:50:59', '2018-08-14 11:50:59'),
-(18, 1, 'IBM1', 3, '2018-08-14 16:49:42', '2020-07-18 21:13:17'),
+(18, 1, 'IBM1', 3, '2018-08-14 16:49:42', '2020-08-13 07:07:17'),
 (28, 135, 'IBM11', 3, '2018-09-24 15:32:39', '2018-09-24 09:32:39'),
 (29, 136, 'IBM12', 3, '2018-09-24 15:34:16', '2018-09-24 09:34:16'),
 (30, 137, 'IBM13', 3, '2018-09-24 15:50:48', '2018-09-24 09:50:48'),
@@ -1460,7 +1619,32 @@ INSERT INTO `tbl_member_landingpage` (`id`, `member_id`, `member_ibm`, `page_id`
 (125, 232, 'IBM3', 3, '2020-07-04 12:41:12', '2020-07-04 12:41:12'),
 (126, 233, 'IBM3', 3, '2020-07-04 13:03:29', '2020-07-04 13:03:29'),
 (127, 234, 'IBM4', 3, '2020-07-11 15:23:08', '2020-07-11 15:23:08'),
-(128, 235, 'IBM5', 3, '2020-07-11 16:08:38', '2020-07-11 16:08:38');
+(128, 235, 'IBM5', 3, '2020-07-11 16:08:38', '2020-07-11 16:08:38'),
+(129, 236, 'IBM6', 3, '2020-08-09 13:49:12', '2020-08-09 13:49:12'),
+(130, 237, 'IBM7', 3, '2020-08-14 02:14:59', '2020-08-14 02:14:59'),
+(131, 238, 'IBM8', 3, '2020-08-14 02:16:01', '2020-08-14 02:16:01'),
+(132, 239, 'IBM9', 3, '2020-08-14 02:32:58', '2020-08-14 02:32:58'),
+(133, 240, 'IBM10', 3, '2020-08-17 05:55:05', '2020-08-17 05:55:05'),
+(134, 241, 'IBM11', 3, '2020-08-17 06:42:34', '2020-08-17 06:42:34'),
+(135, 242, 'IBM12', 3, '2020-08-17 07:02:50', '2020-08-17 07:02:50'),
+(136, 243, 'IBM13', 3, '2020-08-17 09:07:34', '2020-08-17 09:07:34'),
+(137, 244, 'IBM14', 3, '2020-08-17 09:40:54', '2020-08-17 09:40:54'),
+(138, 245, 'IBM15', 3, '2020-08-17 13:00:12', '2020-08-17 13:00:12'),
+(139, 246, 'IBM16', 3, '2020-08-17 13:04:43', '2020-08-17 13:04:43'),
+(140, 247, 'IBM17', 3, '2020-08-18 15:53:33', '2020-08-18 15:53:33'),
+(141, 248, 'IBM18', 3, '2020-08-18 16:15:59', '2020-08-18 16:15:59'),
+(142, 249, 'IBM19', 3, '2020-08-18 16:28:19', '2020-08-18 16:28:19'),
+(143, 250, 'IBM20', 3, '2020-08-19 05:30:42', '2020-08-19 05:30:42'),
+(144, 251, 'IBM21', 3, '2020-08-19 05:36:33', '2020-08-19 05:36:33'),
+(145, 252, 'IBM21', 3, '2020-08-21 10:08:46', '2020-08-21 10:08:46'),
+(146, 253, 'IBM22', 3, '2020-08-21 10:27:46', '2020-08-21 10:27:46'),
+(147, 254, 'IBM22', 3, '2020-08-21 10:49:27', '2020-08-21 10:49:27'),
+(148, 255, 'IBM23', 3, '2020-08-21 11:46:34', '2020-08-21 11:46:34'),
+(149, 256, 'IBM24', 3, '2020-08-21 12:16:17', '2020-08-21 12:16:17'),
+(150, 257, 'IBM24', 3, '2020-08-21 12:29:04', '2020-08-21 12:29:04'),
+(151, 258, 'IBM24', 3, '2020-08-21 12:42:12', '2020-08-21 12:42:12'),
+(152, 259, 'IBM25', 3, '2020-08-21 14:32:48', '2020-08-21 14:32:48'),
+(153, 260, 'IBM25', 3, '2020-08-21 14:39:10', '2020-08-21 14:39:10');
 
 -- --------------------------------------------------------
 
@@ -1658,6 +1842,12 @@ ALTER TABLE `members-test`
   ADD PRIMARY KEY (`u_id`);
 
 --
+-- Indexes for table `members_otp_codes`
+--
+ALTER TABLE `members_otp_codes`
+  ADD PRIMARY KEY (`otp_id`);
+
+--
 -- Indexes for table `members_tweets_category`
 --
 ALTER TABLE `members_tweets_category`
@@ -1679,6 +1869,18 @@ ALTER TABLE `members_twitter_logs`
 -- Indexes for table `members_twitter_posts`
 --
 ALTER TABLE `members_twitter_posts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `paid_memberships`
+--
+ALTER TABLE `paid_memberships`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `paid_member_relationship`
+--
+ALTER TABLE `paid_member_relationship`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1803,13 +2005,19 @@ ALTER TABLE `MemberAdvertise`
 -- AUTO_INCREMENT for table `members`
 --
 ALTER TABLE `members`
-  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=236;
+  MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=261;
 
 --
 -- AUTO_INCREMENT for table `members-test`
 --
 ALTER TABLE `members-test`
   MODIFY `u_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
+
+--
+-- AUTO_INCREMENT for table `members_otp_codes`
+--
+ALTER TABLE `members_otp_codes`
+  MODIFY `otp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 
 --
 -- AUTO_INCREMENT for table `members_tweets_category`
@@ -1827,19 +2035,31 @@ ALTER TABLE `members_twitter_accounts`
 -- AUTO_INCREMENT for table `members_twitter_logs`
 --
 ALTER TABLE `members_twitter_logs`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `members_twitter_posts`
 --
 ALTER TABLE `members_twitter_posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=294;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=297;
+
+--
+-- AUTO_INCREMENT for table `paid_memberships`
+--
+ALTER TABLE `paid_memberships`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `paid_member_relationship`
+--
+ALTER TABLE `paid_member_relationship`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `paypal_Transaction`
 --
 ALTER TABLE `paypal_Transaction`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `pending_tasks`
@@ -1875,7 +2095,7 @@ ALTER TABLE `system_levels`
 -- AUTO_INCREMENT for table `tbl_email_templates`
 --
 ALTER TABLE `tbl_email_templates`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `tbl_landing_pages`
@@ -1887,13 +2107,13 @@ ALTER TABLE `tbl_landing_pages`
 -- AUTO_INCREMENT for table `tbl_last_login`
 --
 ALTER TABLE `tbl_last_login`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=173;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=178;
 
 --
 -- AUTO_INCREMENT for table `tbl_member_landingpage`
 --
 ALTER TABLE `tbl_member_landingpage`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=129;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=154;
 
 --
 -- AUTO_INCREMENT for table `tbl_pages`

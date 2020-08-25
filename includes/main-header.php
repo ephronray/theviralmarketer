@@ -52,7 +52,7 @@ if(isset($_POST['logOutME'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="<?= $baseUrl; ?>assets/icon.ico">
+    <link rel="icon" href="<?= $baseUrl; ?>assets/favicon.ico">
 
     <title>The ViralMarketer</title>
   
@@ -87,13 +87,13 @@ if(isset($_POST['logOutME'])) {
     <a href="/index.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
 	  <b class="logo-mini">
-		  <span class="light-logo"><img src="<?= $baseUrl; ?>assets/white-logo.svg" style="width: 75%;" alt="logo"></span>
-		  <span class="dark-logo"><img src="<?= $baseUrl; ?>assets/logo.svg" style="width: 75%;" alt="logo"></span>
+		  <span class="light-logo"><img src="<?= $baseUrl; ?>assets/logo_white.png" style="width: 75%;" alt="logo"></span>
+		  <span class="dark-logo"><img src="<?= $baseUrl; ?>assets/logo_black.png" style="width: 75%;" alt="logo"></span>
 	  </b>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg">
-		  <img src="<?= $baseUrl; ?>assets/white-logo.svg" alt="logo" style="width: 75%;" class="light-logo">
-	  	  <img src="<?= $baseUrl; ?>assets/logo.svg" alt="logo" style="width: 75%;" class="dark-logo">
+		  <img src="<?= $baseUrl; ?>assets/logo_white.png" alt="logo" style="width: 75%;" class="light-logo">
+	  	  <img src="<?= $baseUrl; ?>assets/logo_black.png" alt="logo" style="width: 75%;" class="dark-logo">
 	  </span>
     </a>
     <!-- Header Navbar -->

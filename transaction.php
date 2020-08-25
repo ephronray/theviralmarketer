@@ -179,125 +179,62 @@ if ($walletAccountDetail['receiveAddress'] != $_SESSION['user']['wallet_number']
 
 
 
-        <div class="modal-content">
-          <div class="modal-header">
+           <div class="modal-content">
+                        <div class="modal-header">
 
 
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">Complete Transaction Password</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">OTP Verification</h4>
 
-          </div>
+                        </div>
 
-          <div class="modal-body">
+                        <div class="modal-body">
 
-              <div id="transection_notification" class="alert alert-danger  mb-3" style="display: none">
-                  There Is Something Went Wrong. Try Again Later.
-              </div>
-            <?php
-            if ($transection_password == null) {
-            ?>
-              <p style="text-transform: font-size: 16px; text-decoration: font-weight: 600;">You need to register for a Transactional password in order to do transactions. </p>
-              <br>
-              <p style="text-transform: uppercase; font-size: 16px; text-decoration: underline; font-weight: 600;">
-                <center><a href="https://theviralmarketer.biz/profile.php"> CLICK HERE TO REGISTER NOW </a></center>
-              </p>
-            <?php
-            } else {
-            ?>
-              <p style="text-transform: uppercase; font-size: 16px; text-decoration: underline; font-weight: 600;">
-                Please Complete Transaction Password
-              </p>
+                            <div id="transection_notification" class="alert alert-danger  mb-3" style="display: none">
+                                There Is Something Went Wrong. Try Again Later.
+                            </div>
+                            <?php
+                             $otp_response =  $db->send_otp_code("2");
+					         $otp_code = '';
+					         if($otp_response['success'])
+							 {
+                               $otp_code = $otp_response['otp_code'];
+							 }
+                                ?>
+                                <p style="text-transform: uppercase; font-size: 16px; text-decoration: underline; font-weight: 600;">
+                                    OTP Verification
+                                </p>
 
 
-              <div class="form-group password">
+                                <div class="form-group password">
 
-                <label for="Inputpassword">Enter 3 hidden Digits of password:</label>
-                <div class="row">
+                                    <label for="Inputpassword">Enter 6 digits OTP Code sent your Email Address</label>
+                                        <input type="hidden" id="get_id" value="<?=$data['id']; ?>" >
+                                <div class="row">
 
-                  <div class="col-6 col-md-3 col-lg-3">
-                      <div class="row">
-                          <div class="col-6">
-                              <span style="margin-left: 34%;">1</span>
-                              <input id="index_1" type="password" step="any" minlength="1" maxlength="1" pattern=".{1,1}" class="form-control" name="index_1">
-                          </div>
+                                        <div class="col-6 col-md-6 col-lg-6">
+											<input type="text" id="otp_code" value="" >
+									</div>
+									<div class="col-6 col-md-6 col-lg-6">
+										<a href="#" > Resend OTP Rquest </a>
+									</div>
+									</div>
+                                   
+                                </div>
+                                <div class="modal-footer">
+                                    <button id="trensection_password_check" name="trensection_password_check" class="btn btn-primary">Submit</button>
 
-                          <div class="col-6">
-                              <span style="margin-left: 34%;">2</span>
-                              <input id="index_2" type="password" step="any" minlength="1" maxlength="1" pattern=".{1,1}" class="form-control" name="index_2">
-                          </div>
-                      </div>
+                                    <button type="button" id="transection-close-<?=$data['id']; ?>" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
 
-                  </div>
+                                <?php
+                            
+                            ?>
 
-                  <div class="col-6 col-md-3 col-lg-3" >
-                      <div class="row">
-                          <div class="col-6">
-                              <span style="margin-left: 34%;">3</span>
-                              <input id="index_3" type="password" step="any" minlength="1" maxlength="1" pattern=".{1,1}" class="form-control" name="index_3">
-                          </div>
-
-                          <div class="col-6">
-                              <span style="margin-left: 34%;">4</span>
-                              <input id="index_4" type="password" step="any" minlength="1" maxlength="1" pattern=".{1,1}" class="form-control" name="index_4">
-                          </div>
-
-                      </div>
-
-                  </div>
+                        </div>
 
 
-                  <div class="col-6 col-md-3 col-lg-3" >
-                      <div class="row">
-                          <div class="col-6">
-                              <span style="margin-left: 34%;">5</span>
-                              <input id="index_5" type="password" step="any" minlength="1" maxlength="1" pattern=".{1,1}" class="form-control" name="index_5">
-                          </div>
-
-                          <div class="col-6">
-                              <span style="margin-left: 34%;">6</span>
-                              <input id="index_6" type="password" step="any" minlength="1" maxlength="1" pattern=".{1,1}" class="form-control" name="index_6">
-                          </div>
-
-                      </div>
-
-                  </div>
-
-                  <div class="col-6 col-md-3 col-lg-3">
-
-                      <div class="row">
-
-                          <div class="col-6">
-                              <span style="margin-left: 34%;">7</span>
-                              <input id="index_7" type="password" step="any" minlength="1" maxlength="1" pattern=".{1,1}" class="form-control" name="index_7">
-                          </div>
-
-                          <div class="col-6">
-                              <span style="margin-left: 34%;">8</span>
-                              <input id="index_8" type="password" step="any" minlength="1" maxlength="1" pattern=".{1,1}" class="form-control" name="index_8">
-                          </div>
-
-                      </div>
-
-                  </div>
-
-
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button id="trensection_password_check" name="trensection_password_check" class="btn btn-primary">Submit</button>
-
-                <button type="button" id="transection-close" class="btn btn-danger" data-dismiss="modal">Close</button>
-              </div>
-
-            <?php
-            }
-            ?>
-
-          </div>
-
-
-        </div>
-
+                    </div>
       </div>
     </div>
     <!--end model box for transection Password-->
@@ -498,37 +435,37 @@ include_once 'includes/main_footer.php';
 
     }
   });
-  $('#trensection_password_check').click(function() {
+  $('#trensection_password_check').click(function(){
     var input_all_value = '';
     var get_id = $('#get_id').val();
+	var otp_code_in = $('#otp_code').val();
+    var parent_modal = $('#transaction-password-'+get_id);
+	var otp_code = '<?php echo $otp_code; ?>';
 
-    var transection_password = '<?php echo $transection_password; ?>';
+  
 
+if(otp_code_in ==  otp_code)
+{
+  
+    $('#transection-close-'+get_id).trigger('click');
+     $('#send_btn_show').trigger('click');
 
-    for (i = 1; i <= transection_password.length; ++i) {
+  
+}
+else
+{
+    $('#transection_notification').show();
 
-      var single_value = $('#index_' + i).val();
+    setTimeout(function(){
 
-      var input_all_value = input_all_value + single_value;
-
-
-
-    }
-
-    if (input_all_value == transection_password) {
-
-      $('#transection-close').trigger('click');
-      $('#send_btn_show').trigger('click');
-
-    } else {
-      $('#transection_notification').show();
-      setTimeout(function(){
-          $('#transection_notification').fadeOut();
-      }, 5000);
-    }
+        $('#transection_notification').fadeOut();
 
 
+    }, 5000)
+}
 
-  })
+   
+    
+})
 </script>
 <?php //include_once 'includes/footer.php'; ?>

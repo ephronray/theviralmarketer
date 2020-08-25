@@ -5,9 +5,15 @@ $menu = array('tab'=>4, 'option' => 'viral-tweet');
 include_once './../includes/main-header.php'; 
 require_once (__DIR__.'/../_libs/twitterSetting.php');
 require_once(__DIR__.'/../_libs/dbConnect.php');
+require_once (__DIR__.'/../_libs/contant.php');
 
-$twitter = new TwitterSetting();
+
+$paid_levels = "SELECT * FROM  `subscribed_levels` WHERE  `sender_ibm` =  '".$_SESSION['user']['ibm']."' AND  `payment_status` =  '1'";
+$all_level   = $newsifyObj->db_select($paid_levels);
+$paid_levels =  $all_level->num_rows;
+ $twitter = new TwitterSetting();
 $db = new dbConnect();
+$paid_facility_list = $db->paidmembers();
 // add tweeter account
  if(isset($_SESSION["twitter_oauth_token"]) && isset($_SESSION["twitter_oauth_token_secret"])){ 
     $twitter->saveNewTwitterAccount();
@@ -131,7 +137,7 @@ ul.typetabs li
     font-size:15px;
     padding-left:10px;
     padding-right:10px;
-    border:1px solid #ab8ce478;
+    border:1px solid #3c8bf7;
 }
 .tabs
 {
@@ -142,13 +148,13 @@ ul.typetabs li
 ul.typetabs {
     width:auto;
     border-radius: 4px;
-    border: 1px solid #ab8ce478;
+    border: 1px solid #3c8bf7;
 }
 }
 
 ul.typetabs li.active
 {
- background-color: #ab8ce4;
+ background-color: #3c8bf7;
     color: #fff;   
 }
 </style>
@@ -217,13 +223,21 @@ if( $showalert == true && $error == false) {
           </div>
         </div>
 <div class="box-body">  
-       <form method="POST" enctype="multipart/form-data"  id"updateForm"  action="action/UpdatetweetProcess.php?id=<?= $twitterSingleDetail['id'] ?>&Tweetid=<?= $tweetdata['id'] ?>">
+       <form method="POST" enctype="multipart/form-data"  id="updateForm"  action="action/UpdatetweetProcess.php?id=<?= $twitterSingleDetail['id'] ?>&Tweetid=<?= $tweetdata['id'] ?>">
         <input type="hidden" name="type" id="tweet-type" value="<?= $tweetdata['type'] ?>"/>
         <input type="hidden" name="currentdate" id="currentnameUpdate" value=""/>
          <input  type="hidden" id="unpublishedData"  name="unpublishedData" value="0"  class="unpublishedData" >
-        <div class="form-group" >
+        <div style="position: relative;  " class="form-group" >
     
     <textarea class="form-control" name="caption" style="margin-top: 5%;" placeholder="Add a Caption" id="exampleFormControlTextarea1" rows="4" required><?php echo json_decode($tweetdata['data'])->caption ?></textarea>
+		 <?php if(!empty($paid_facility_list)){
+				foreach($paid_facility_list as $paid_item){
+			 if((($paid_item['slug'] == MembershipConstant::WATERMARK_FOR_TWITTER ) && ($paid_item['is_show'] == 1)) || $paid_item['slug'] != MembershipConstant::WATERMARK_FOR_TWITTER ) {
+			 ?>
+			<span style=" color: #8e959b;position: absolute;bottom: 5px;right: 10px;">Powered By TheViralMarketer</span>
+		<?php }}}else{ ?>
+			<span style=" color: #8e959b;position: absolute;bottom: 5px;right: 10px;">Powered By TheViralMarketer</span>
+			<?php } ?>
   </div>
             <div class="form-group">
   <!--<label for="Catagory" class="col-sm-2 col-form-label">Catagory</label>-->
@@ -320,9 +334,17 @@ if($tweetdata['result'] == 'Unpublished')
         <input type="hidden" name="type" id="tweet-type" value="text"/>
          <input type="hidden" name="currentdate" id="currentdate" value=""/>
         <input type="hidden" class="saveinMediaLibrary" name="saveinMediaLibrary" value="0">
-        <div class="form-group" >
+        <div style="position: relative;  " class="form-group" >
     
     <textarea class="form-control" name="caption" style="margin-top: 5%;" placeholder="Add a Caption" id="exampleFormControlTextarea1" rows="4" required></textarea>
+			<?php if(!empty($paid_facility_list)){
+				foreach($paid_facility_list as $paid_item){
+			 if((($paid_item['slug'] == MembershipConstant::WATERMARK_FOR_TWITTER ) && ($paid_item['is_show'] == 1)) || $paid_item['slug'] != MembershipConstant::WATERMARK_FOR_TWITTER ) {
+			 ?>
+			<span style=" color: #8e959b;position: absolute;bottom: 5px;right: 10px;">Powered By TheViralMarketer</span>
+		<?php }}}else{ ?>
+			<span style=" color: #8e959b;position: absolute;bottom: 5px;right: 10px;">Powered By TheViralMarketer</span>
+			<?php } ?>
   </div>
             <div class="form-group">
   <!--<label for="Catagory" class="col-sm-2 col-form-label">Catagory</label>-->

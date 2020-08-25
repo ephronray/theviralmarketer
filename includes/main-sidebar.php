@@ -7,7 +7,7 @@
 		 <div class="ulogo">
 			 <a href="#">
 			  <!-- logo for regular state and mobile devices -->
-			  <span><img src="<?=$newsifyObj->base_url; ?>/assets/white-logo.png" style="width: 85%;"/></span>
+			  <span><img src="<?=$newsifyObj->base_url; ?>/assets/logo_white.png" style="width: 85%;"/></span>
 			</a>
 		</div>
         <div class="image">
