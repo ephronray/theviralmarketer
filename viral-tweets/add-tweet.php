@@ -230,14 +230,20 @@ if( $showalert == true && $error == false) {
         <div style="position: relative;  " class="form-group" >
     
     <textarea class="form-control" name="caption" style="margin-top: 5%;" placeholder="Add a Caption" id="exampleFormControlTextarea1" rows="4" required><?php echo json_decode($tweetdata['data'])->caption ?></textarea>
-		 <?php if(!empty($paid_facility_list)){
+     <?php  if($_SESSION['user']['ibm'] != 'IBM1') {
+     if(!empty($paid_facility_list) ){
 				foreach($paid_facility_list as $paid_item){
 			 if((($paid_item['slug'] == MembershipConstant::WATERMARK_FOR_TWITTER ) && ($paid_item['is_show'] == 1)) || $paid_item['slug'] != MembershipConstant::WATERMARK_FOR_TWITTER ) {
 			 ?>
 			<span style=" color: #8e959b;position: absolute;bottom: 5px;right: 10px;">Powered By TheViralMarketer</span>
-		<?php }}}else{ ?>
+    <?php } else { ?>
+
+    <?php }
+  }}else{ ?>
 			<span style=" color: #8e959b;position: absolute;bottom: 5px;right: 10px;">Powered By TheViralMarketer</span>
-			<?php } ?>
+			<?php } }else { ?>
+
+      <?php } ?>
   </div>
             <div class="form-group">
   <!--<label for="Catagory" class="col-sm-2 col-form-label">Catagory</label>-->
