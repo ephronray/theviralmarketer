@@ -34,9 +34,9 @@ if(isset($_POST['submit']))
 				foreach($paid_facility_list as $paid_item){
 			 if((($paid_item['slug'] == MembershipConstant::WATERMARK_FOR_TWITTER ) && ($paid_item['is_show'] == 1)) || $paid_item['slug'] != MembershipConstant::WATERMARK_FOR_TWITTER ) {
 			 
-			$caption = $caption." <a href='".$db->base_url."/referral/?ref=".$_SESSION['user']['ibm']."'>Powered By TheViralMarketer</a>";
+			$caption = $caption."\n Powered By TheViralMarketer";
 		 }}}else{ 
-            $caption = $caption." <a href='".$db->base_url."/referral/?ref=".$_SESSION['user']['ibm']."'>Powered By TheViralMarketer</a>";
+            $caption = $caption."\n Powered By TheViralMarketer";
 
              } 
             
