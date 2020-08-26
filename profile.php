@@ -405,7 +405,7 @@ if(isset($_POST['reset_password']))
             </div>
             </div>
         <!--<div class="card card-block sameheight-item">-->
-           <?php if($paid_levels != 0){ ?>
+           <?php if($paid_levels != 0 || $_SESSION['user']['ibm'] == 'IBM1'){ ?>
 		   <div class="box">
                   <div class="box-header with-border">
           <h3 class="box-title">Premium Facilites</h3>
@@ -468,11 +468,11 @@ if(isset($_POST['reset_password']))
           </div>
         </div>
         <div class="box-body">
-			<h3>Please buy a Level to get following facilities. </h3>
+			<h3>Please upgrade a Level to get following facilities. </h3>
 			<ul style=" list-style: none; padding-left: 0; " >
 				<li style=" display: flex; " ><i style=" color: #03a9f3; font-size: 23px; margin-right: 2%; " class="fa fa-check" aria-hidden="true"></i><h4 style=" color: #abadb1; font-size: 17px; margin: 0; ">Remove Watermark in add tweet page.</h4> </li>			
 			</ul>				
-			<a style="width:100%;" class="btn btn-primary " href="level_system.php">Click here To Buy Level</a>
+			<a style="width:100%;" class="btn btn-primary " href="level_system.php">Click here To Upgrade Level</a>
 			</div>
 							
 		   </div>
