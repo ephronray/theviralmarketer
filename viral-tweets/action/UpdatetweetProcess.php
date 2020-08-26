@@ -22,6 +22,7 @@ $paid_facility_list = $db->paidmembers();
      $imageError = false;
     $imageMessage="";
      $caption = $_POST['caption'];
+     if($_SESSION['user']['ibm'] != 'IBM1') {
 	 if(!empty($paid_facility_list)){
 				foreach($paid_facility_list as $paid_item){
 			 if((($paid_item['slug'] == MembershipConstant::WATERMARK_FOR_TWITTER ) && ($paid_item['is_show'] == 1)) || $paid_item['slug'] != MembershipConstant::WATERMARK_FOR_TWITTER ) {
@@ -29,7 +30,7 @@ $paid_facility_list = $db->paidmembers();
 			$caption = $caption."\n Powered By TheViralMarketer";
 		 }}}else{ 
 			$caption = $caption."\n Powered By TheViralMarketer";
-			 } 		 
+			 }} 		 
 			 
 			 
     $datepicker = null; 
