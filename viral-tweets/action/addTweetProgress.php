@@ -36,9 +36,9 @@ if(isset($_POST['submit']))
                 
                 
 
-			$caption = $caption.'\n &lt;a href=&quot;'.$newsifyObj->base_url.'/referral/?ref='.$_SESSION['user']['ibm'].'&quot;&gt;Powered By TheViralMarketer&lt;/a&gt;';
+			$caption = $caption.'\n &lt;a href=&quot;'.$db->base_url.'/referral/?ref='.$_SESSION['user']['ibm'].'&quot;&gt;Powered By TheViralMarketer&lt;/a&gt;';
 		 }}}else{ 
-            $caption = $caption.'\n &lt;a href=&quot;'.$newsifyObj->base_url.'/referral/?ref='.$_SESSION['user']['ibm'].'&quot;&gt;Powered By TheViralMarketer&lt;/a&gt;';
+            $caption = $caption.'\n &lt;a href=&quot;'.$db->base_url.'/referral/?ref='.$_SESSION['user']['ibm'].'&quot;&gt;Powered By TheViralMarketer&lt;/a&gt;';
 	
              } 
             
