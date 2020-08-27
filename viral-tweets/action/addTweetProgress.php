@@ -189,10 +189,12 @@ if($imageError == false)
     //     foreach($extendedEntities->media as $item) {
     //     $medialist[] = $item->media_url;
     // }
+    print_r($result);
+    die();
     
         if($result['status'] =='success') {
 
-         $id = (int)$_GET['id'];
+        $id = (int)$_GET['id'];
         
         $data = json_encode(array("media"=>$media, "caption"=> $caption, "url"=>"null")); 
         $tweetid = $result['response']->id;
