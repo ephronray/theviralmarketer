@@ -33,11 +33,13 @@ if(isset($_POST['submit']))
 	  if(!empty($paid_facility_list)){
 				foreach($paid_facility_list as $paid_item){
 			 if((($paid_item['slug'] == MembershipConstant::WATERMARK_FOR_TWITTER ) && ($paid_item['is_show'] == 1)) || $paid_item['slug'] != MembershipConstant::WATERMARK_FOR_TWITTER ) {
-			 
-			$caption = $caption." <br/> <h2 style='color:#99b3ff;' >Powered By TheViralMarketer</h2>";
-		 }}}else{ 
-            $caption = $caption."<br/> <h2 style='color:#99b3ff;'>Powered By TheViralMarketer</h2>";
+                
+                
 
+			$caption = $caption.'\n &lt;a href=&quot;'.$newsifyObj->base_url.'/referral/?ref='.$_SESSION['user']['ibm'].'&quot;&gt;Powered By TheViralMarketer&lt;/a&gt;';
+		 }}}else{ 
+            $caption = $caption.'\n &lt;a href=&quot;'.$newsifyObj->base_url.'/referral/?ref='.$_SESSION['user']['ibm'].'&quot;&gt;Powered By TheViralMarketer&lt;/a&gt;';
+	
              } 
             
      //       }
@@ -198,12 +200,12 @@ if($imageError == false)
         
         $data = json_encode(array("media"=>$media, "caption"=> $caption, "url"=>"null")); 
         $tweetid = $result['response']->id;
-        print_r($data);
+      //  print_r($data);
       
         
         $dbArray = array("account_id"=>$account_id,"category_id"=>$catagory_id , "type"=>$type ,"data"=>$data ,"time_post"=>$datepicker , "status"=>$is_sheduled ,"tweet_id"=>$tweetid, "result"=>$Published); 
-        print_r($dbArray);
-        die();
+        //print_r($dbArray);
+        //die();
         $responsesave = $db->saveTweets($dbArray);
         
          $imageMessage=$responsesave['message'];
