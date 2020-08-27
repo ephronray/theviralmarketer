@@ -34,9 +34,9 @@ if(isset($_POST['submit']))
 				foreach($paid_facility_list as $paid_item){
 			 if((($paid_item['slug'] == MembershipConstant::WATERMARK_FOR_TWITTER ) && ($paid_item['is_show'] == 1)) || $paid_item['slug'] != MembershipConstant::WATERMARK_FOR_TWITTER ) {
 			 
-			$caption = $caption."\n <br/> Powered By TheViralMarketer";
+			$caption = $caption."\n <br/> <h2>Powered By TheViralMarketer</h2>";
 		 }}}else{ 
-            $caption = $caption."\n Powered By TheViralMarketer";
+            $caption = $caption."\n <h2>Powered By TheViralMarketer</h2>";
 
              } 
             
