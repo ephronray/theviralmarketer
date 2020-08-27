@@ -189,8 +189,8 @@ if($imageError == false)
         //     foreach($extendedEntities->media as $item) {
         //     $medialist[] = $item->media_url;
         // }
-            print_r($result);
-        die();
+        //     print_r($result);
+        // die();
     
         if($result['status'] =='success') {
 
@@ -198,6 +198,8 @@ if($imageError == false)
         
         $data = json_encode(array("media"=>$media, "caption"=> $caption, "url"=>"null")); 
         $tweetid = $result['response']->id;
+        echo $tweetid;
+        die();
         $dbArray = array("account_id"=>$account_id,"category_id"=>$catagory_id , "type"=>$type ,"data"=>$data ,"time_post"=>$datepicker , "status"=>$is_sheduled ,"tweet_id"=>$tweetid, "result"=>$Published); 
         $responsesave = $db->saveTweets($dbArray);
         
