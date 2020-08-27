@@ -186,11 +186,11 @@ if($imageError == false)
         $result = $twitter->postTweet($dbArray);
         $response = $result['response'];
         $extendedEntities = $response->extended_entities;
-    //     foreach($extendedEntities->media as $item) {
-    //     $medialist[] = $item->media_url;
-    // }
-    print_r($result);
-    die();
+        //     foreach($extendedEntities->media as $item) {
+        //     $medialist[] = $item->media_url;
+        // }
+            print_r($result);
+        die();
     
         if($result['status'] =='success') {
 
@@ -214,8 +214,9 @@ if($imageError == false)
         die();
         }
 
-        }
     }
+
+}
 }
 if( $imageError == true)
 {
