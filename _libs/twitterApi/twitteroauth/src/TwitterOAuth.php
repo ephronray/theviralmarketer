@@ -614,4 +614,19 @@ class TwitterOAuth extends Config
         /* Use CACert file when not in a PHAR file. */
         return !$this->pharRunning();
     }
+
+    public function publicMakeRequests($url, $method, array $parameters, $json)
+    {
+        do {
+            $this->sleepIfNeeded();
+            $result = $this->oAuthRequest($url, $method, $parameters, $json);
+            $response = JsonDecoder::decode($result, $this->decodeJsonAsArray);
+            $this->response->setBody($response);
+            $this->attempts++;
+            // Retry up to our $maxRetries number if we get errors greater than 500 (over capacity etc)
+        } while ($this->requestsAvailable());
+
+        return $response;
+    }
+
 }
