@@ -224,6 +224,11 @@
 						  <span class="avatar avatar-sm rounded-circle bg-warning"><i class="fa fa-twitter"></i></span>
 						  <span class="title">Add Tweets</span>
 						</a>
+
+						<a class="media media-single p-10" href="<?=$newsifyObj->base_url; ?>/viral-tweets/tweet-analysis.php">
+                                <span class="avatar avatar-sm rounded-circle bg-info"><i class="fa fa-bar-chart"></i></span>
+                                <span class="title">Tweet Anaylsis</span>
+						</a>
 					  </div>
 				  </div>
 				</div>
