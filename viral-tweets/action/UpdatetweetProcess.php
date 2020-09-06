@@ -4,33 +4,43 @@ require_once (__DIR__.'/../../_libs/twitterSetting.php');
 require_once(__DIR__.'/../../_libs/contant.php');
 $twitter = new TwitterSetting() ;
 $db = new dbConnect();
-$paid_facility_list = $db->paidmembers();
-         if(isset($_POST['submit']))
- {
-     
-     $currentdate = $_POST['currentdate'];
-    
-     $correctcurrentdateindex = strpos($currentdate , 'GMT');
-     $currentdate = substr($currentdate,0,$correctcurrentdateindex);
-     $currentdate = date_create($currentdate);
-     $currentdate = date_format($currentdate,'Y-m-d h:i');
-     $unpublishedData =$_POST['unpublishedData'];
+if(isset($_POST['submit'])) {
+    $currentdate = $_POST['currentdate'];
+    $correctcurrentdateindex = strpos($currentdate , 'GMT');
+    $currentdate = substr($currentdate,0,$correctcurrentdateindex);
+    $currentdate = date_create($currentdate);
+    $currentdate = date_format($currentdate,'Y-m-d h:i');
+    $unpublishedData =$_POST['unpublishedData'];
     $media =array();
     $tweetid = $_GET['Tweetid'];
     $accountid = $_GET['id'];
     $tweetdata = $db->showSingleTweet($accountid ,$tweetid);
-     $imageError = false;
+    $imageError = false;
     $imageMessage="";
-     $caption = $_POST['caption'];
-     if($_SESSION['user']['ibm'] != 'IBM1') {
-	 if(!empty($paid_facility_list)){
-				foreach($paid_facility_list as $paid_item){
-			 if((($paid_item['slug'] == MembershipConstant::WATERMARK_FOR_TWITTER ) && ($paid_item['is_show'] == 1)) || $paid_item['slug'] != MembershipConstant::WATERMARK_FOR_TWITTER ) {
-			 
-			$caption = $caption."\n Powered By TheViralMarketer";
-		 }}}else{ 
-			$caption = $caption."\n Powered By TheViralMarketer";
-			 }} 		 
+    $caption = $_POST['caption'];
+   
+    /** 
+     * Add Powered by String in twitter status
+     * The String will only append If The member is free
+     * And If the member is paid then shuld grant to append
+     */
+    $userLevel = $db->CheckMemberPaid();
+    $referral = false;
+    if($userLevel == 0) {
+        $referral = true;
+    } else {
+        $branding = $db->getBrandingValue();
+        if($branding == 1) {
+            $referral = true;    
+        }
+    }
+
+    if( $referral ) {
+        $caption .= PHP_EOL . PHP_EOL . PHP_EOL;
+        $caption .= 'Powered By TheViralTweet → '. $db->base_url.'referral/?ref='.$_SESSION['user']['ibm'];
+    }
+
+    /** Add referrer code to tweet end here */
 			 
 			 
     $datepicker = null; 
@@ -61,7 +71,7 @@ $type =  $_POST["type"];
 // Video
  
     if($type == 'video'){
- if(empty($_FILES['video']['name']))
+    if(empty($_FILES['video']['name']))
         {
             $imageError = true;
             $imageMessage = 'Please choose Video for new Tweet ';

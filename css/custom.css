@@ -101,3 +101,10 @@
 a.btn:focus{
     color: #ffffff;
 }
+
+input.brand-checkbox {
+    position: relative !important;
+    left: 15px !important;
+    top: 2px !important;
+    opacity: 1 !important;
+}

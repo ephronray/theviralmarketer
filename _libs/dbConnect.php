@@ -24,7 +24,7 @@ class dbConnect
  private $db_name = Environemnt::DB_NAME;
  private $bitcoinSetting;
  public $dbCon;
- public $base_url   = 'https://www.theviralmarketer.biz/';
+ public $base_url   = Environemnt::BASE_URL;
  public $sqlError   = false;
  public $ref_keys   = array();
  protected $glob;
@@ -651,7 +651,8 @@ public function updateProfile($user_id, $data){
   `first_name` = '".$data['first_name']."',
   `last_name` = '".$data['last_name']."',
   `btc_add` = '".$data['btc_add']."',
-  `user_password` = '".$data['password']."'
+  `user_password` = '".$data['password']."',
+  `branding` = '".$data['branding']."'
   WHERE 
   `members`.`u_id` = '$user_id'; ";
   if (mysqli_query($this->dbCon, $query)){
@@ -2198,53 +2199,53 @@ return $data['level'] ?? 0;
    
      
  }
-public function insertPaid($data){
+// public function insertPaid($data){
    
-    $dbQuery = "INSERT INTO `paid_memberships` 
-      (`name`, `slug`, `is_show`) 
-      VALUES ('".$data['name']."', '".$data['slug']."', '".$data['is_show']."')";        
+//     $dbQuery = "INSERT INTO `paid_memberships` 
+//       (`name`, `slug`, `is_show`) 
+//       VALUES ('".$data['name']."', '".$data['slug']."', '".$data['is_show']."')";        
    
-      try {
-        if (mysqli_query($this->dbCon, $dbQuery)) {
-         $last_id = mysqli_insert_id($this->dbCon);
-         $addmember = "INSERT INTO `paid_member_relationship` (`member_id`, `paid_id`)
-         VALUES ('". $_SESSION['user']["u_id"] ."','".$last_id."')";
-         $addresult = mysqli_query($this->dbCon, $addmember);
-        if ($addresult) {
-            return  array(
-                    'success' => 1,
-                    'message' => 'Insert Successfully',                         
-                    'error' => 0
-                  );
-                        }
-          else{
-            return  array(
-                    'success' => 0,
-                    'message' => 'Insert Faliure!',                          
-                    'error' => 1
-                  );
+//       try {
+//         if (mysqli_query($this->dbCon, $dbQuery)) {
+//          $last_id = mysqli_insert_id($this->dbCon);
+//          $addmember = "INSERT INTO `paid_member_relationship` (`member_id`, `paid_id`)
+//          VALUES ('". $_SESSION['user']["u_id"] ."','".$last_id."')";
+//          $addresult = mysqli_query($this->dbCon, $addmember);
+//         if ($addresult) {
+//             return  array(
+//                     'success' => 1,
+//                     'message' => 'Insert Successfully',                         
+//                     'error' => 0
+//                   );
+//                         }
+//           else{
+//             return  array(
+//                     'success' => 0,
+//                     'message' => 'Insert Faliure!',                          
+//                     'error' => 1
+//                   );
               
                       
-              }
+//               }
             
-      }
-        else{
-            return  array(
-                    'success' => 0,
-                    'message' => 'Insert Faliure !',                          
-                    'error' => 1
-                  );
+//       }
+//         else{
+//             return  array(
+//                     'success' => 0,
+//                     'message' => 'Insert Faliure !',                          
+//                     'error' => 1
+//                   );
               
                       
-              }
+//               }
     
     
-}
-catch (Exception $e) {
-    echo $e->getMessage();
-  }
+// }
+// catch (Exception $e) {
+//     echo $e->getMessage();
+//   }
 
-}
+// }
  public function paidmembers(){
      
    $uid = $_SESSION['user']["u_id"];
@@ -2260,23 +2261,46 @@ while ($paidlist = mysqli_fetch_assoc($result)) {
   return $response;
 	 
 }
-public function updatePaid($data){
-	$user_id = $_SESSION['user']["u_id"];
-	 $query = "UPDATE `paid_member_relationship` ,`paid_memberships`  SET 
-  `is_show` = '".$data['is_show']."'
-  WHERE 
-  `member_id` = '".$user_id."' AND
-  `slug`= '".$data['slug']."' ";
-  if (mysqli_query($this->dbCon, $query)){
-    return [
-      'success' => true,
-      'message' => 'Premium Facilty has been updated!!'
-    ];
-  }else {
-    return [
-      'success' => false,
-      'message' => 'Premium Facilty  update operation failed!!'
-    ];
+// public function updatePaid($data){
+// 	$user_id = $_SESSION['user']["u_id"];
+// 	 $query = "UPDATE `paid_member_relationship` ,`paid_memberships`  SET 
+//   `is_show` = '".$data['is_show']."'
+//   WHERE 
+//   `member_id` = '".$user_id."' AND
+//   `slug`= '".$data['slug']."' ";
+//   if (mysqli_query($this->dbCon, $query)){
+//     return [
+//       'success' => true,
+//       'message' => 'Premium Facilty has been updated!!'
+//     ];
+//   }else {
+//     return [
+//       'success' => false,
+//       'message' => 'Premium Facilty  update operation failed!!'
+//     ];
+//   }
+// }
+
+  /**
+   * This function Is used to check whether the logged in 
+   * used is paid member of not
+   */
+  public function CheckMemberPaid() {
+    $query = "SELECT `id` FROM  `subscribed_levels` WHERE  `sender_ibm` =  '".$_SESSION['user']['ibm']."' AND  `payment_status` =  '1' ORDER BY `id` DESC  LIMIT 1";
+    $result = mysqli_query($this->dbCon, $query);
+    $data = mysqli_fetch_array($result);
+    return isset($data['id']) ? 1 : 0;
   }
-}
+
+  /**
+   * This function is used to get the If Branding is enable or not
+   */
+  public function getBrandingValue() {
+    $query = "SELECT `branding` FROM `members` WHERE `u_id` = '".$_SESSION['user']['u_id']."'";
+    $result = mysqli_query($this->dbCon, $query);
+
+    $data = mysqli_fetch_array($result);
+    return $data['branding'] ?? 0;
+  }
+
 }
