@@ -101,18 +101,18 @@ if(isset($_POST['reset_password']))
 
 ?>
 <div style="min-height: 709.5px; overflow: hidden;" class="content-wrapper">
-<section class="content-header">
-     <h1 >Edit Profile</h1>
+    <section class="content-header">
+        <h1 >Edit Profile</h1>
         <p class="title-description">Edit your personal info!!</p>
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/index.php"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="breadcrumb-item active">Profile</li>
-      </ol>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/index.php"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="breadcrumb-item active">Profile</li>
+        </ol>
     </section>
-<article class="content grid-page">
+    <article class="content grid-page">
   
     <?php
-               if(isset($_GET['recover_password'])) {
+            if(isset($_GET['recover_password'])) {
                 echo $objDB->alertMessage('success', 'Successfully Changed Transaction Password');    
             }  ?>
              <?php if($errMsg != '') { 
@@ -127,101 +127,95 @@ if(isset($_POST['reset_password']))
             ?>
     <section class="section">
         <div class="row sameheight-container">
-            <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="col-xs-12 col-sm-12 col-md-12">
                
-           <div class="box">
-             <div class="box-header with-border">
-          <h3 class="box-title">Edit Profile</h3>
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Edit Profile</h3>
           
-          <div class="box-tools pull-right">
-            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
-          </div>
-        </div>
-        
-        <div class="box-body">
-              <form role="form" method="POST" action="">
-                        <div class="form-group"> 
-                            <label for="first_name">First Name</label>
-                            <input class="form-control" type="text" placeholder="First name" name="first_name" id="first_name" 
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <form role="form" method="POST" action="">
+                            <div class="form-group"> 
+                                <label for="first_name">First Name</label>
+                                <input class="form-control" type="text" placeholder="First name" name="first_name" id="first_name" 
                                 value="<?php echo $result['first_name'] ?>">
-                        </div>
-                        <div class="form-group"> 
-                            <label for="last_name">Last Name</label>
-                            <input class="form-control" type="text" placeholder="Last name" name="last_name" id="last_name"
-                            value="<?php echo $result['last_name'] ?>">
-                        </div>
-                        <div class="form-group"> 
-                            <label for="user_email">E-mail</label>
-                            <input class="form-control" type="text" readonly
-                            value="<?php echo $result['user_email'] ?>">
-                        </div>
-                        <div class="form-group"> 
-                            <label for="btc_add">Bitcoin Wallet Address &nbsp; <i class="fa fa-info-circle"
-                            title="If you delete your Bitcoin Wallet Address and do not replace it with a different one,then the current one will remain as default.Your Bitcoin Wallet Address is a long array of of numbers and letters, make sure that it displays correctly in order to send and receive payments.The Viral Marketer admin does take any responsibility for any incorrect numbers."></i></label>
-                            <input class="form-control" type="text" placeholder="Bitcoin Wallet Address" name="btc_add" id="btc_add" readonly
-                            value="<?php echo $result['wallet_number'] ?>">
-                        </div>
-                        <div class="form-group"> 
-                            <label for="btc_add">Bitcoin Wallet Passphrase &nbsp; <i class="fa fa-info-circle"
-                            title="If you want to sift your wallet to another website's wallet than use this Passphrase."></i></label>
-                            <textarea rows="3" cols="10" class="form-control"  placeholder="Bitcoin Wallet Passphrase" name="pass" id="pass" readonly><?php echo $passphrase?> </textarea>
-                        </div>
-                        <div class="form-group"> 
-                            <label for="password">Password</label>
-                            <input class="form-control" id="password" name="password" placeholder="Password" type="password"> 
-                        </div>
-                        <div class="form-group"> 
-                            <label for="confirm_password">Confirm password</label>
-                            <input class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm Password" type="password"> 
-                        </div>
-                        <?php if($objDB->CheckMemberPaid() != 0) { ?>
-                            <div class="form-group">
-                                <div class="checkbox">
-                                    <label>
-                                    <?= isset($result['branding']) && $result['branding'] == '1' ? "Remove": "Add";  ?> Branding
-                                        <input type="checkbox" name="branding" class="brand-checkbox" <?= isset($result['branding']) && $result['branding'] == '1' ? "checked": ""  ?> value="<?= isset($result['branding']) && $result['branding'] == 1 ? 0: 1  ?>">
-                                    </label>
-                                </div>
                             </div>
-                        <?php } ?>
-                        <div class="form-group"> 
-                            <button type="submit" name="update-profile" class="btn btn-primary pull-right">Save changes</button> 
-                        </div>
-                    </form>
-        </div>
-           </div>
-           
-                <!--<div class="card card-block sameheight-item" style="height: 309px;">-->
-                  
-                <!--</div>-->
+                            <div class="form-group"> 
+                                <label for="last_name">Last Name</label>
+                                <input class="form-control" type="text" placeholder="Last name" name="last_name" id="last_name"
+                            value="<?php echo $result['last_name'] ?>">
+                            </div>
+                            <div class="form-group"> 
+                                <label for="user_email">E-mail</label>
+                                <input class="form-control" type="text" readonly
+                                value="<?php echo $result['user_email'] ?>">
+                            </div>
+                            <div class="form-group"> 
+                                <label for="btc_add">Bitcoin Wallet Address &nbsp; <i class="fa fa-info-circle"
+                                title="If you delete your Bitcoin Wallet Address and do not replace it with a different one,then the current one will remain as default.Your Bitcoin Wallet Address is a long array of of numbers and letters, make sure that it displays correctly in order to send and receive payments.The Viral Marketer admin does take any responsibility for any incorrect numbers."></i></label>
+                                <input class="form-control" type="text" placeholder="Bitcoin Wallet Address" name="btc_add" id="btc_add" readonly
+                                value="<?php echo $result['wallet_number'] ?>">
+                            </div>
+                            <div class="form-group"> 
+                                <label for="btc_add">Bitcoin Wallet Passphrase &nbsp; <i class="fa fa-info-circle"
+                                title="If you want to sift your wallet to another website's wallet than use this Passphrase."></i></label>
+                                <textarea rows="3" cols="10" class="form-control"  placeholder="Bitcoin Wallet Passphrase" name="pass" id="pass" readonly><?php echo $passphrase?> </textarea>
+                            </div>
+                            <div class="form-group"> 
+                                <label for="password">Password</label>
+                                <input class="form-control" id="password" name="password" placeholder="Password" type="password"> 
+                            </div>
+                            <div class="form-group"> 
+                                <label for="confirm_password">Confirm password</label>
+                                <input class="form-control" id="confirm_password" name="confirm_password" placeholder="Confirm Password" type="password"> 
+                            </div>
+                            <?php if($objDB->CheckMemberPaid() != 0) { ?>
+                                <div class="form-group">
+                                    <div class="checkbox">
+                                        <label>
+                                        <?= isset($result['branding']) && $result['branding'] == '1' ? "Remove": "Add";  ?> Branding
+                                            <input type="checkbox" name="branding" class="brand-checkbox" <?= isset($result['branding']) && $result['branding'] == '1' ? "checked": ""  ?> value="<?= isset($result['branding']) && $result['branding'] == 1 ? 0: 1  ?>">
+                                        </label>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                            <div class="form-group"> 
+                                <button type="submit" name="update-profile" class="btn btn-primary pull-right">Save changes</button> 
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
             <!---->
             
-       <div class="col-xs-12 col-md-6 sameheight-container">
+            <!-- <div class="col-xs-12 col-md-6 sameheight-container" style="display:none">
            
-                      <div class="box">
-             <div class="box-header with-border">
-          <h3 class="box-title"></h3>
-          
-          <div class="box-tools pull-right">
-            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
-          </div>
-        </div>
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title"></h3>
+            
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
+                        </div>
+                    </div>
         
-        <div class="box-body">
-            <div class="row">
+                    <div class="box-body">
+                        <div class="row">
                             <div class="container">
-                            
-                            <form method="post">
-                                <div class="form-group"> 
-                                <button style="display:none" type="submit" id="reset_password" name="reset_password" class="btn btn-block btn-primary">Register/Reset Transaction Password</button> 
+                                <form method="post">
+                                    <div class="form-group"> 
+                                        <button style="display:none" type="submit" id="reset_password" name="reset_password" class="btn btn-block btn-primary">Register/Reset Transaction Password</button> 
                                     </div>
                                 </form>
                                 <button type="submit"  class="btn btn-block btn-primary" onclick="conformReset()">Register/Reset Transaction Password</button>
-                                </div>
-                                <h2 class="separator"><span>OR</span></h2>
+                            </div>
+                            <h2 class="separator"><span>OR</span></h2>
                         </div>
                         
                         
@@ -254,8 +248,8 @@ if(isset($_POST['reset_password']))
             
             
             
-            </div>
-            </div>
+                </div>
+            </div> -->
         <!--<div class="card card-block sameheight-item">-->
              
             
