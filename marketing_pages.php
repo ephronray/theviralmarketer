@@ -175,12 +175,12 @@ $count_pages = mysqli_num_rows($query);
 						 <div class="box-body">
 						     <div style="    height: 258px !important;width: 100%;margin-bottom: 4%;">
 						     <?php if($data['page_images']){ ?>
-							<img  src="landing_pages/images/<?=$data['page_images']?>" 
+							<img  src="assets/landing_pages/images/<?=$data['page_images']?>" 
 							
 							class="img-thumbnail img-responsive" alt="<?=$data['page_name'];?>"
 							style="    height: 258px !important;width: 100%;margin-bottom: 4%;">
 							<?php } else { ?>
-								<img  src="images/7ccb010d8fddc4bcd84587ef3c34d100.jpg" 
+								<img  src="assets/logo.png" 
 							
 							class="img-thumbnail img-responsive" alt="Landing Pages"
 							style="    height: 258px !important;width: 100%;margin-bottom: 4%;">
