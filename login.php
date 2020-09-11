@@ -13,7 +13,7 @@ unset($_SESSION["register_new_user"]);
 
 $newsifyObj = new  dbConnect();
 
-$newsifyObj->loggedINStatus();
+//$newsifyObj->loggedINStatus();
 $errMsg = '';
 if(isset($_POST['logIn'])) {
     $errors = [];
@@ -52,116 +52,85 @@ if(isset($_POST['logIn'])) {
 
 ?>
 
-<!doctype html>
-<html class="no-js" lang="en">
 
+
+
+<!DOCTYPE html>
+<html>
+
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <head>
-  <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="assets/favicon.ico">
-	<link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.0/css/ionicons.min.css">
-  <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
-    <title>The Viral Marketer| LOGIN </title>
-  
-	<!-- Bootstrap 4.0-->
-	<link rel="stylesheet" href="assets/vendor_components/bootstrap/dist/css/bootstrap.min.css">
-	
-	<!-- Bootstrap extend-->
-	<link rel="stylesheet" href="css/css/bootstrap-extend.css">
-	
-	<!-- Theme style -->
-	<link rel="stylesheet" href="css/css/master_style.css">
+        <meta charset="utf-8">
+        <title>The Viral Markter|LOGIN</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta content="" name="description" />
+        <meta content="themes-lab" name="author" />
+        <link rel="shortcut icon" href="assets/global/images/favicon.png">
+        <link href="assets/global/css/style.css" rel="stylesheet">
+        <link href="assets/global/css/ui.css" rel="stylesheet">
+        <link href="assets/global/plugins/bootstrap-loading/lada.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="login.css">
+    </head>
+    <body >
 
-	<!-- Crypto_Admin skins -->
-	<link rel="stylesheet" href="css/css/skins/_all-skins.css">	
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
 
-	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
+            <!-- Icon -->
+            <div class="fadeIn first" style="vertical-align: middle">
+            <b><?=(isset($_GET['ref']))?'CONNECT WITH US': '<img src="assets/logo_black.png" >'?>
+            </div>
 
-</head>
-<body class="hold-transition login-page">
-<div class="login-box">
-  <div class="login-logo">
-    <a href="#"><b><?=(isset($_GET['ref']))?'CONNECT WITH US': '<img src="assets/logo_black.png" >'?>  </b></a>
-  </div>
-        <div class="auth">
-            <div class="auth-container">
-                <div class="card">
-                    <header class="auth-header">
-                        <?php if($recover_password != '')
-                        { ?>
-						<div class="alert alert-success" style="text-align:center"> Your Password has been changed. </div>
-                        <?php }  ?>
-                      
-                            
-                    </header>
-                    <div class="auth-content">
-                        <?php if($errMsg != '') { ?>
-						<div class="alert alert-danger" style="text-align: center;">
-						<?php echo $errMsg; ?>
- </div>
+            
 
-                        <?php  }?>
-                     <?php if(!isset($_GET['ref'])): ?>
-                <div class="login-box-body">
-                <p class="login-box-msg">LOGIN TO CONTINUE</p>
-
-                 <form method="POST" class="form-element" novalidate="" action="">
-                <div class="form-group has-feedback">
-                <input type="email" class="form-control" id="username" name="email" placeholder="Email">
-                <span class="ion ion-email form-control-feedback"></span>
-                </div>
-                <div class="form-group has-feedback">
-                <input type="password" class="form-control" id= "password" name="password" placeholder="Password">
-                <span class="ion ion-locked form-control-feedback"></span>
-                </div>
-              
-        <!-- /.col -->
-        <div class="col-12">
-         <div class="fog-pwd">
-          	<a href="forget-password.php"><i class="ion ion-locked"></i> Forgot pwd?</a><br>
-          </div>
-        </div>
-        <!-- /.col -->
-        <div class="col-12 text-center">
-          <button type="submit" name ="logIn" class="btn btn-info btn-block margin-top-10">SIGN IN</button>
-        </div>
-        <!-- /.col -->
-      </div>
-    </form>
-    <!-- /.social-auth-links -->
-  
-  </div>
-                            <?php else: ?>
-                            <span id="response_mesg"></span>
-                            <div class="form-group" style="margin-top: 64px;" id="loginRef"> 
-                                <button type="button" id="letmein" name="mylogIn" class="btn btn-block btn-primary">Let Me In</button> 
-                            </div>
-                        <?php endif; ?>
+            <!-- Login Form -->
+            <div class="fadeIn first" style="margin: 20px 20px">
+                <?php if($errMsg != '') { ?>
+                    <div class="alert alert-danger" style="text-align: center;">
+                        <?php echo $errMsg; ?>
                     </div>
-                </div>
+                <?php  }?>
+                <form role="form" method="POST" class="form-element" novalidate="" action="">
+                    <div class="form-group" style="padding: 10px">
+                        <label for="exampleInputEmail1">Username or Email</label>
+                        <input type="email" class="form-control" name="email" id="exampleInputEmail1" placeholder="Enter email">
+                    </div>
+                    <div class="form-group" style="padding: 10px">
+                        <label for="exampleInputPassword1">Password <a href="forget-password.php">(forgot password)</a></label>
+                        <input type="password" class="form-control" name="password" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-group" style="margin-left: 30%">
+                        <button type="submit" name="logIn" class="btn btn-lg btn-primary" style="">Sign in</button>
+                    </div>
 
+                </form>
             </div>
-        </div>
-        <!-- Reference block for JS -->
-        <div class="ref" id="ref">
-            <div class="color-primary"></div>
-            <div class="chart">
-                <div class="color-primary"></div>
-                <div class="color-secondary"></div>
-            </div>
-        </div>
 
-        <script src="js/vendor.js"></script>
-        <script src="js/app.js"></script>
-        <script src="js/facebook.js"></script>
+            <!-- Link Password -->
+            <div id="formFooter">
+                <a class="underlineHover" href="login_faq.php" style="padding-right: 2px" >FAQ</a>
+
+                <a class="underlineHover" href="login_terms-and-conditions.php" style="padding-right: 2px">Terms & Condition</a>
+
+                <a class="underlineHover"href="login_privacy-policy.php" style="padding-right: 2px">Privacy policy</a>
+
+                <a class="underlineHover" href="login_income-disclaimer.php" style="padding-right: 2px">Income Disclaimer</a>
+
+                <a class="underlineHover" href="login_refund-policy.php" style="padding-right: 2px">Refund Policy</a>
+            </div>
+
+        </div>
+    </div>
+    <script src="assets/global/plugins/jquery/jquery-3.1.0.min.js"></script>
+    <script src="assets/global/plugins/jquery/jquery-migrate-3.0.0.min.js"></script>
+    <script src="assets/global/plugins/gsap/main-gsap.min.js"></script>
+    <script src="assets/global/plugins/tether/js/tether.min.js"></script>
+    <script src="assets/global/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/global/plugins/backstretch/backstretch.min.js"></script>
+    <script src="assets/global/plugins/bootstrap-loading/lada.min.js"></script>
+    <!-- <script src="assets/global/js/pages/login-v2.js"></script> -->
     </body>
+
 
 </html>
