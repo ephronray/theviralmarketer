@@ -4,7 +4,7 @@ $newsifyObj = new  dbConnect();
 $sql = "SELECT 
 		  id, page_name, page_content 
 		  FROM  `tbl_pages` 
-		  WHERE  `page_name` =  'refund-policy' Limit 1";
+		  WHERE  `page_name` =  'faq' Limit 1";
 //$query   = $newsifyObj->db_select($sql);
 $result    = mysqli_query($newsifyObj->dbCon, $sql);
 $row = mysqli_fetch_array($result);
@@ -73,7 +73,7 @@ $row = mysqli_fetch_array($result);
       <div class="container">
          <div class="jumbotron jumbotron-fluid" style="margin-top: 10%">
             <div class="container">
-              <h1 class="display-4"><strong>Refund Policy</strong></h1>
+              <h1 class="display-4">FAQ</h1>
               <div class="col-md-12">
                     <?php if(!empty($row['page_content'])){
 						echo $row['page_content'];
