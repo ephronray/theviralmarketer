@@ -109,15 +109,15 @@ if(isset($_POST['logIn'])) {
 
             <!-- Link Password -->
             <div id="formFooter">
-                <a class="underlineHover" href="login_faq.php" style="padding-right: 2px" >FAQ</a>
+                <a class="underlineHover" target="_blank" href="login_faq.php" style="padding-right: 2px" >FAQ</a>
 
-                <a class="underlineHover" href="login_terms-and-conditions.php" style="padding-right: 2px">Terms & Condition</a>
+                <a class="underlineHover" target="_blank" href="login_terms-and-conditions.php" style="padding-right: 2px">Terms & Condition</a>
 
-                <a class="underlineHover"href="login_privacy-policy.php" style="padding-right: 2px">Privacy policy</a>
+                <a class="underlineHover" target="_blank" href="login_privacy-policy.php" style="padding-right: 2px">Privacy policy</a>
 
-                <a class="underlineHover" href="login_income-disclaimer.php" style="padding-right: 2px">Income Disclaimer</a>
+                <a class="underlineHover" target="_blank" href="login_income-disclaimer.php" style="padding-right: 2px">Income Disclaimer</a>
 
-                <a class="underlineHover" href="login_refund-policy.php" style="padding-right: 2px">Refund Policy</a>
+                <a class="underlineHover" target="_blank" href="login_refund-policy.php" style="padding-right: 2px">Refund Policy</a>
             </div>
 
         </div>
