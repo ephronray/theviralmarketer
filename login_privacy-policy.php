@@ -51,6 +51,7 @@ $row = mysqli_fetch_array($result);
     </div>
 
     
+
     <header class="site-navbar js-sticky-header site-navbar-target" role="banner" style="background-color: #e6ccff;">
 
       <div class="container">
@@ -74,6 +75,7 @@ $row = mysqli_fetch_array($result);
          <div class="jumbotron jumbotron-fluid" style="margin-top: 10%">
             <div class="container">
               <h1 class="display-4"><strong>PRIVACY AND POLICY</strong></h1>
+
               <div class="col-md-12">
                     <?php if(!empty($row['page_content'])){
 						echo $row['page_content'];
@@ -113,4 +115,6 @@ $row = mysqli_fetch_array($result);
 
 
   </body>
+
   </html>
+

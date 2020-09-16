@@ -1,5 +1,4 @@
-<?php 
-include_once '_libs/dbConnect.php';
+<?php  include_once '_libs/dbConnect.php';
 $newsifyObj = new  dbConnect();
 $sql = "SELECT 
 		  id, page_name, page_content 
@@ -51,6 +50,7 @@ $row = mysqli_fetch_array($result);
     </div>
 
     
+
     <header class="site-navbar js-sticky-header site-navbar-target" role="banner" style="background-color: #e6ccff;">
 
       <div class="container">
@@ -71,6 +71,7 @@ $row = mysqli_fetch_array($result);
 
     <div class="site-section hero" id="home-section">
       <div class="container">
+
          <div class="jumbotron jumbotron-fluid" style="margin-top: 10%">
             <div class="container">
               <h1 class="display-4"><strong>FAQ</strong></h1>
@@ -113,4 +114,7 @@ $row = mysqli_fetch_array($result);
 
 
   </body>
+
   </html>
+
+
