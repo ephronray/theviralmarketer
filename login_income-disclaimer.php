@@ -4,7 +4,7 @@ $newsifyObj = new  dbConnect();
 $sql = "SELECT 
 		  id, page_name, page_content 
 		  FROM  `tbl_pages` 
-		  WHERE  `page_name` =  'income-disclaimer Limit 1";
+		  WHERE  `page_name` =  'income-disclaimer' Limit 1";
 //$query   = $newsifyObj->db_select($sql);
 $result    = mysqli_query($newsifyObj->dbCon, $sql);
 $row = mysqli_fetch_array($result);
