@@ -181,6 +181,7 @@ function show_refferal($level, $ibms, $obj){
                                 print_r(array($_SESSION['user']['ibm']));
                                 echo $_SESSION['user']['ibm'] ;
                                  echo $ref['ibm'];
+                                 print_r($ref['ibm']);
                                 // show_refferal(0, array($_SESSION['user']['ibm']), $newsifyObj); ?>
                         </div>
 
