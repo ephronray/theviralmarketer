@@ -77,17 +77,13 @@ function show_refferal($level, $ibms, $obj){
 	{
 
 echo "referals are .";
-print_r($referrals);    
+//print_r($referrals);    
 		$refferal .= '</tbody>  </table></div>';
 		$refferal .= $accordion_end;
 		echo $refferal;
-		show_refferal($level, $referrals, $obj);
+//		show_refferal($level, $referrals, $obj);
 		
-	} else {
-        $refferal .= '</tbody>  </table></div>';
-        $refferal .= $accordion_end;
-        echo $refferal;
-    }
+	} 
 }
 
 ?>
