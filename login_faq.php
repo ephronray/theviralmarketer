@@ -1,5 +1,4 @@
-<?php 
-include_once '_libs/dbConnect.php';
+<?php  include_once '_libs/dbConnect.php';
 $newsifyObj = new  dbConnect();
 $sql = "SELECT 
 		  id, page_name, page_content 
@@ -51,7 +50,8 @@ $row = mysqli_fetch_array($result);
     </div>
 
     
-    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner" style="background-color: #e6ccff;">
 
       <div class="container">
         <div class="row align-items-center">
@@ -59,8 +59,8 @@ $row = mysqli_fetch_array($result);
           <div class="col-6 col-xl-2">
             <div class="mb-0 site-logo"><img src="assets/logo_black.png" alt=""></div>
           </div>
-
-          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3 text-black"></span></a></div>
+<!-- 
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3 text-black"></span></a></div> -->
 
         </div>
       </div>
@@ -71,6 +71,7 @@ $row = mysqli_fetch_array($result);
 
     <div class="site-section hero" id="home-section">
       <div class="container">
+
          <div class="jumbotron jumbotron-fluid" style="margin-top: 10%">
             <div class="container">
               <h1 class="display-4"><strong>FAQ</strong></h1>
@@ -113,4 +114,7 @@ $row = mysqli_fetch_array($result);
 
 
   </body>
+
   </html>
+
+
