@@ -172,11 +172,15 @@ function show_refferal($level, $ibms, $obj){
                     <?php include('includes/balance_amount.php'); ?>
                 </div>
 
+                
                 <div class="row ">
                     <div class="col-md-12">
                     <?php if($count > 0){ ?>
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                                <?php show_refferal(0, array($_SESSION['user']['ibm']), $newsifyObj); ?>
+                                <?php
+                                print_r(array($_SESSION['user']['ibm']));
+                                echo $_SESSION['user']['ibm'] ;
+                                // show_refferal(0, array($_SESSION['user']['ibm']), $newsifyObj); ?>
                         </div>
 
                         <?php }else {

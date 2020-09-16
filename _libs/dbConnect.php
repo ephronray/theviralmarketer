@@ -126,15 +126,14 @@ public function registerNewUser($data)
     $newsletter = implode($email_hash);
     $rand_id = rand(100,999);
     $wallet_value = $data['email'].$rand_id;
-	
-	$response = $this->bitcoinSetting->createWallet($wallet_value);
-    //if(true) {
-      //  $wallet_adress = 'asdae123123asda';
-        // $wallet_xpub = '19231moasmio123m1i23j1j039130913';
+		$response = $this->bitcoinSetting->createWallet($wallet_value);
+  //  if(true) {
+    //    $wallet_adress = 'asdae123123asda';
+      //   $wallet_xpub = '19231moasmio123m1i23j1j039130913';
 
-         if($response['status'] == true) {
-	 $wallet_adress = $response['wallet_address']['user_wallet_address'];
-	 $wallet_xpub = $response['wallet_address']['wallet_xpub'];
+     if($response['status'] == true) {
+	  $wallet_adress = $response['wallet_address']['user_wallet_address'];
+	  $wallet_xpub = $response['wallet_address']['wallet_xpub'];
 	
      $password = md5($data['password']);
       $dbQuery = "INSERT INTO `members` 
@@ -1361,9 +1360,11 @@ $otp_insert = mysqli_query($this->dbCon, $dbQuery);
 			$content       = str_replace('{#otp_code#}', $otp_code, $content);
 
 
-			$headers = 'MIME-Version: 1.0'."\r\n";
-			$headers .= 'Content-type: text/html; charset=iso-8859-1'."\r\n";
-			$headers .= "From: info@theviralmarketer.biz"; 
+      $headers = 'MIME-Version: 1.0'."\r\n";
+	    $headers .= 'Content-type: text/html; charset=iso-8859-1'."\r\n";
+        $headers .= "From: info@theviralmarketer.biz"; 
+			 
+
 			mail($memberInfo['email'], 'OTP Payment Verification | The Viral Marketer', $content, $headers); 
 		  }  
 	    return $response = array('success'=> true,

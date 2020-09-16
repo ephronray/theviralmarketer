@@ -49,7 +49,7 @@ if(isset($_POST['resend_email']))
           //  $headers .= "From: info@theviralmarketer.biz";
 	   $headers .= "From: viral Marketer"; 
 	//$email;
-            if(mail('saadraza.official@gmail.com', 'The Viral Marketer Signup | Email Verification', 'message ', $headers)) {
+            if(mail($email , 'The Viral Marketer Signup | Email Verification', 'message ', $headers)) {
             $_SESSION['message_of_user'] = array(
                'message' => $message
                
