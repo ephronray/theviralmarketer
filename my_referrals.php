@@ -76,7 +76,8 @@ function show_refferal($level, $ibms, $obj){
 	if(count($referrals) > 0 )
 	{
 
-echo "referals are .".$referrals;    
+echo "referals are .";
+print_r($referrals);    
 		$refferal .= '</tbody>  </table></div>';
 		$refferal .= $accordion_end;
 		echo $refferal;
