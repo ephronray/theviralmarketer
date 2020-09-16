@@ -83,7 +83,11 @@ print_r($referrals);
 		echo $refferal;
 		show_refferal($level, $referrals, $obj);
 		
-	} 
+	} else {
+        $refferal .= '</tbody>  </table></div>';
+        $refferal .= $accordion_end;
+        echo $refferal;
+    }
 }
 
 ?>
