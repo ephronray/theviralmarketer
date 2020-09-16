@@ -75,6 +75,8 @@ function show_refferal($level, $ibms, $obj){
 	}
 	if(count($referrals) > 0 )
 	{
+
+echo "referals are .".$referrals;    
 		$refferal .= '</tbody>  </table></div>';
 		$refferal .= $accordion_end;
 		echo $refferal;
@@ -178,11 +180,8 @@ function show_refferal($level, $ibms, $obj){
                     <?php if($count > 0){ ?>
                         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                 <?php
-                                print_r(array($_SESSION['user']['ibm']));
-                                echo $_SESSION['user']['ibm'] ;
-                                 echo $ref['ibm'];
-                                 print_r($ref['ibm']);
-                                // show_refferal(0, array($_SESSION['user']['ibm']), $newsifyObj); ?>
+                               
+                                 show_refferal(0, array($_SESSION['user']['ibm']), $newsifyObj); ?>
                         </div>
 
                         <?php }else {
