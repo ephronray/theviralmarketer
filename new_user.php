@@ -318,7 +318,7 @@ a[x-apple-data-detectors] {
                 <td bgcolor="#ffffff" align="left" style="padding: 0px 30px 40px 30px; border-radius: 0px 0px 0px 0px; color: #666666; font-family: 'Poppins', sans-serif; font-size: 14px; font-weight: 400; line-height: 25px;">
                  
                   
-                  <a class= "btn btn-info btn-block margin-top-10" href="http://theme.theviralmarketer.biz/" target="_blank" style="font-size: 18px; font-family: Helvetica, Arial, sans-serif; text-decoration: none; padding: 12px 50px; border-radius: 2px; border: 1px solid #57c7d4; display: inline-block; ">Click to Login</a>
+                  <a class= "btn btn-info btn-block margin-top-10" href="http://theviralmarketer.biz/" target="_blank" style="font-size: 18px; font-family: Helvetica, Arial, sans-serif; text-decoration: none; padding: 12px 50px; border-radius: 2px; border: 1px solid #57c7d4; display: inline-block; ">Click to Login</a>
                 </td>
                 
               </tr>
