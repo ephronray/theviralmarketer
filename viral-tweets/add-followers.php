@@ -847,8 +847,8 @@ $.ajax(settings).done(function (response) {
     }
 }
 var resp  = '';
-$.ajax(hashsettings).done(function (response) {
-  html += response ;
+$.ajax(hashsettings).done(function (res) {
+  html += res ;
 });
 
 	   }
