@@ -1,6 +1,12 @@
 <?php
 $valueDate = $_POST['dateFormatChange'] ;
-if(isset($valueDate )){
+if(isset($_POST['dateFormatChange'] )){
+
+    echo dateFormatChange($_POST['dateFormatChange']);
+
+}
+
+
 function dateFormatChange($valueDate) {
 	 return $valueDate;
 	 if($valueDate) {
@@ -26,6 +32,6 @@ return $changeyears.($changeyears != ""?" / ":"").$monthschange.($monthschange !
 }
 	
 	
-}
+
 
 ?>
