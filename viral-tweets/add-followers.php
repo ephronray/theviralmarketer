@@ -608,8 +608,6 @@ if(count($activeFollowUsersFollowersList) > 0) { ?>
 
 
 <script>
-var html = '';
-
     function addFollowAction(attr) {
         var $this = attr;
         var userId = $(attr).attr('user-id');
@@ -803,7 +801,7 @@ $.ajax(settings).done(function (response) {
    var resp = JSON.parse(response);
      if(resp && resp.length > 0) {
 
-    
+    var html = '';
 		 html += "<div class='table-responsive'>";
         if(type == "username") {
 			
@@ -847,8 +845,8 @@ $.ajax(settings).done(function (response) {
     }
 }
 var resp  = '';
-$.ajax(hashsettings).done(function (res) {
-  html += res ;
+$.ajax(hashsettings).done(function (response) {
+  html += response ;
 });
 
 	   }
