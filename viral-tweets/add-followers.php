@@ -832,7 +832,8 @@ $.ajax(settings).done(function (response) {
        html += "<td><div style='display:flex;' ><div ><img src="+user.profile_image_url+" style='min-width: 67px;border-radius: 50%;margin-right: 10px;' class='tweeter-avatar'> </div> <div style='text-align:left;' class='follower-user-name'><b style='font-size: 15px;'>@"+user.screen_name+"</b> <span style='color:#a4a4a4'>"+user.name+" <img class='loader-img-"+user.id +"' style='display:none;width:28px;' src='../../images/loader.gif' style='width:28px;'></span><div style='display:flex'><button style='margin-right:2px' onClick='addFollowAction(this)' list-id='<?= $twitterSingleDetail['followed_list_data']->id; ?>' list-url='<?= $twitterSingleDetail['followed_list_data']->uri; ?>' slug='<?= $twitterSingleDetail['followed_list_data']->slug; ?>'   user-name="+user.name+" user-id="+user.id+" screen-name="+user.screen_name+" account-id='<?= $_GET['id']; ?>' class='btn btn-primary btn-sm'><i class='fa fa-plus'></i> Follow </button><button onCLick='addFollowList(this)' list-id='<?= $twitterSingleDetail['list_data']->id; ?>' slug='<?= $twitterSingleDetail['list_data']->slug; ?>'  list-url='<?= $twitterSingleDetail['list_data']->uri; ?>'  user-name="+user.name+" user-id="+user.id+" screen-name="+user.screen_name+" account-id='<?= $_GET['id']; ?>' class='btn btn-primary btn-sm'><i class='fa fa-plus'></i> Follow List</button></div></div></div></td>";
        html += "<td>"+user.description+"</td>";
        html += "<td>"+user.location+"</td>";
-//        var status = user.status;
+        var status = user.status;
+        html += "<td>";
         if(type == "hashtag") {
 		var hashsettings = {
   "async": true,
@@ -843,20 +844,23 @@ $.ajax(settings).done(function (response) {
     "dateFormatChange": user.publihed_last_tweet
     }
 }
+var resp  = '';
 $.ajax(hashsettings).done(function (response) {
-  html +="<td>"+response+"</td>";
-    
+    resp = response;
+     
 });
-		   }
+html += resp  ;
+	   }
 	   else if (type == "username"){
         var status = user.status;
 	   if(status) {
-      html +="<td>"+status.created_at+"</td>";
+        html += status.created_at; 
         } else {
-          html +="<td>Never Tweeted</td>";
+            html += 'Never Tweeted'; 
         }
 	   }
         
+        html += "</td>";
         html +="<td>"+user.last_activity+"</td>";
         html += "<td>"+user.followers_count+"</td>";
         html += "<td>"+user.friends_count+"</td>";
