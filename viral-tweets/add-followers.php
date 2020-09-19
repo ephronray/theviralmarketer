@@ -845,8 +845,8 @@ $.ajax(settings).done(function (response) {
     }
 }
 $.ajax(hashsettings).done(function (response) {
-  html += response ;
-	console.log(response);
+     html += response ;
+    
 });
 		   
 		   
