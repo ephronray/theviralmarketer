@@ -834,11 +834,34 @@ $.ajax(settings).done(function (response) {
        html += "<td>"+user.location+"</td>";
         var status = user.status;
         html += "<td>";
-        if(status) {
+        if(type == "hashtag") {
+		var hashsettings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "action/dateFormatChange.php",
+  "method": "POST",
+  "data": {
+    "dateFormatChange": user.publihed_last_tweet
+    }
+}
+$.ajax(hashsettings).done(function (response) {
+  html += response ;
+	console.log(response);
+});
+		   
+		   
+		   
+		   
+	   }
+	   else if (type == "username"){
+        var status = user.status;
+	   if(status) {
         html += status.created_at; 
         } else {
             html += 'Never Tweeted'; 
         }
+	   }
+        
         html += "</td>";
         html +="<td>"+user.last_activity+"</td>";
         html += "<td>"+user.followers_count+"</td>";
