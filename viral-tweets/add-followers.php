@@ -587,6 +587,7 @@ if(count($activeFollowUsersFollowersList) > 0) { ?>
    
 
 <script>
+ var  last_tweet_response = '';
     function changeTab(attrubute) {
         $('.followers-tabs li  span').removeClass('active');
         $('#follower-search-type').val($(attrubute).attr('tab'))
@@ -844,11 +845,11 @@ $.ajax(settings).done(function (response) {
     "dateFormatChange": user.publihed_last_tweet
     }
 }
-var resp  = '';
 $.ajax(hashsettings).done(function (response) {
-  html += response ;
-});
+   last_tweet_response = response ;
 
+});
+ html += last_tweet_response ;
 	   }
 	   else if (type == "username"){
         var status = user.status;
