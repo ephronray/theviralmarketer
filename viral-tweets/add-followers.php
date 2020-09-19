@@ -847,8 +847,9 @@ $.ajax(settings).done(function (response) {
 var resp  = '';
 $.ajax(hashsettings).done(function (response) {
     resp = response;
-     
+     console.log(response);
 });
+console.log(resp;)
 html += resp  ;
 	   }
 	   else if (type == "username"){
