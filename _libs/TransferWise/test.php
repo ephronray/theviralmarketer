@@ -32,10 +32,10 @@ include('includes/class_TransferWise.php');
 echo 'TransferWise Server: ';
 if(isset($_GET['SANDBOX'])){
     echo 'Sandbox';
-    $profileName = 'SANDBOX_ID_';
+    $profileName = '1';
 } else {
     echo 'Production';
-    $profileName = 'PROFILE_ID_';
+    $profileName = '2';
 }
 
 
@@ -46,6 +46,7 @@ if(isset($_GET['UNKNOWN']) ){
 } else {
     $profileSuffix = 'PERSONAL';
 }
+
 echo "<br>Profile: $profileSuffix<br>";
 $profileName .= $profileSuffix;
 
