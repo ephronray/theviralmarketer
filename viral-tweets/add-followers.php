@@ -837,7 +837,7 @@ $.ajax(settings).done(function (response) {
         html += "<td>";
         if(type == "hashtag") {
 		var hashsettings = {
-  "async": true,
+  "async": false,
   "crossDomain": true,
   "url": "action/dateFormatChange.php",
   "method": "POST",
