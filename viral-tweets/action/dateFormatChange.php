@@ -7,17 +7,15 @@ if(isset($_POST['dateFormatChange'] )){
 }
 
 
+ 
 function dateFormatChange($valueDate) {
-	 return $valueDate;
-	 if($valueDate) {
-     $date1 = date("Y-m-d", strtotime($valueDate));
-    $date2 = date("Y-m-d");
-     if($date1 == $date2) {
-        return "Today";
-    }
-	
-		  
- $diff = abs(strtotime($date2) - strtotime($date1));
+    if($valueDate) {
+       $date1 = date("Y-m-d", strtotime($valueDate));
+        $date2 = date("Y-m-d");
+       if($date1 == $date2) {
+       return "Today";
+      }
+  $diff = abs(strtotime($date2) - strtotime($date1));
 
 $years = floor($diff / (365*60*60*24));
 $months = floor(($diff - $years * 365*60*60*24) / (30*60*60*24));
@@ -30,8 +28,7 @@ $dayChange = $days != 0? $days > 1 ? $days.' days':$days.' day':"" ;
 return $changeyears.($changeyears != ""?" / ":"").$monthschange.($monthschange != ""?" / ":"").$dayChange. ($dayChange != "" ? " ago ": "Never Tweeted");
 }
 }
-	
-	
+  
 
 
 ?>
