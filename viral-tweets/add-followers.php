@@ -766,6 +766,7 @@ $('.memberlist').css('display','block');
 $('.loader-img').html('<img  style="width:80px;" src="../../images/loader.gif" style="width:80px">');
 $('#follow-user-table_length').css('display','none');
 $('#follow-tags-table_length').css('display','none');
+console.log(filterArray);
 var filterListingArray = JSON.stringify(filterArray);
 var type = "<?= $_GET['type']; ?>";
 if(type == "username") {
