@@ -533,7 +533,8 @@ foreach($followusers as $user) { ?>
                   <td>
                     <?php echo dateFormatChange($user->publihed_last_tweet); ?>
                   </td>
-                  <td><?php echo twitterActivity($user->id , $twitterLogs); ?></td>
+                  <td><?php echo $user->id ;
+                  echo twitterActivity($user->id , $twitterLogs); ?></td>
                   <td><?= $user->followers_count; ?></td>
                   <td><?= $user->friends_count; ?></td>
                    <td><?= $user->statuses_count; ?></td>
