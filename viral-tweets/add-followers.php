@@ -797,7 +797,7 @@ var settings = {
     "filterArray": filterListingArray,
     "activeFollowUsersFollowersList": activeFollowUsersFollowersList,
     "twitterLogs" : twitterLogs,
-    "type":type
+    "type": type
   }
 }
 $.ajax(settings).done(function (response) {
