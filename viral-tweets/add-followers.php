@@ -79,7 +79,7 @@ td
 $data = array('accountId'=>$_GET['id']);
 $twitterLogs = $db->showTwitterLogs($data);
 function twitterActivity($user_id , $twitterLogs) {
-  console.log($twitterLogs);
+  
 $status = '';
 foreach($twitterLogs as $arrayitem ) {
     if($arrayitem['twitter_user_id'] == $user_id ) {
@@ -456,7 +456,11 @@ foreach($followusers as $user) { ?>
                   <td>
                     <?php echo  ($status  && $status->created_at) ?dateFormatChange($status->created_at):"Never Tweeted"; ?>
                   </td>
-                  <td><?php echo twitterActivity($user->id , $twitterLogs); ?></td>
+
+                  <td><?php
+                  $data = array('accountId'=>$_GET['id']);
+                  $twitterLogs = $db->showTwitterLogs($data);
+                  echo twitterActivity($user->id , $twitterLogs); ?></td>
                   <td><?= $user->followers_count; ?></td>
                   <td><?= $user->friends_count; ?></td>
                   <td><?= $user->statuses_count;?></td>
