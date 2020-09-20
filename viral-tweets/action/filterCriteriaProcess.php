@@ -539,7 +539,8 @@ function filterlastTweeted($activeFollowUsersFollowersList , $filter )
     $lastTweet = $filter->lastTweet;
     $newContainUsersFollowersList = [];
     $newNotContainUsersFollowersList = [];
-    
+    return "hashtag";
+
     if($type == 'hashtag') {
         return "hashtag";
  foreach($activeFollowUsersFollowersList as $user) {
