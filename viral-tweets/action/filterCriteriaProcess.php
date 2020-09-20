@@ -5,6 +5,8 @@ if(isset($_POST['filterArray'])) {
 $filterArray = json_decode($_POST['filterArray']);
 $twitterFollowerIds = json_decode($_POST['twitterFollowerIds']);
 $type= $_POST['type'];
+echo $type ;
+die();
 $twitterLogs = json_decode($_POST['twitterLogs']);
 $twitter = new TwitterSetting();
 
