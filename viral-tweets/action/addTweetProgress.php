@@ -1,22 +1,13 @@
 
 
 <?php
-
 ob_start();
-//session_start();
-//$menu = array('tab'=>4, 'option' => 'viral-tweet');
-//include_once './../includes/main-header.php'; 
+require_once(__DIR__.'/../../_libs/contant.php');
 require_once(__DIR__.'/../../_libs/dbConnect.php');
 require_once (__DIR__.'/../../_libs/twitterSetting.php');
-require_once(__DIR__.'/../../_libs/contant.php');
-//$paid_levels = "SELECT * FROM  `subscribed_levels` WHERE  `sender_ibm` =  '".$_SESSION['user']['ibm']."' AND  `payment_status` = '1'";
-//$all_level   = $newsifyObj->db_select($paid_levels);
-//$paid_levels =  $all_level->num_rows;
-
 $twitter = new TwitterSetting() ;
 $db = new dbConnect();
-$paid_facility_list = $db->paidmembers();
-if(isset($_POST['submit']))
+         if(isset($_POST['submit']))
  {
      
      $saveinMediaLibrary = $_POST['saveinMediaLibrary'];
@@ -29,7 +20,7 @@ if(isset($_POST['submit']))
      $imageError = false;
      $imageMessage="";
      $caption = $_POST['caption'];
-   //  if($_SESSION['user']['ibm'] != 'IBM1') {
+     //  if($_SESSION['user']['ibm'] != 'IBM1') {
 	  if(!empty($paid_facility_list)){
 				foreach($paid_facility_list as $paid_item){
 			 if((($paid_item['slug'] == MembershipConstant::WATERMARK_FOR_TWITTER ) && ($paid_item['is_show'] == 1)) || $paid_item['slug'] != MembershipConstant::WATERMARK_FOR_TWITTER ) {
@@ -44,7 +35,7 @@ if(isset($_POST['submit']))
             
      //       }
 	
-	$datepicker = null; 
+     $datepicker = null; 
      $catagory_id = $_POST['catagory'];
      $Published = 'Published Successfully'; 
 if($_POST['shedule'] == 1)     
@@ -150,7 +141,7 @@ if($type == 'image'){
 }    //multiple image
 
 if($imageError == false)
-{  $data = json_encode(array("media"=>$media, "caption"=> $caption  , "url"=>"null")); 
+{  $data = json_encode(array("media"=>$media, "caption"=> $caption, "url"=>"null")); 
     if($saveinMediaLibrary == 1)
     {  
         if($is_sheduled == 0)
@@ -188,24 +179,17 @@ if($imageError == false)
         $result = $twitter->postTweet($dbArray);
         $response = $result['response'];
         $extendedEntities = $response->extended_entities;
-        //     foreach($extendedEntities->media as $item) {
-        //     $medialist[] = $item->media_url;
-        // }
-        //     print_r($result);
-        // die();
+    //     foreach($extendedEntities->media as $item) {
+    //     $medialist[] = $item->media_url;
+    // }
     
         if($result['status'] =='success') {
 
-        $id = (int)$_GET['id'];
+         $id = (int)$_GET['id'];
         
         $data = json_encode(array("media"=>$media, "caption"=> $caption, "url"=>"null")); 
         $tweetid = $result['response']->id;
-      //  print_r($data);
-      
-        
         $dbArray = array("account_id"=>$account_id,"category_id"=>$catagory_id , "type"=>$type ,"data"=>$data ,"time_post"=>$datepicker , "status"=>$is_sheduled ,"tweet_id"=>$tweetid, "result"=>$Published); 
-        //print_r($dbArray);
-        //die();
         $responsesave = $db->saveTweets($dbArray);
         
          $imageMessage=$responsesave['message'];
@@ -221,9 +205,8 @@ if($imageError == false)
         die();
         }
 
+        }
     }
-
-}
 }
 if( $imageError == true)
 {
