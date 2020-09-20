@@ -63,6 +63,7 @@ if(isset($_POST['logOutME'])) {
 <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.3.45/css/materialdesignicons.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.0/css/simple-line-icons.min.css">
 
+<link rel="stylesheet" href="../../css/corner-popup.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >	
 	<!-- Crypto_Admin skins -->
 	<link rel="stylesheet" href="css/css/skins/_all-skins.css">
