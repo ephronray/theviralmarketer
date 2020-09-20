@@ -2,7 +2,6 @@
 
 <?php
 ob_start();
-require_once(__DIR__.'/../../_libs/contant.php');
 require_once(__DIR__.'/../../_libs/dbConnect.php');
 require_once (__DIR__.'/../../_libs/twitterSetting.php');
 $twitter = new TwitterSetting() ;
@@ -20,21 +19,6 @@ $db = new dbConnect();
      $imageError = false;
      $imageMessage="";
      $caption = $_POST['caption'];
-     //  if($_SESSION['user']['ibm'] != 'IBM1') {
-	  if(!empty($paid_facility_list)){
-				foreach($paid_facility_list as $paid_item){
-			 if((($paid_item['slug'] == MembershipConstant::WATERMARK_FOR_TWITTER ) && ($paid_item['is_show'] == 1)) || $paid_item['slug'] != MembershipConstant::WATERMARK_FOR_TWITTER ) {
-                
-                
-
-			$caption = $caption.'\n &lt;a href=&quot;'.$db->base_url.'/referral/?ref='.$_SESSION['user']['ibm'].'&quot;&gt;Powered By TheViralMarketer&lt;/a&gt;';
-		 }}}else{ 
-            $caption = $caption.'\n &lt;a href=&quot;'.$db->base_url.'/referral/?ref='.$_SESSION['user']['ibm'].'&quot;&gt;Powered By TheViralMarketer&lt;/a&gt;';
-	
-             } 
-            
-     //       }
-	
      $datepicker = null; 
      $catagory_id = $_POST['catagory'];
      $Published = 'Published Successfully'; 
