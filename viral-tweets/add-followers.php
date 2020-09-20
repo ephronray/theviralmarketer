@@ -78,7 +78,7 @@ td
 <?php
 $data = array('accountId'=>$_GET['id']);
 $twitterLogs = $db->showTwitterLogs($data);
-print_r($twitterLogs);
+
 
 
 function twitterActivity($user_id , $twitterLogs) {
@@ -168,7 +168,11 @@ return $changeyears.($changeyears != ""?" / ":"").$monthschange.($monthschange !
       </ol>
     </section>
     <article class="content grid-page">
-
+    <?php
+  echo "<pre>";
+  print_r($twitterLogs);
+  echo "</pre>";
+?>
  
 
         <section  aria-live="polite" aria-atomic="true" style="position: relative;" class="section">
