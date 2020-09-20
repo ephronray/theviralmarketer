@@ -67,6 +67,7 @@ if(isset($_POST['logOutME'])) {
 	<!-- theme style -->
 	<link rel="stylesheet" href="<?= $baseUrl; ?>css/css/master_style.css">
 		<!--tags-->
+    <link rel="stylesheet" href="../../css/corner-popup.min.css">
 		<link href="../../css/tagsinput.css" rel="stylesheet">
 	<link rel="stylesheet" href="<?= $baseUrl; ?>css/custom.css">
 <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.3.45/css/materialdesignicons.min.css">
