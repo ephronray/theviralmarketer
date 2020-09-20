@@ -168,13 +168,7 @@ return $changeyears.($changeyears != ""?" / ":"").$monthschange.($monthschange !
       </ol>
     </section>
     <article class="content grid-page">
-    <?php
-  echo "<pre>";
-  print_r($twitterLogs);
-  echo "</pre>";
-?>
- 
-
+  
         <section  aria-live="polite" aria-atomic="true" style="position: relative;" class="section">
             
          <?php require_once (__DIR__.'/../viral-tweets/single-twitter-account.php'); ?>
@@ -533,8 +527,7 @@ foreach($followusers as $user) { ?>
                   <td>
                     <?php echo dateFormatChange($user->publihed_last_tweet); ?>
                   </td>
-                  <td><?php echo $user->id ;
-                  echo twitterActivity($user->id , $twitterLogs); ?></td>
+                  <td><?php echo twitterActivity($user->id , $twitterLogs); ?></td>
                   <td><?= $user->followers_count; ?></td>
                   <td><?= $user->friends_count; ?></td>
                    <td><?= $user->statuses_count; ?></td>
