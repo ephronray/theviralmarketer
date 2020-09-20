@@ -654,7 +654,7 @@ return $diff->format("%a");
               $status->created_at = dateFormatChange($status->created_at);
          }
          
-         if($type == 'hashtag') {
+         if($_POST['type'] == 'hashtag') {
              $status = $user->status;
              $status->created_at = dateFormatChange($user->publihed_last_tweet);
          }

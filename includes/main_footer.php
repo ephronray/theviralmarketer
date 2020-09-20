@@ -23,6 +23,7 @@
 
 
 	<!-- jQuery 3 -->
+
 	<script src="<?=$newsifyObj->base_url; ?>/js/xlsx.full.min.js"></script>
 	<script src="<?=$newsifyObj->base_url; ?>/js/FileSaver.min.js"></script>
 	<script src="<?=$newsifyObj->base_url; ?>/js/moment.js"></script>
@@ -32,7 +33,7 @@
 	
 	<!-- popper -->
 	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/popper/dist/popper.min.js"></script>
-	
+	<script src="<?=$newsifyObj->base_url; ?>/js/corner-popup.min.js"></script>
 	<!-- Bootstrap 4.0-->
 	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/bootstrap/dist/js/bootstrap.js"></script>
 	
