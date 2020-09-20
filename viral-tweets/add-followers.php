@@ -781,7 +781,7 @@ activeFollowUsersFollowersList = JSON.stringify(activeFollowUsersFollowersList);
 }
 
 var twitterLogs = <?php echo json_encode($twitterLogs); ?>;
-console.log(twitterLogs);
+
 twitterLogs = JSON.stringify(twitterLogs);
 
 var settings = {
@@ -802,7 +802,7 @@ var settings = {
 }
 $.ajax(settings).done(function (response) {
    var resp = JSON.parse(response);
-    console.log(resp); 
+    
     
      if(resp && resp.length > 0) {
 
