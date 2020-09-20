@@ -670,7 +670,7 @@ $.ajax(settings).done(function (response) {
     shadow: 1,
     timeout: 5000000000,
     delay: 10,
-    colors:"#85ce36",
+    colors:"#03a9f3",
     header: userName+ " has been "+type,
     button3:"View list on twitter",
      // link for other popups
