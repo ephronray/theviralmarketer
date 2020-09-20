@@ -79,6 +79,7 @@ td
 $data = array('accountId'=>$_GET['id']);
 $twitterLogs = $db->showTwitterLogs($data);
 function twitterActivity($user_id , $twitterLogs) {
+  console.log($twitterLogs);
 $status = '';
 foreach($twitterLogs as $arrayitem ) {
     if($arrayitem['twitter_user_id'] == $user_id ) {

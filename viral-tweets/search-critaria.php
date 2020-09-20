@@ -372,7 +372,7 @@ $db = new dbConnect();
           <option value="false">Unfollow</option>
           
         </select>
-         <input class="form-control " onkeyup="searchlastActivity(this , event)" name="lastActivity" type="text"/>
+         <input class="form-control " onkeyup="searchlastActivity(this , event)" name="lastActivity" type="number"/>
          <span style=" width: auto; " class="input-group-addon">days ago</span>
     </div>  
   </div>
