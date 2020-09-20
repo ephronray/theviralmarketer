@@ -546,6 +546,7 @@ function filterlastTweeted($activeFollowUsersFollowersList , $filter )
     
      //isNewer
      if($type == 'hashtag') {
+         retunr "hastag";
      if(isset($user->publihed_last_tweet) && dateFormatChageForLastAction($user->publihed_last_tweet) < $lastTweet &&  $isGreaterThen) {
           $newContainUsersFollowersList[] =  $user;
      }
