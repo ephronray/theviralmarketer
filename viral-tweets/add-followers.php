@@ -802,6 +802,8 @@ var settings = {
 }
 $.ajax(settings).done(function (response) {
    var resp = JSON.parse(response);
+    console.log(resp); 
+    
      if(resp && resp.length > 0) {
 
     var html = '';
