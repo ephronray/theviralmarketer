@@ -540,13 +540,14 @@ function filterlastTweeted($activeFollowUsersFollowersList , $filter )
     $newContainUsersFollowersList = [];
     $newNotContainUsersFollowersList = [];
     
-    
+    if($type == 'hashtag') {
+        return "hashtag";
  foreach($activeFollowUsersFollowersList as $user) {
      
     
      //isNewer
-     if($type == 'hashtag') {
-         return "hastag";
+    
+        
      if(isset($user->publihed_last_tweet) && dateFormatChageForLastAction($user->publihed_last_tweet) < $lastTweet &&  $isGreaterThen) {
           $newContainUsersFollowersList[] =  $user;
      }
@@ -555,19 +556,21 @@ function filterlastTweeted($activeFollowUsersFollowersList , $filter )
      if(isset($user->publihed_last_tweet)  && dateFormatChageForLastAction($user->publihed_last_tweet) >= $lastTweet && !$isGreaterThen) {
         $newNotContainUsersFollowersList[] = $user;
      }
-
-    }else{
-        $status = $user->status ;
-        if(isset($user->status) && isset($status->created_at) && dateFormatChageForLastAction($status->created_at) < $lastTweet &&  $isGreaterThen) {
-            $newContainUsersFollowersList[] =  $user;
-       }
-       
-       //isOlder
-       if(isset($user->status) && isset($status->created_at) && dateFormatChageForLastAction($status->created_at) >= $lastTweet && !$isGreaterThen) {
-          $newNotContainUsersFollowersList[] = $user;
-       }
-    }
  }  
+}else{
+    foreach($activeFollowUsersFollowersList as $user) {
+    
+    $status = $user->status ;
+    if(isset($user->status) && isset($status->created_at) && dateFormatChageForLastAction($status->created_at) < $lastTweet &&  $isGreaterThen) {
+        $newContainUsersFollowersList[] =  $user;
+   }
+   
+   //isOlder
+   if(isset($user->status) && isset($status->created_at) && dateFormatChageForLastAction($status->created_at) >= $lastTweet && !$isGreaterThen) {
+      $newNotContainUsersFollowersList[] = $user;
+   }
+}
+}
  if($isGreaterThen) {
   return  $newContainUsersFollowersList;
  } else {
