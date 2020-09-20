@@ -78,6 +78,9 @@ td
 <?php
 $data = array('accountId'=>$_GET['id']);
 $twitterLogs = $db->showTwitterLogs($data);
+print_r($twitterLogs);
+
+
 function twitterActivity($user_id , $twitterLogs) {
   
 $status = '';
@@ -458,8 +461,6 @@ foreach($followusers as $user) { ?>
                   </td>
 
                   <td><?php
-                  $data = array('accountId'=>$_GET['id']);
-                  $twitterLogs = $db->showTwitterLogs($data);
                   echo twitterActivity($user->id , $twitterLogs); ?></td>
                   <td><?= $user->followers_count; ?></td>
                   <td><?= $user->friends_count; ?></td>
