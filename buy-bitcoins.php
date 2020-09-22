@@ -932,7 +932,7 @@ top: 51.4%;
 										<label for="bankDetail">I know their bank details</label>
                                     </fieldset>
                      </div> 
-                     <div  class="bank-detail-confirmation">
+                     <div style="display:none;" class="bank-detail-confirmation">
                         <p>
                         Please enter their email address in the required field above. We’ll send an email to request their bank details once you’ve paid for your transfer.<br/>
 Make sure they respond to our email or the money will be refunded to you.
@@ -1558,16 +1558,13 @@ $(".btn-with-icon").on("click", function() {
 <script>
 
 
-$(document).ready(function() {
-    $("#bank-detail-confirmation").hide();
-});
 $('#bankDetail').click(function() {
     if ($('#bankDetail').attr('checked')) {
-  $("#bank-detail").show();
-  $("#bank-detail-confirmation").hide();
+  $("#bank-detail").css('display','block');
+  $("#bank-detail-confirmation").css('display','none');
 } else {
-    $("#bank-detail").hide();
-  $("#bank-detail-confirmation").show();
+    $("#bank-detail").css('display','none');
+  $("#bank-detail-confirmation").css('display','block');
 }
 });
 

@@ -3596,7 +3596,7 @@ select.form-control:not([size]):not([multiple]) {
     border-top: 8px solid #F3F3F3
 }
 .wizard-content .wizard.vertical>.steps {
-    /* display: inline; */
+    display: inline;
     float: left;
     width: 10%
 }
