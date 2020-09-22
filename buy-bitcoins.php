@@ -8,6 +8,7 @@ $menu = array(
 include_once 'includes/main-header.php';
 require_once(__DIR__ . '/_libs/payment.php');
 require_once(__DIR__ . '/_libs/dbConnect.php');
+require_once(__DIR__ . '/_libs/countries.php');
 
 $newsifyObj = new payment();
 $dbobject   = new dbConnect();
@@ -961,6 +962,47 @@ top: 51.4%;
                         <!-- <div style="display:flex">
                         <i class="icon fa fa-warning" style="font-size: 18px;margin-top: 3px;margin-right: 4px;color: #fbae1c;"></i><p style="font-weight: 400;font-size: 14px;color: #847d7d;">Visa is Not Available Yet Please Choose another method.</p> 
                     </div>  -->
+                   <div class="row">
+                        <div class="col-md-6">
+                           <div class="form-group">
+
+                               <label for="firstName"></i>First Name:</label>
+                                <input id="firstName" type="text"  class="form-control" name="firstName" required placeholder="Enter First Name" >
+
+                            </div>  
+                        
+                        </div>
+                        
+                        <div class="col-md-6">
+                             <div class="form-group">
+
+                                <label for="secondName"></i>Second Name:</label>
+                                <input id="secondName" type="text"  class="form-control" name="secondName" required  placeholder="Enter Second Name" >
+
+                                </div> 
+                        </div>
+                    </div>
+                        <div class="col-md-12">
+                        <div class="form-group">
+
+                            <label for="secondName"></i>Country:</label>
+                            <select class="form-control" name="country">
+                            <php
+                            foreach( $countries as $key => $single){  ?>
+                            <option value="<?= $key; ?>"><?= $single ?></option>
+
+
+                         <?php  }
+
+
+                            ?>
+    </select>
+                            
+                            <input id="secondName" type="text"  class="form-control" name="secondName" required  placeholder="Enter Second Name" >
+
+                            </div> 
+                         </div>
+                   
                     <div class="form-group">
 
                         <label for="InputAmountPaypal"><i class="fa fa-money  "></i>Amount:</label>
@@ -971,7 +1013,7 @@ top: 51.4%;
                 <div class="col-md-6 col-sm-12 col-xs-12 " style="text-align:center !important;float:right; " >
                   
                     <p id="paypal_sucess_password"></p>
-                        <button  style="display:none;float:left;" id="paynow_visa" onClick="visaPay(event);" name="buy_bitcoin"  class="btn btn-lg btn-primary">Pay Now</button>
+                        <button  style="width:100%" id="paynow_visa" onClick="visaPay(event);" class="btn btn-lg btn-primary">Pay Now</button>
 
                   
 
