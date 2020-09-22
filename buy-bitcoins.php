@@ -86,13 +86,13 @@ $error                = "";
         opacity: 1
     }
 }
-.actions .clearfix{
+.actions.clearfix{
     padding-top: 0;
 }
-.actions .clearfix ul{
+.actions.clearfix ul{
     padding-right:0px;
 }
-.actions .clearfix ul li{
+.actions.clearfix ul li{
     margin:0 10px;
 }
 .fadeIn {
@@ -941,8 +941,8 @@ Make sure they respond to our email or the money will be refunded to you.
     </div>
     <div class="bank-detail col-md-12">
             <h3>Bank Details</h3>
-    </hr>
-    <div class="col-md-12">
+    <hr style="margin-bottom:0">
+    <div >
 							<div class="form-group">
 								<label for="iban">IBAN :</label>
 								<input type="text" name="iban" placeholder="DE89370400440532013000" class="form-control required" id="iban">
