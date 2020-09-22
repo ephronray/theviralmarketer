@@ -845,18 +845,8 @@ top: 51.4%;
                        <!-- <div style="display:flex">
                         <i class="icon fa fa-warning" style="font-size: 18px;margin-top: 3px;margin-right: 4px;color: #fbae1c;"></i><p style="font-weight: 400;font-size: 14px;color: #847d7d;">Stripe is Not Available Yet Please Choose another method.</p> 
                         </div> -->
-                        <div class="box box-solid bg-dark">
-        <div class="box-header with-border">
-          <h3 class="box-title">Step wizard with validation</h3>
-          <h6 class="box-subtitle">You can us the validation like what we did</h6>
-
-          <div class="box-tools pull-right">
-            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
-          </div>
-        </div>
-        <!-- /.box-header -->
-        <div class="box-body wizard-content">
+          
+                        <div class="box-body wizard-content">
 			<form action="#" class="validation-wizard wizard-circle">
 				<!-- Step 1 -->
 				<h6>Step 1</h6>
@@ -1016,8 +1006,7 @@ top: 51.4%;
 				</section>
 			</form>
         </div>
-        <!-- /.box-body -->
-      </div>
+
 
                       <div style="display:none;padding:0px;" class="modal-body">
                 <div class="form-group">
