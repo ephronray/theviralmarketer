@@ -56,6 +56,14 @@ $error                = "";
     src: url(../fonts/PragmaticaSlab-Mediumns.eot) format("embedded-opentype");
     src: url(../fonts/PragmaticaSlab-Medium.ttf) format("truetype")
 }
+.wizard-content .wizard.wizard-circle>.steps .step{
+    width: 93px !important;
+    height: 50px !important;
+}
+.wizard-content .wizard>.steps .step{
+    margin-left: -56px  !important;
+}
+
 .animated {
     -webkit-animation-duration: 1.5s;
     animation-duration: 2.5s;
@@ -210,7 +218,7 @@ $error                = "";
     line-height: 1.7em;
     padding: 0.7em 0
 }
-#features .features-textblock ul li:before {
+/* #features .features-textblock ul li:before {
     display: inline-block;
     position: relative;
     top: -1px;
@@ -223,7 +231,7 @@ $error                = "";
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     border-radius: 50%
-}
+} */
 #features .features-graph {
     height: 425px;
     margin: 25px
@@ -672,7 +680,7 @@ top: 51.4%;
     line-height: 1.7em;
     padding: 0.7em 0
 }
-#features .features-textblock ul li:before {
+/* #features .features-textblock ul li:before {
     display: inline-block;
     position: relative;
     top: -1px;
@@ -685,7 +693,7 @@ top: 51.4%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     border-radius: 50%
-}
+} */
 #features .features-graph {
     height: 425px;
     margin: 25px
@@ -850,7 +858,7 @@ top: 51.4%;
 			<form action="#" class="validation-wizard wizard-circle">
 				<!-- Step 1 -->
 				<h6>Step 1</h6>
-				<section class="bg-hexagons-dark">
+				<section style="background:none;background-color:#fff;" class="bg-hexagons-dark">
 					<div class="row">
 						<div class="col-md-6">
 							<div class="form-group">
@@ -896,7 +904,7 @@ top: 51.4%;
 				</section>
 				<!-- Step 2 -->
 				<h6>Step 2</h6>
-				<section class="bg-hexagons-dark">
+				<section style="background:none;background-color:#fff;" class="bg-hexagons-dark">
 					<div class="row">
 						<div class="col-md-6">
 							<div class="form-group">
@@ -919,7 +927,7 @@ top: 51.4%;
 				</section>
 				<!-- Step 3 -->
 				<h6>Step 3</h6>
-				<section class="bg-hexagons-dark">
+				<section style="background:none;background-color:#fff;" class="bg-hexagons-dark">
 					<div class="row">
 						<div class="col-md-6">
 							<div class="form-group">
