@@ -932,8 +932,8 @@ top: 51.4%;
 										<label for="bankDetail">I know their bank details</label>
                                     </fieldset>
                      </div> 
-                     <div style="display:none;" class="bank-detail-confirmation">
-                        <p>
+                     <div style="display:none;" class="bank-detail-confirmation col-md-12">
+                        <p style="font-size: 14px;">
                         Please enter their email address in the required field above. We’ll send an email to request their bank details once you’ve paid for your transfer.<br/>
 Make sure they respond to our email or the money will be refunded to you.
                         </p>
