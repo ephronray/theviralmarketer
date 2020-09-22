@@ -40,6 +40,17 @@
 	<!-- Slimscroll -->
 	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js"></script>
 	
+      <!-- validate  -->
+	  <script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/jquery-validation-1.17.0/dist/jquery.validate.min.js"></script>
+	
+	<!-- Sweet-Alert  -->
+    <script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/sweetalert/sweetalert.min.js"></script>
+    
+    <!-- wizard  -->
+    <script src="<?=$newsifyObj->base_url; ?>/js/pages/steps.js"></script>
+	
+
+
 	<!-- FastClick -->
 	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/fastclick/lib/fastclick.js"></script>
 	
