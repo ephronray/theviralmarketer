@@ -985,18 +985,17 @@ top: 51.4%;
                         <div class="col-md-12">
                         <div class="form-group">
 
-                            <label for="secondName"></i>Country:</label>
-                            <select class="form-control" name="country">
-                            <php
-                            foreach( $countries as $key => $single){  ?>
-                            <option value="<?= $key; ?>"><?= $single ?></option>
+                            <!-- <label for="secondName"></i>Country:</label> -->
+                            <!-- <select class="form-control" name="country"> -->
+                             <!-- foreach( $countries as $key =>$single){  ?> -->
+                            <!-- <option value="<?php echo $key; ?>"><?php echo $single ?></option> -->
 
 
-                         <?php  }
+                         <?php // }
 
 
                             ?>
-    </select>
+    <!-- </select> -->
                             
                             <input id="secondName" type="text"  class="form-control" name="secondName" required  placeholder="Enter Second Name" >
 
