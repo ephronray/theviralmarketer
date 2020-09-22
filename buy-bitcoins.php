@@ -841,11 +841,184 @@ top: 51.4%;
                 <div data-features-tabs class="features-content-col col-md-6 col-sm-12 col-xs-12">
                     <div id="feature-1" class="features-textblock animated fadeIn">
                     <div class="modal-body">
-                      <h2>Stripe</h2>
-                       
-                       <div style="display:flex">
+                      <!-- <h2>Stripe</h2> -->
+                       <!-- <div style="display:flex">
                         <i class="icon fa fa-warning" style="font-size: 18px;margin-top: 3px;margin-right: 4px;color: #fbae1c;"></i><p style="font-weight: 400;font-size: 14px;color: #847d7d;">Stripe is Not Available Yet Please Choose another method.</p> 
-                    </div>
+                        </div> -->
+                        <div class="box box-solid bg-dark">
+        <div class="box-header with-border">
+          <h3 class="box-title">Step wizard with validation</h3>
+          <h6 class="box-subtitle">You can us the validation like what we did</h6>
+
+          <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
+          </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body wizard-content">
+			<form action="#" class="validation-wizard wizard-circle">
+				<!-- Step 1 -->
+				<h6>Step 1</h6>
+				<section class="bg-hexagons-dark">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="wfirstName2"> First Name : <span class="danger">*</span> </label>
+								<input type="text" class="form-control required" id="wfirstName2" name="firstName"> </div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="wlastName2"> Last Name : <span class="danger">*</span> </label>
+								<input type="text" class="form-control required" id="wlastName2" name="lastName"> </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="wemailAddress2"> Email Address : <span class="danger">*</span> </label>
+								<input type="email" class="form-control required" id="wemailAddress2" name="emailAddress"> </div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="wphoneNumber2">Phone Number :</label>
+								<input type="tel" class="form-control" id="wphoneNumber2"> </div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="wlocation2"> Select City : <span class="danger">*</span> </label>
+								<select class="custom-select form-control required" id="wlocation2" name="location">
+									<option value="">Select City</option>
+									<option value="India">India</option>
+									<option value="USA">USA</option>
+									<option value="Dubai">Dubai</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="wdate2">Date of Birth :</label>
+								<input type="date" class="form-control" id="wdate2"> </div>
+						</div>
+					</div>
+				</section>
+				<!-- Step 2 -->
+				<h6>Step 2</h6>
+				<section class="bg-hexagons-dark">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="jobTitle3">Company Name :</label>
+								<input type="text" class="form-control required" id="jobTitle3">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="webUrl3">Company URL :</label>
+								<input type="url" class="form-control required" id="webUrl3" name="webUrl3"> </div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<label for="shortDescription3">Short Description :</label>
+								<textarea name="shortDescription" id="shortDescription3" rows="6" class="form-control"></textarea>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Step 3 -->
+				<h6>Step 3</h6>
+				<section class="bg-hexagons-dark">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="wint1">Interview For :</label>
+								<input type="text" class="form-control required" id="wint1"> </div>
+							<div class="form-group">
+								<label for="wintType1">Interview Type :</label>
+								<select class="custom-select form-control required" id="wintType1" data-placeholder="Type to search cities" name="wintType1">
+									<option value="Banquet">Normal</option>
+									<option value="Fund Raiser">Difficult</option>
+									<option value="Dinner Party">Hard</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="wLocation1">Location :</label>
+								<select class="custom-select form-control required" id="wLocation1" name="wlocation">
+									<option value="">Select City</option>
+									<option value="India">India</option>
+									<option value="USA">USA</option>
+									<option value="Dubai">Dubai</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="wjobTitle4">Interview Date :</label>
+								<input type="date" class="form-control required" id="wjobTitle4">
+							</div>
+							<div class="form-group">
+								<label>Requirements :</label>
+									<input name="group2" type="radio" id="radio_3" value="1">
+									<label for="radio_3" class="block">Employee</label>
+									<input name="group2" type="radio" id="radio_4" value="1">
+									<label for="radio_4">Contract</label>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Step 4 -->
+				<h6>Step 4</h6>
+				<section class="bg-hexagons-dark">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="behName3">Behaviour :</label>
+								<input type="text" class="form-control required" id="behName3">
+							</div>
+							<div class="form-group">
+								<label for="participants3">Confidance</label>
+								<input type="text" class="form-control required" id="participants3">
+							</div>
+							<div class="form-group">
+								<label for="participants4">Result</label>
+								<select class="custom-select form-control required" id="participants4" name="location">
+									<option value="">Select Result</option>
+									<option value="Selected">Selected</option>
+									<option value="Rejected">Rejected</option>
+									<option value="Call Second-time">Call Second-time</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label for="decisions2">Comments</label>
+								<textarea name="decisions" id="decisions2" rows="4" class="form-control"></textarea>
+							</div>
+							<div class="form-group">
+								<label>Rate Interviwer :</label>
+								<div class="c-inputs-stacked">
+									<input type="checkbox" id="checkbox_6">
+									<label for="checkbox_6" class="block">1 star</label>
+									<input type="checkbox" id="checkbox_7">
+									<label for="checkbox_7" class="block">2 star</label>
+									<input type="checkbox" id="checkbox_8">
+									<label for="checkbox_8" class="block">3 star</label>
+									<input type="checkbox" id="checkbox_9">
+									<label for="checkbox_9" class="block">4 star</label>
+									<input type="checkbox" id="checkbox_10">
+									<label for="checkbox_10" class="block">5 star</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</form>
+        </div>
+        <!-- /.box-body -->
+      </div>
+
                       <div style="display:none;padding:0px;" class="modal-body">
                 <div class="form-group">
 
