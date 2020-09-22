@@ -917,7 +917,7 @@ top: 51.4%;
 				<!-- Step 2 -->
 				<h6>Step 2</h6>
 				<section style="background:none;background-color:#fff;" class="bg-hexagons-dark">
-					<div class="row">
+					
 						<div class="col-md-12">
 							<div class="form-group">
 								<label for="recipentemail">Their Email(Optional) :</label>
@@ -935,25 +935,24 @@ top: 51.4%;
 										<label for="bankDetail">I know their bank details</label>
                                     </fieldset>
                      </div> 
-                     <div style="display:none;" class="bank-detail-confirmation col-md-12">
+                    <div style="display:none;" class="bank-detail-confirmation col-md-12">
                         <p style="font-size: 14px;">
-                        Please enter their email address in the required field above. We’ll send an email to request their bank details once you’ve paid for your transfer.<br/>
-Make sure they respond to our email or the money will be refunded to you.
+                            Please enter their email address in the required field above. We’ll send an email to request their bank details once you’ve paid for your transfer.<br/>
+                            Make sure they respond to our email or the money will be refunded to you.
                         </p>
-
-    </div>
-    <div class="bank-details col-md-12">
-            <h3>Bank Details</h3>
-    <hr style="margin-top:0">
-    <div >
+                    </div>
+                    <div class="bank-details col-md-12">
+                        <h3>Bank Details</h3>
+                        <hr style="margin-top:0">
+                        <div >
 							<div class="form-group">
 								<label for="iban">IBAN :</label>
 								<input type="text" name="iban" placeholder="DE89370400440532013000" class="form-control required" id="iban">
 							</div>
 						</div>
-    </div>
+                    </div>
                      
-					</div>
+				
 				</section>
 				<!-- Step 3 -->
 				<h6>Step 3</h6>
