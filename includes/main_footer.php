@@ -50,7 +50,7 @@
     <script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/sweetalert/sweetalert.min.js"></script>
     
     <!-- wizard  -->
-    <script src="<?=$newsifyObj->base_url; ?>/js/pages/steps.js"></script>
+    <script src="<?=$newsifyObj->base_url; ?>/js/js/pages/steps.js"></script>
 	
 
 
