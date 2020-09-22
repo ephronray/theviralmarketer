@@ -959,51 +959,7 @@ top: 51.4%;
 					</div>
 				</section>
 				<!-- Step 4 -->
-				<h6>Step 4</h6>
-				<section class="bg-hexagons-dark">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="behName3">Behaviour :</label>
-								<input type="text" class="form-control required" id="behName3">
-							</div>
-							<div class="form-group">
-								<label for="participants3">Confidance</label>
-								<input type="text" class="form-control required" id="participants3">
-							</div>
-							<div class="form-group">
-								<label for="participants4">Result</label>
-								<select class="custom-select form-control required" id="participants4" name="location">
-									<option value="">Select Result</option>
-									<option value="Selected">Selected</option>
-									<option value="Rejected">Rejected</option>
-									<option value="Call Second-time">Call Second-time</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="decisions2">Comments</label>
-								<textarea name="decisions" id="decisions2" rows="4" class="form-control"></textarea>
-							</div>
-							<div class="form-group">
-								<label>Rate Interviwer :</label>
-								<div class="c-inputs-stacked">
-									<input type="checkbox" id="checkbox_6">
-									<label for="checkbox_6" class="block">1 star</label>
-									<input type="checkbox" id="checkbox_7">
-									<label for="checkbox_7" class="block">2 star</label>
-									<input type="checkbox" id="checkbox_8">
-									<label for="checkbox_8" class="block">3 star</label>
-									<input type="checkbox" id="checkbox_9">
-									<label for="checkbox_9" class="block">4 star</label>
-									<input type="checkbox" id="checkbox_10">
-									<label for="checkbox_10" class="block">5 star</label>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
+				
 			</form>
         </div>
 
