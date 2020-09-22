@@ -939,7 +939,7 @@ Make sure they respond to our email or the money will be refunded to you.
                         </p>
 
     </div>
-    <div class="bank-detail">
+    <div class="bank-detail col-md-12">
             <h3>Bank Details</h3>
     </hr>
     <div class="col-md-12">
@@ -1559,13 +1559,16 @@ $(".btn-with-icon").on("click", function() {
 
 
 $('#bankDetail').click(function() {
-    if ($('#bankDetail').attr('checked')) {
-  $("#bank-detail").css('display','block');
+ 
+    if($('#bankDetail').prop("checked") == true){
+        $("#bank-detail").css('display','block');
   $("#bank-detail-confirmation").css('display','none');
-} else {
-    $("#bank-detail").css('display','none');
+            }
+            else if($('#bankDetail').prop("checked") == false){
+                $("#bank-detail").css('display','none');
   $("#bank-detail-confirmation").css('display','block');
-}
+            }
+ 
 });
 
 
