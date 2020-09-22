@@ -939,9 +939,9 @@ Make sure they respond to our email or the money will be refunded to you.
                         </p>
 
     </div>
-    <div class="bank-detail col-md-12">
+    <div class="bank-details col-md-12">
             <h3>Bank Details</h3>
-    <hr style="margin-bottom:0">
+    <hr style="margin-top:0">
     <div >
 							<div class="form-group">
 								<label for="iban">IBAN :</label>
@@ -1561,12 +1561,12 @@ $(".btn-with-icon").on("click", function() {
 $('#bankDetail').click(function() {
  
     if($('#bankDetail').prop("checked") == true){
-        $("#bank-detail").css('display','block');
-  $("#bank-detail-confirmation").css('display','none');
+        $(".bank-details").css('display','block');
+  $(".bank-detail-confirmation").css('display','none');
             }
             else if($('#bankDetail').prop("checked") == false){
-                $("#bank-detail").css('display','none');
-  $("#bank-detail-confirmation").css('display','block');
+                $(".bank-details").css('display','none');
+  $(".bank-detail-confirmation").css('display','block');
             }
  
 });
