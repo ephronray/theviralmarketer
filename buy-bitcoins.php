@@ -86,14 +86,17 @@ $error                = "";
         opacity: 1
     }
 }
-.actions.clearfix{
-    padding-top: 0;
+.actions.clearfix ul li {
+    margin: 0 3px !important;
 }
-.actions.clearfix ul{
-    padding-right:0px;
+.actions.clearfix ul li a {
+    font-size: 17px;
 }
-.actions.clearfix ul li{
-    margin:0 10px;
+.actions.clearfix {
+    padding-top: 0 !important;
+}
+.actions.clearfix ul {
+    padding-right: 0 !important;
 }
 .fadeIn {
     -webkit-animation-name: fadeIn;
