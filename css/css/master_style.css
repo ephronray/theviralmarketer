@@ -3532,7 +3532,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 .wizard-content .wizard.wizard-circle>.steps>ul>li:after,
 .wizard-content .wizard.wizard-circle>.steps>ul>li:before {
-    top: 45px;
+    top: 53px;
     width: 50%;
     height: 3px;
     background-color: #03a9f3

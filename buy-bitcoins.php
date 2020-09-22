@@ -86,6 +86,15 @@ $error                = "";
         opacity: 1
     }
 }
+.actions .clearfix{
+    padding-top: 0;
+}
+.actions .clearfix ul{
+    padding-right:0px;
+}
+.actions .clearfix ul li{
+    margin:0 10px;
+}
 .fadeIn {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn
@@ -906,23 +915,41 @@ top: 51.4%;
 				<h6>Step 2</h6>
 				<section style="background:none;background-color:#fff;" class="bg-hexagons-dark">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-12">
 							<div class="form-group">
-								<label for="jobTitle3">Company Name :</label>
-								<input type="text" class="form-control required" id="jobTitle3">
+								<label for="recipentemail">Their Email(Optional) :</label>
+								<input type="email" name="recipentemail" class="form-control required" id="recipentemail">
 							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="webUrl3">Company URL :</label>
-								<input type="url" class="form-control required" id="webUrl3" name="webUrl3"> </div>
 						</div>
 						<div class="col-md-12">
 							<div class="form-group">
-								<label for="shortDescription3">Short Description :</label>
-								<textarea name="shortDescription" id="shortDescription3" rows="6" class="form-control"></textarea>
+								<label for="accountHolder">Full name of Account Holder :</label>
+								<input type="text" class="form-control required" id="accountHolder" name="accountHolder"> </div>
+						</div>
+                        <div class="controls col-md-12">
+									<fieldset>
+										<input type="checkbox" id="bankDetail" required value="1" checked>
+										<label for="bankDetail">I know their bank details</label>
+                                    </fieldset>
+                     </div> 
+                     <div class="bank-detail-confirmation">
+                        <p>
+                        Please enter their email address in the required field above. We’ll send an email to request their bank details once you’ve paid for your transfer.<br/>
+Make sure they respond to our email or the money will be refunded to you.
+                        </p>
+
+    </div>
+    <div class="bank-detail">
+            <h3>Bank Details</h3>
+    </hr>
+    <div class="col-md-12">
+							<div class="form-group">
+								<label for="iban">IBAN :</label>
+								<input type="text" name="iban" placeholder="DE89370400440532013000" class="form-control required" id="iban">
 							</div>
 						</div>
+    </div>
+                     
 					</div>
 				</section>
 				<!-- Step 3 -->
@@ -1528,6 +1555,13 @@ $(".btn-with-icon").on("click", function() {
     });
 });    
 	</script>
+<script>
+if ($('#bankDetail').attr('checked')) {
+  $("#bank-detail").show();
+} else {
+  $("#bank-detail-confirmation").hide();
+}
 
+</script>
 	
 	
