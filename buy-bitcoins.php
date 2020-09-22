@@ -861,144 +861,12 @@ top: 51.4%;
                 <div data-features-tabs class="features-content-col col-md-6 col-sm-12 col-xs-12">
                     <div id="feature-1" class="features-textblock animated fadeIn">
                     <div class="modal-body">
-                      <!-- <h2>Stripe</h2> -->
-                       <!-- <div style="display:flex">
+                      <h2>Stripe</h2>
+                       <div style="display:flex">
                         <i class="icon fa fa-warning" style="font-size: 18px;margin-top: 3px;margin-right: 4px;color: #fbae1c;"></i><p style="font-weight: 400;font-size: 14px;color: #847d7d;">Stripe is Not Available Yet Please Choose another method.</p> 
-                        </div> -->
+                        </div>
           
-                        <div class="box-body wizard-content">
-			<form action="#" class="validation-wizard wizard-circle">
-				<!-- Step 1 -->
-				<h6>Step 1</h6>
-				<section style="background:none;background-color:#fff;" class="bg-hexagons-dark">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="wfirstName2"> First Name : <span class="danger">*</span> </label>
-								<input type="text" class="form-control required" id="wfirstName2" name="firstName"> </div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="wlastName2"> Last Name : <span class="danger">*</span> </label>
-								<input type="text" class="form-control required" id="wlastName2" name="lastName"> </div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="wemailAddress2"> Email Address : <span class="danger">*</span> </label>
-								<input type="email" class="form-control required" id="wemailAddress2" name="emailAddress"> </div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="wphoneNumber2">Phone Number :</label>
-								<input type="tel" class="form-control" id="wphoneNumber2"> </div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="wlocation2"> Select City : <span class="danger">*</span> </label>
-								<select class="custom-select form-control required" id="wlocation2" name="location">
-									<option value="">Select City</option>
-									<option value="India">India</option>
-									<option value="USA">USA</option>
-									<option value="Dubai">Dubai</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="wdate2">Date of Birth :</label>
-								<input type="date" class="form-control" id="wdate2"> </div>
-						</div>
-					</div>
-				</section>
-				<!-- Step 2 -->
-				<h6>Step 2</h6>
-				<section style="background:none;background-color:#fff;" class="bg-hexagons-dark">
-					
-						<div class="col-md-12">
-							<div class="form-group">
-								<label for="recipentemail">Their Email(Optional) :</label>
-								<input type="email" name="recipentemail" class="form-control email-optional" id="recipentemail">
-							</div>
-						</div>
-						<div class="col-md-12">
-							<div class="form-group">
-								<label for="accountHolder">Full name of Account Holder :</label>
-								<input type="text" class="form-control required" id="accountHolder" name="accountHolder"> </div>
-						</div>
-                        <div class="controls col-md-12">
-									<fieldset>
-										<input type="checkbox" id="bankDetail" required value="1" checked>
-										<label for="bankDetail">I know their bank details</label>
-                                    </fieldset>
-                     </div> 
-                    <div style="display:none;" class="bank-detail-confirmation col-md-12">
-                        <p style="font-size: 14px;">
-                            Please enter their email address in the required field above. We’ll send an email to request their bank details once you’ve paid for your transfer.<br/>
-                            Make sure they respond to our email or the money will be refunded to you.
-                        </p>
-                    </div>
-                    <div class="bank-details col-md-12">
-                        <h3>Bank Details</h3>
-                        <hr style="margin-top:0">
-                        <div >
-							<div class="form-group">
-								<label for="iban">IBAN :</label>
-								<input type="text" name="iban" placeholder="DE89370400440532013000" class="form-control required" id="iban">
-							</div>
-						</div>
-                    </div>
-                     
-				
-				</section>
-				<!-- Step 3 -->
-				<h6>Step 3</h6>
-				<section style="background:none;background-color:#fff;" class="bg-hexagons-dark">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="wint1">Interview For :</label>
-								<input type="text" class="form-control required" id="wint1"> </div>
-							<div class="form-group">
-								<label for="wintType1">Interview Type :</label>
-								<select class="custom-select form-control required" id="wintType1" data-placeholder="Type to search cities" name="wintType1">
-									<option value="Banquet">Normal</option>
-									<option value="Fund Raiser">Difficult</option>
-									<option value="Dinner Party">Hard</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<label for="wLocation1">Location :</label>
-								<select class="custom-select form-control required" id="wLocation1" name="wlocation">
-									<option value="">Select City</option>
-									<option value="India">India</option>
-									<option value="USA">USA</option>
-									<option value="Dubai">Dubai</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-md-6">
-							<div class="form-group">
-								<label for="wjobTitle4">Interview Date :</label>
-								<input type="date" class="form-control required" id="wjobTitle4">
-							</div>
-							<div class="form-group">
-								<label>Requirements :</label>
-									<input name="group2" type="radio" id="radio_3" value="1">
-									<label for="radio_3" class="block">Employee</label>
-									<input name="group2" type="radio" id="radio_4" value="1">
-									<label for="radio_4">Contract</label>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- Step 4 -->
-				
-			</form>
-        </div>
+           
 
 
                       <div style="display:none;padding:0px;" class="modal-body">
@@ -1087,13 +955,29 @@ top: 51.4%;
                     </div>
                     <div id="feature-3" class="features-textblock animated fadeIn">
                         <div class="modal-body">
-                        <h2>
+                         <h2>
                             Visa
                         </h2>
-                        <div style="display:flex">
+                        <!-- <div style="display:flex">
                         <i class="icon fa fa-warning" style="font-size: 18px;margin-top: 3px;margin-right: 4px;color: #fbae1c;"></i><p style="font-weight: 400;font-size: 14px;color: #847d7d;">Visa is Not Available Yet Please Choose another method.</p> 
-                    </div>
-                      
+                    </div>  -->
+                    <div class="form-group">
+
+                        <label for="InputAmountPaypal"><i class="fa fa-money  "></i>Amount:</label>
+                        <input id="InputAmountPaypal" type="number" step="any" class="form-control" name="amount" required aria-describedby="AmountHelp" placeholder="Enter Amount In dollers($)" oninput="transactionFeePaypal()">
+                        
+                    </div>  
+
+                <div class="col-md-6 col-sm-12 col-xs-12 " style="text-align:center !important;float:right; " >
+                  
+                    <p id="paypal_sucess_password"></p>
+                        <button  style="display:none;float:left;" id="paynow_visa" onClick="visaPay(event);" name="buy_bitcoin"  class="btn btn-lg btn-primary">Pay Now</button>
+
+                  
+
+                </div>
+
+
                     </div>
                 </div>
                 
