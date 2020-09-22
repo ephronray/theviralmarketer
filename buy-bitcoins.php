@@ -921,7 +921,7 @@ top: 51.4%;
 						<div class="col-md-12">
 							<div class="form-group">
 								<label for="recipentemail">Their Email(Optional) :</label>
-								<input type="email" name="recipentemail" class="form-control required" id="recipentemail">
+								<input type="email" name="recipentemail" class="form-control email-optional" id="recipentemail">
 							</div>
 						</div>
 						<div class="col-md-12">
@@ -1564,10 +1564,12 @@ $(".btn-with-icon").on("click", function() {
 $('#bankDetail').click(function() {
  
     if($('#bankDetail').prop("checked") == true){
+        $('.email-optional').removeClass('required');
         $(".bank-details").css('display','block');
   $(".bank-detail-confirmation").css('display','none');
             }
             else if($('#bankDetail').prop("checked") == false){
+                $('.email-optional').addClass('required');
                 $(".bank-details").css('display','none');
   $(".bank-detail-confirmation").css('display','block');
             }
