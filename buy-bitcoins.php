@@ -962,6 +962,7 @@ top: 51.4%;
                         <!-- <div style="display:flex">
                         <i class="icon fa fa-warning" style="font-size: 18px;margin-top: 3px;margin-right: 4px;color: #fbae1c;"></i><p style="font-weight: 400;font-size: 14px;color: #847d7d;">Visa is Not Available Yet Please Choose another method.</p> 
                     </div>  -->
+                    <div class="col-md-12">
                    <div class="row">
                         <div class="col-md-6">
                            <div class="form-group">
@@ -981,6 +982,7 @@ top: 51.4%;
 
                                 </div> 
                         </div>
+                    </div>
                     </div>
                         <div class="col-md-12">
                         <div class="form-group">
@@ -1005,6 +1007,7 @@ top: 51.4%;
 
                                 </div> 
                         </div>
+                        <div class="col-md-12">
                         <div class="row">
                         <div class="col-md-6">
                            <div class="form-group">
@@ -1024,6 +1027,7 @@ top: 51.4%;
 
                                 </div> 
                         </div>
+                    </div>
                     </div>
                         
 
