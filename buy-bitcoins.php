@@ -985,30 +985,64 @@ top: 51.4%;
                         <div class="col-md-12">
                         <div class="form-group">
 
-                            <!-- <label for="secondName"></i>Country:</label> -->
-                            <!-- <select class="form-control" name="country"> -->
-                             <!-- foreach( $countries as $key =>$single){  ?> -->
-                            <!-- <option value="<?php echo $key; ?>"><?php echo $single ?></option> -->
-
-
-                         <?php // }
-
-
-                            ?>
-    <!-- </select> -->
+                            <label for="secondName"></i>Country:</label>
+                            <select class="form-control" name="country">
+                             <?php foreach( $countries as $key =>$single){  ?>
+                            <option value="<?php echo $key; ?>"><?php echo $single ?></option>
+                         <?php }   ?>
+    </select>
                             
-                            <input id="secondName" type="text"  class="form-control" name="secondName" required  placeholder="Enter Second Name" >
 
+
+                          
                             </div> 
                          </div>
-                   
+                         <div class="col-md-12">
+                             <div class="form-group">
+
+                                <label for="address"></i>Address:</label>
+                                <input id="address" type="text"  class="form-control" name="address" required  placeholder="Enter Address" >
+
+                                </div> 
+                        </div>
+                        <div class="row">
+                        <div class="col-md-6">
+                           <div class="form-group">
+
+                               <label for="city"></i>City:</label>
+                                <input id="city" type="text"  class="form-control" name="city" required placeholder="Enter City" >
+
+                            </div>  
+                        
+                        </div>
+                        
+                        <div class="col-md-6">
+                             <div class="form-group">
+
+                                <label for="postalCode"></i>Postal Code:</label>
+                                <input id="postalCode" type="text"  class="form-control" name="postalCode" required  placeholder="Enter Postal Code" >
+
+                                </div> 
+                        </div>
+                    </div>
+                        
+
+<div class="col-md-12">
                     <div class="form-group">
 
                         <label for="InputAmountPaypal"><i class="fa fa-money  "></i>Amount:</label>
                         <input id="InputAmountPaypal" type="number" step="any" class="form-control" name="amount" required aria-describedby="AmountHelp" placeholder="Enter Amount In dollers($)" oninput="transactionFeePaypal()">
                         
                     </div>  
+</div>
+<div class="col-md-12">
+                    <div class="form-group">
 
+                        <label for="accountNumber">Account Number:</label>
+                        <input id="accountNumber" type="text" class="form-control" name="accountNumber" required  placeholder="Enter Account Number" >
+                        
+                    </div>  
+</div>
                 <div class="col-md-6 col-sm-12 col-xs-12 " style="text-align:center !important;float:right; " >
                   
                     <p id="paypal_sucess_password"></p>
