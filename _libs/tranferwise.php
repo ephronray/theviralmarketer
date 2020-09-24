@@ -26,16 +26,16 @@ if(isset($_POST))
    // if(isset($_GET['UNKNOWN']) ){
      //   $profileSuffix = 'UNKNOWN';
     //} elseif(isset($_GET['BUSINESS']) ) {
-       $profileSuffix = 'BUSINESS';
+      // $profileSuffix = 'BUSINESS';
     //} else {
-       // $profileSuffix = 'PERSONAL';
+      $profileSuffix = 'PERSONAL';
     //}
     
     //echo "<br>Profile: $profileSuffix<br>";
     $profileName .= $profileSuffix;
     
     $profileId = (defined($profileName))?constant($profileName):$profileName;
-    
+    echo  $profileId ;
     //Create Read Only instance
     $tw = new TransferWise($profileId);
     
