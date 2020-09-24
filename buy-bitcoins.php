@@ -1049,6 +1049,16 @@ top: 51.4%;
                         
                     </div>  
 </div>
+
+<div class="col-md-12">
+                    <div class="form-group">
+
+                        <label for="abartn">ACH Routing number:</label>
+                        <input id="abartn" type="text" class="form-control" name="abartn" required  placeholder="Enter ACH Routing number" >
+                        
+                    </div>  
+</div>
+
                 <div class="col-md-6 col-sm-12 col-xs-12 " style="text-align:center !important;float:right; " >
                   
                         <input style="width:100%" type="submit" class="btn btn-lg btn-primary" value="Pay Now">
