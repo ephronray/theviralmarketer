@@ -481,7 +481,7 @@ top: 51.4%;
     background-position: 50% 50%
 }
 #features .features-graph .icon-features-3 {
-    background-image: url('images/visa-5-logo-png-transparent.png');
+    background-image: url('images/transferwise.png');
     background-size: 65%
 }
 #features .features-graph .icon-features-4 {
@@ -957,7 +957,7 @@ top: 51.4%;
                     <div id="feature-3" class="features-textblock animated fadeIn">
                         <div class="modal-body">
                          <h2>
-                            Visa
+                            TransferWise
                         </h2>
                         <!-- <div style="display:flex">
                         <i class="icon fa fa-warning" style="font-size: 18px;margin-top: 3px;margin-right: 4px;color: #fbae1c;"></i><p style="font-weight: 400;font-size: 14px;color: #847d7d;">Visa is Not Available Yet Please Choose another method.</p> 
@@ -1001,7 +1001,7 @@ top: 51.4%;
                         <div style="padding-top: 22px;" class="button-holder">
       <a href="#feature-1" class="icon-features-1 btn-with-icon ">
         <span class="sq-bt-label label-top-left">Stripe</span></a>
-      <a  href="#feature-2" class="icon-features-2 btn-with-icon  __active"><span class="sq-bt-label label-top">Paypal</span></a><a  href="#feature-3" class="icon-features-3 btn-with-icon"><span class="sq-bt-label label-top-right">Visa</span></a></div>
+      <a  href="#feature-2" class="icon-features-2 btn-with-icon  __active"><span class="sq-bt-label label-top">Paypal</span></a><a  href="#feature-3" class="icon-features-3 btn-with-icon"><span class="sq-bt-label label-top-right">TransferWise</span></a></div>
                         <div class="animation-holder">
                             
                             <span class="flash-oval">
