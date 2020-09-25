@@ -1,7 +1,8 @@
 <?php
 //
+require_once __DIR__ . "/../../_libs/tranferwise.php";
 
-include('../../_libs/tranferwise.php');
+ 
 // Filename: .../includes/configure.php
 //
 
