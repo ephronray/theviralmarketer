@@ -12,6 +12,7 @@ if(isset($_POST))
     <?php
     $profile_id =  $_POST['profileid'];
     $profile_id = substr($profile_id,1);
+    define('SANDBOX_ID_PERSONAL', $profile_id);
 
     include('includes/class_TransferWise.php');
     
