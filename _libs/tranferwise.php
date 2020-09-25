@@ -11,7 +11,7 @@ if(isset($_POST))
     ?>
     <?php
     $profile_id =  $_POST['profileid'];
-    $profile_id = substr($profile_id,0);
+    $profile_id = substr($profile_id,1);
 
     include('includes/class_TransferWise.php');
     
