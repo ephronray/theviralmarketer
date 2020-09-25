@@ -42,7 +42,9 @@ if(isset($_POST))
 
     //Create Read Only instance
     $tw = new TransferWise($profileId);
-    
+    if(is_object($tw )){
+      echo "Working";
+    }
     if(strstr($profileId,'_UNKNOWN') !== false) {
         //Phase 1 - IDs unknown
         $profiles=json_decode($tw->getProfiles());
