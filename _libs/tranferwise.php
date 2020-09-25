@@ -37,11 +37,11 @@ if(isset($_POST))
     //echo "<br>Profile: $profileSuffix<br>";
     $profileName .= $profileSuffix;
     
-   // $profileId = (defined($profileName))?constant($profileName):$profileName;
+    $profileId = (defined($profileName))?constant($profileName):$profileName;
     
-
+      
     //Create Read Only instance
-    $tw = new TransferWise($profile_id);
+    $tw = new TransferWise($profileId);
     // if(is_object($tw )){
     //   echo "Working";
     //   echo $profile_id;
