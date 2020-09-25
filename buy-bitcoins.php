@@ -481,7 +481,7 @@ top: 51.4%;
     background-position: 50% 50%
 }
 #features .features-graph .icon-features-3 {
-    background-image: url('images/transferwise.png');
+    background-image: url('images/Transferwise.png');
     background-size: 65%
 }
 #features .features-graph .icon-features-4 {
