@@ -3,6 +3,7 @@
 if(isset($_POST))
 {
     require_once (__DIR__.'/../_libs/TransferWise/includes/class_TransferWise.php');
+    require_once (__DIR__.'/../_libs/TransferWise/includes/configure.php');
   
     
    
