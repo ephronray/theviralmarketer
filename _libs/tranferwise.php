@@ -38,12 +38,14 @@ if(isset($_POST))
     $profileName .= $profileSuffix;
     
     $profileId = (defined($profileName))?constant($profileName):$profileName;
-    echo $profileId ;
+    
 
     //Create Read Only instance
     $tw = new TransferWise($profileId);
     if(is_object($tw )){
       echo "Working";
+      echo $profile_id;
+      echo $profileId ;
     }
     if(strstr($profileId,'_UNKNOWN') !== false) {
         //Phase 1 - IDs unknown
