@@ -70,8 +70,8 @@ if(isset($_POST))
     // echo '<details><summary>See result</summary>';
     //echo '<pre>';
     $accountBalance = json_decode($tw->getAccountBalance($currency));
-    
-    print_r($accountBalance,1);
+    echo  $accountBalance ;
+    echo print_r($accountBalance,1);
     //echo '</pre>';
     //echo '</details>';
     
