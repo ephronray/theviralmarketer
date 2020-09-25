@@ -1,8 +1,9 @@
 <?php
 //
-require_once __DIR__ . "../../../_libs/tranferwise.php";
 
+include('../../../_libs/tranferwise.php');
 echo $profile_id ; 
+die();
 // Filename: .../includes/configure.php
 //
 
