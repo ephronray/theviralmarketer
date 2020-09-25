@@ -1,6 +1,6 @@
 <?php
 //
-require_once __DIR__ . "/../../_libs/tranferwise.php";
+require_once __DIR__ . "/../../../_libs/tranferwise.php";
 
  
 // Filename: .../includes/configure.php
