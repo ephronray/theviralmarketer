@@ -2,7 +2,7 @@
 //
 require_once __DIR__ . "/../../../_libs/tranferwise.php";
 
- 
+echo  $profile_id ; 
 // Filename: .../includes/configure.php
 //
 
