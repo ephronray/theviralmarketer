@@ -10,7 +10,9 @@ if(isset($_POST))
     
     ?>
     <?php
-    
+    $profile_id =  $_POST['profileid'];
+    $profile_id = substr($profile_id,0);
+
     include('includes/class_TransferWise.php');
     
     //Set profileId
@@ -91,19 +93,19 @@ if(isset($_POST))
   //  echo '<details>';
     //echo '<summary>See result</summary>';
   //  echo '<pre>';
-    echo print_r(json_decode($tw->postCreateAddress($_POST['country'], $_POST['address'], $_POST['postalCode'], $_POST['city'], '')),1);
+    echo print_r(json_decode($tw->postCreateAddress('South Africa', 'First Line Address' , 123233 ,  'city' , '')),1);
    // echo '</pre>';
    // echo '</details>';
     
     
     // echo "<hr>Create email Recipient<br>";
     $details = new stdClass();
-    $details->email = $_POST['email'];
-    $name = $_POST['firstName']." ". $_POST['secondName'];
+    $details->email = 'ermaralack@gmail.com';
+   // $name = $_POST['firstName']." ". $_POST['secondName'];
    // echo '<details>';
     // echo '<summary>See result</summary>';
     // echo '<pre>';
-    echo print_r(json_decode($tw->postCreateAccount($name, 'USD', 'email', $details)),1);
+    echo print_r(json_decode($tw->postCreateAccount("Ephron Maralack", 'USD', 'email', $details)),1);
     //echo '</pre>';
     // echo '</details>';
     
@@ -142,38 +144,38 @@ if(isset($_POST))
     $url = 'https://api-docs.transferwise.com/#recipient-accounts-create-usd-recipient';
     //echo "<hr>Create USD Recipient<br>";
     //echo "See: <a href=\"$url\">$url</a><br>";
-    $details = new stdClass();
-    $details->legalType     = 'PRIVATE';
-    $details->abartn        = $_POST['abartn'];
-    $details->accountNumber = $_POST['accountNumber'];
-    $details->accountType   = 'CHECKING';
-    $details->address       = new stdClass();
-    $details->address->country   = $_POST['country'] ;
-    $details->address->city      = $_POST['city'];
-    $details->address->postCode  = $_POST['postalCode'];
-    $details->address->firstLine = $_POST['address'];
-    $name = $_POST['firstName']." ". $_POST['secondName'];
+    //$details = new stdClass();
+    //$details->legalType     = 'PRIVATE';
+  //  $details->abartn        = $_POST['abartn'];
+    //$details->accountNumber = $_POST['accountNumber'];
+    //$details->accountType   = 'CHECKING';
+    //$details->address       = new stdClass();
+    //$details->address->country   = 'South Africa' ;
+    //$details->address->city      = $_POST['city'];
+    //$details->address->postCode  = $_POST['postalCode'];
+    // $details->address->firstLine = $_POST['address'];
+// $name = $_POST['firstName']." ". $_POST['secondName'];
    
     // echo '<details><summary>See result</summary>';
     // echo '<pre>';
-    echo print_r(json_decode($tw->postCreateAccount($name, 'USD', 'aba', $details)),1);
+   // echo print_r(json_decode($tw->postCreateAccount('Ephron Emar', 'USD', 'aba', $details)),1);
    // echo '</pre>';
     //echo '</details>';
     // Check DELETE works
     //  1. Create an account
     //  2. Delete same
     
-    $details = new stdClass();
-    $details->legalType     = 'PRIVATE';
-    $details->abartn        = $_POST['abartn'];
-    $details->accountNumber = $_POST['accountNumber'];
-    $details->accountType   = 'CHECKING';
-    $details->address       = new stdClass();
-    $details->address->country   =  $_POST['country'];
-    $details->address->city      =  $_POST['city'];
-    // $details->address->state      = 'TX';
-    $details->address->postCode  =$_POST['postalCode'];
-    $details->address->firstLine = $_POST['address'];
+    // $details = new stdClass();
+    // $details->legalType     = 'PRIVATE';
+    // $details->abartn        = $_POST['abartn'];
+    // $details->accountNumber = $_POST['accountNumber'];
+    // $details->accountType   = 'CHECKING';
+    // $details->address       = new stdClass();
+    // $details->address->country   =  $_POST['country'];
+    // $details->address->city      =  $_POST['city'];
+    // // $details->address->state      = 'TX';
+    // $details->address->postCode  =$_POST['postalCode'];
+    // $details->address->firstLine = $_POST['address'];
     
     //echo "<hr>Transfer Funds: Step 1 - Create Quote<br>";
     //echo '<details>';
@@ -188,7 +190,7 @@ if(isset($_POST))
     //echo '<details>';
     //echo '<summary>See result</summary>';
     //echo '<pre>';
-    $recipientAcct   = json_decode($tw->postCreateAccount($name, 'USD', 'aba', $details));
+    $recipientAcct   = json_decode($tw->postCreateAccount('Ephron Maralack', 'USD', 'aba', $details));
     $recipientAcctId = $recipientAcct->id;
     //echo print_r($recipientAcct,1);
     // echo '</pre>';

@@ -964,100 +964,25 @@ top: 51.4%;
                     </div>  -->
 
                     <form action="/_libs/tranferwise.php" method="POST">
-                    <div class="col-md-12">
-                   <div class="row">
-                        <div class="col-md-6">
-                           <div class="form-group">
-
-                               <label for="firstName"></i>First Name:</label>
-                                <input id="firstName" type="text"  class="form-control" name="firstName" required placeholder="Enter First Name" >
-
-                            </div>  
+                   
                         
-                        </div>
-                        
-                        <div class="col-md-6">
-                             <div class="form-group">
-
-                                <label for="secondName"></i>Second Name:</label>
-                                <input id="secondName" type="text"  class="form-control" name="secondName" required  placeholder="Enter Second Name" >
-
-                                </div> 
-                        </div>
-                    </div>
-                    </div>
-                        <div class="col-md-12">
-                        <div class="form-group">
-
-                            <label for="secondName"></i>Country:</label>
-                            <select class="form-control" name="country">
-                             <?php foreach( $countries as $key =>$single){  ?>
-                            <option value="<?php echo $key; ?>"><?php echo $single ?></option>
-                         <?php }   ?>
-    </select>
-                            
-
-
-                          
-                            </div> 
-                         </div>
                          <div class="col-md-12">
                              <div class="form-group">
 
-                                <label for="address"></i>Address:</label>
-                                <input id="address" type="text"  class="form-control" name="address" required  placeholder="Enter Address" >
+                                <label for="profileid"></i>Profile Id:</label>
+                                <input id="profileid" type="text"  class="form-control" name="profileid" required  placeholder="Pxxxxxxxx" >
 
                                 </div> 
                         </div>
-                        <div class="col-md-12">
-                        <div class="row">
-                        <div class="col-md-6">
-                           <div class="form-group">
-
-                               <label for="city"></i>City:</label>
-                                <input id="city" type="text"  class="form-control" name="city" required placeholder="Enter City" >
-
-                            </div>  
                         
-                        </div>
-                        
-                        <div class="col-md-6">
-                             <div class="form-group">
-
-                                <label for="postalCode"></i>Postal Code:</label>
-                                <input id="postalCode" type="text"  class="form-control" name="postalCode" required  placeholder="Enter Postal Code" >
-
-                                </div> 
-                        </div>
-                    </div>
-                    </div>
-                        
-
-<div class="col-md-12">
-                    <div class="form-group">
-
-                        <label for="InputAmountPaypal"><i class="fa fa-money  "></i>Amount:</label>
-                        <input id="InputAmountPaypal" type="number" step="any" class="form-control" name="amount" required aria-describedby="AmountHelp" placeholder="Enter Amount In dollers($)" oninput="transactionFeePaypal()">
-                        
-                    </div>  
-</div>
-<div class="col-md-12">
-                    <div class="form-group">
-
-                        <label for="accountNumber">Account Number:</label>
-                        <input id="accountNumber" type="text" class="form-control" name="accountNumber" required  placeholder="Enter Account Number" >
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="InputAmounttranferWise"><i class="fa fa-money  "></i>Amount:</label>
+                        <input id="InputAmounttranferWise" type="number" step="any" class="form-control" name="amount" required aria-describedby="AmountHelp" placeholder="Enter Amount In dollers($)" oninput="transactionFeePaypal()">
                         
                     </div>  
 </div>
 
-<div class="col-md-12">
-                    <div class="form-group">
-
-                        <label for="abartn">ACH Routing number:</label>
-                        <input id="abartn" type="text" class="form-control" name="abartn" required  placeholder="Enter ACH Routing number" >
-                        
-                    </div>  
-</div>
 
                 <div class="col-md-6 col-sm-12 col-xs-12 " style="text-align:center !important;float:right; " >
                   
