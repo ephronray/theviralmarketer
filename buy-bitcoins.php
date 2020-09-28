@@ -1418,6 +1418,7 @@ function transferwisePay(event) {
                 type: 'post',
                 dataType: 'JSON',
                 success: function(response) {
+                    console.log(response);
 	              if(response['success']) {
 					  window.open(response['url'],'_self');
 			} else {
