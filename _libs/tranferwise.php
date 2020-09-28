@@ -82,7 +82,7 @@ if(isset($_POST))
       echo print_r(json_decode($tw->getStatement($currency,'json',gmdate("Y-m-d\TH:i:s\Z", strtotime('-1 month')))),1);
       //echo '</pre>';
       //echo '</details>';
-    }
+    // }
     
    // echo "<hr>Get Exch Rate<br>";
     //echo '<details><summary>See result</summary>';
