@@ -970,7 +970,7 @@ top: 51.4%;
                              <div class="form-group">
 
                                 <label for="profileid"></i>Profile Id:</label>
-                                <input id="profileid" type="text"  class="form-control" name="profileid" required  placeholder="Pxxxxxxxx" >
+                                <input id="profileid" type="text"  class="form-control profileidTansferwise" name="profileid" required  placeholder="Pxxxxxxxx" >
 
                                 </div> 
                         </div>
@@ -978,7 +978,7 @@ top: 51.4%;
                     <div class="col-md-12">
                         <div class="form-group">
                             <label for="InputAmounttranferWise"><i class="fa fa-money  "></i>Amount:</label>
-                        <input id="InputAmounttranferWise" type="number" step="any" class="form-control" name="amount" required aria-describedby="AmountHelp" placeholder="Enter Amount In dollers($)" oninput="transactionFeePaypal()">
+                        <input id="InputAmounttranferWise" type="number" step="any" class="form-control amountTansferwise" name="amount" required aria-describedby="AmountHelp" placeholder="Enter Amount In dollers($)" oninput="transactionFeePaypal()">
                         
                     </div>  
 </div>
@@ -986,7 +986,7 @@ top: 51.4%;
 
                 <div class="col-md-6 col-sm-12 col-xs-12 " style="text-align:center !important;float:right; " >
                   
-                        <input style="width:100%" type="submit" class="btn btn-lg btn-primary" value="Pay Now">
+                        <input style="width:100%" type="submit" onClick="transferwisePay(event);"  class="btn btn-lg btn-primary" value="Pay Now">
                   
 
                 </div>
@@ -1405,7 +1405,32 @@ else
     
 </script>
 
+
 <script>
+function transferwisePay(event) {
+    var amount = $('.amountTansferwise').val();
+    var profileid  = $('.profileidTansferwise').val();
+    $.ajax({
+        url: './ajax/transfewiseProcess.php',
+                 data: {
+                     "amount": amount,
+                    "profileid": profileid
+                },
+                type: 'post',
+                dataType: 'JSON',
+                success: function(response) {
+	              if(response['success']) {
+					  window.open(response['url'],'_self');
+			} else {
+				  $("#error-message").html(response['message']).css('display', 'block');
+				$(window).scrollTop()
+				}
+          }
+
+    });
+    
+    }
+
 function paypalPay(event) {
     var amount = paypalTotalAmount();
     var user_amount = document.getElementById("InputAmountPaypal").value;
