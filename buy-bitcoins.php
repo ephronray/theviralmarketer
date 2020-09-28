@@ -963,8 +963,7 @@ top: 51.4%;
                         <i class="icon fa fa-warning" style="font-size: 18px;margin-top: 3px;margin-right: 4px;color: #fbae1c;"></i><p style="font-weight: 400;font-size: 14px;color: #847d7d;">Visa is Not Available Yet Please Choose another method.</p> 
                     </div>  -->
 
-                    <form action="/_libs/tranferwise.php" method="POST">
-                   
+                             
                         
                          <div class="col-md-12">
                              <div class="form-group">
@@ -991,7 +990,7 @@ top: 51.4%;
 
                 </div>
 
-</form>
+
                     </div>
                 </div>
                 
