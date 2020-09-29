@@ -60,13 +60,8 @@ if(isset($_POST['amount']) && isset($_POST['profileid']))
 
 	$details = new stdClass();
   $details->email = 'ermaralack@gmail.com';
-    try {
-      $transferwise->postCreateAccount("Ephron Maralack", 'USD', 'email', $details);
-    } catch (\Throwable $th) {
-      throw $th;
-
-    }
-	  
+    
+	  $transferwise->postCreateAccount("Ephron Maralack", 'USD', 'email', $details);
 	
 	
 
