@@ -46,7 +46,11 @@ if(isset($_POST['amount']) && isset($_POST['profileid']))
 	// echo '<details><summary>See result</summary>';
 	//echo '<pre>';
 	$accountBalance = json_decode($transferwise->getAccountBalance($currency));
-	//echo  $accountBalance ;
+  if(isset($accountBalance)){
+    echo "workimg";
+echo $accountBalance;
+  }
+  //echo  $accountBalance ;
 	//echo print_r($accountBalance,1);
 	//echo '</pre>';
 	$transferwise->getStatement($currency,'json',gmdate("Y-m-d\TH:i:s\Z", strtotime('-1 month')));
