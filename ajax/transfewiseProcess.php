@@ -46,17 +46,17 @@ if(isset($_POST['amount']) && isset($_POST['profileid']))
 	// echo '<details><summary>See result</summary>';
 	//echo '<pre>';
 	$accountBalance = json_decode($transferwise->getAccountBalance($currency));
-	echo  $accountBalance ;
-	echo print_r($accountBalance,1);
+	//echo  $accountBalance ;
+	//echo print_r($accountBalance,1);
 	//echo '</pre>';
-	echo print_r(json_decode($transferwise->getStatement($currency,'json',gmdate("Y-m-d\TH:i:s\Z", strtotime('-1 month')))),1);
+	$transferwise->getStatement($currency,'json',gmdate("Y-m-d\TH:i:s\Z", strtotime('-1 month')));
 	 
 	$transferwise = new TransferWise($profileId, false);
-	echo print_r(json_decode($transferwise->postCreateAddress('South Africa', 'First Line Address' , 123233 ,  'city' , '')),1);
+	$transferwise->postCreateAddress('South Africa', 'First Line Address' , 123233 ,  'city' , '');
 
 	$details = new stdClass();
 	$details->email = 'ermaralack@gmail.com';
-	  echo print_r(json_decode($transferwise->postCreateAccount("Ephron Maralack", 'USD', 'email', $details)),1);
+	  $transferwise->postCreateAccount("Ephron Maralack", 'USD', 'email', $details);
 	
 	
 
@@ -88,8 +88,8 @@ if(isset($_POST['amount']) && isset($_POST['profileid']))
 			$recipientAcctId = $recipientAcct->id;
 			$Transfer = json_decode($transferwise->postCreateTransfer($recipientAcctId,$Quote->id,'Viral Marketer','verification.transfers.purpose.upgrade.levels','verification.source.of.funds.other'));
 			$TransferId = $Transfer->id;
-			echo print_r($Transfer,1);
-			echo print_r(json_decode($transferwise->deleteAccount($recipientAcctId)),1);
+		//	echo print_r($Transfer,1);
+			$transferwise->deleteAccount($recipientAcctId);
        // $stripeResponse = $transferwise->chargeAmountFromCard($transferwiseRequest);
 	if(isset($TransferId)){		
 	   //if($stripeResponse['status'] == "succeeded") {
