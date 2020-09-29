@@ -53,14 +53,20 @@ if(isset($_POST['amount']) && isset($_POST['profileid']))
   //echo  $accountBalance ;
 	//echo print_r($accountBalance,1);
 	//echo '</pre>';
-  echo print_r(json_decode(	$transferwise->getStatement($currency,'json',gmdate("Y-m-d\TH:i:s\Z", strtotime('-1 month')))),1);
-    
+	$transferwise->getStatement($currency,'json',gmdate("Y-m-d\TH:i:s\Z", strtotime('-1 month')));
+	 
 	$transferwise = new TransferWise($profileId, false);
 	$transferwise->postCreateAddress('South Africa', 'First Line Address' , 123233 ,  'city' , '');
 
 	$details = new stdClass();
-	$details->email = 'ermaralack@gmail.com';
-	  $transferwise->postCreateAccount("Ephron Maralack", 'USD', 'email', $details);
+  $details->email = 'ermaralack@gmail.com';
+    try {
+      $transferwise->postCreateAccount("Ephron Maralack", 'USD', 'email', $details);
+    } catch (\Throwable $th) {
+      throw $th;
+
+    }
+	  
 	
 	
 
