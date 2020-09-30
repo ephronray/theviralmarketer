@@ -236,7 +236,7 @@
 
 
 <?php 
-    //  include_once 'includes/main_footer.php';
+     include_once 'includes/main_footer.php';
 ?>
 
 <script>
