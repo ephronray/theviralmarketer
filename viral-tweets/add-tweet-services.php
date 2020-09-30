@@ -267,10 +267,3 @@ h4.box-title{
     </div>
     
 <?php include_once './../includes/main_footer.php'; ?>
-<script>
-$(document).ready(function(){
-console.log('asdasd');
-});
-</script>
-
-

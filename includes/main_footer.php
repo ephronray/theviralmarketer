@@ -31,7 +31,7 @@
 	<script src="<?=$newsifyObj->base_url; ?>/js/collect.min.js"></script>
 
 	<!-- issue file -->
-	<!-- <script src="<?php // echo $newsifyObj->base_url; ?>/assets/vendor_components/jquery/dist/jquery.js"></script> -->
+	<script src="<?php  echo $newsifyObj->base_url; ?>/assets/vendor_components/jquery/dist/jquery.js"></script>
 	<!-- issue file -->
 	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/fastclick/lib/fastclick.js"></script>
 	<!-- popper -->
