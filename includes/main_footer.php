@@ -26,7 +26,9 @@
 
 	<script src="<?=$newsifyObj->base_url; ?>/js/xlsx.full.min.js"></script>
 	<script src="<?=$newsifyObj->base_url; ?>/js/FileSaver.min.js"></script>
-	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/jquery/dist/jquery.js"></script>
+	<script src="<?=$newsifyObj->base_url; ?>/js/moment.js"></script>
+	<script src="<?=$newsifyObj->base_url; ?>/js/underscore-min.js"></script>
+	<script src="<?=$newsifyObj->base_url; ?>/js/collect.min.js"></script>
 	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/fastclick/lib/fastclick.js"></script>
 	<!-- popper -->
 	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/popper/dist/popper.min.js"></script>
