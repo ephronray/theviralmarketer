@@ -24,7 +24,7 @@
 
 	<!-- jQuery 3 -->
 
-	<script src="<?=$newsifyObj->base_url; ?>/js/FileSaver.min.js"></script>
+	<script src="<?=$newsifyObj->base_url; ?>/js/xlsx.full.min.js"></script>
 	<script src="<?=$newsifyObj->base_url; ?>/js/moment.js"></script>
 	<script src="<?=$newsifyObj->base_url; ?>/js/underscore-min.js"></script>
 	<script src="<?=$newsifyObj->base_url; ?>/js/collect.min.js"></script>
