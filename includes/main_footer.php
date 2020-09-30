@@ -29,8 +29,10 @@
 	<script src="<?=$newsifyObj->base_url; ?>/js/moment.js"></script>
 	<script src="<?=$newsifyObj->base_url; ?>/js/underscore-min.js"></script>
 	<script src="<?=$newsifyObj->base_url; ?>/js/collect.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-	
+
+	<!-- issue file -->
+	<!-- <script src="<?php // echo $newsifyObj->base_url; ?>/assets/vendor_components/jquery/dist/jquery.js"></script> -->
+	<!-- issue file -->
 	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/fastclick/lib/fastclick.js"></script>
 	<!-- popper -->
 	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/popper/dist/popper.min.js"></script>
