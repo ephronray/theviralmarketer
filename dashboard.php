@@ -186,7 +186,7 @@
 					      <h4 style="text-align: center;margin-top: 13px;"> The Viral Marketer Overview</h4>
 					      <p style="text-align:center">Watch this very IMPORTANT Video</p>
 					      </div>
-					      <iframe id="overview-iframe" width="100%" height="220" src="https://www.youtube.com/embed/EPJ2O9xL5g8?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+					      <!-- <iframe id="overview-iframe" width="100%" height="220" src="https://www.youtube.com/embed/EPJ2O9xL5g8?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe> -->
 					      
 					      <div class="box-controls overview-button-video" >
 					          <a class="btn btn-primary box-btn-fullscreen" href="#" ><span id="video-button-text" ><i class="fa fa-video-camera"></i>Full Screen</span></a>
