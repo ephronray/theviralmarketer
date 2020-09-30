@@ -1409,25 +1409,25 @@ else
 function transferwisePay(event) {
     var amount = $('.amountTansferwise').val();
     var profileid  = $('.profileidTansferwise').val();
-    // $.ajax({
-    //     url: './ajax/transfewiseProcess.php',
-    //              data: {
-    //                  "amount": amount,
-    //                 "profileid": profileid
-    //             },
-    //             type: 'post',
-    //             dataType: 'JSON',
-    //             success: function(response) {
-    //                 console.log(response);
-	//               if(response['success']) {
-	// 				  window.open(response['url'],'_self');
-	// 		} else {
-	// 			  $("#error-message").html(response['message']).css('display', 'block');
-	// 			$(window).scrollTop()
-	// 			}
-    //       }
+    $.ajax({
+        url: './ajax/transfewiseProcess.php',
+                 data: {
+                     "amount": amount,
+                    "profileid": profileid
+                },
+                type: 'post',
+                dataType: 'JSON',
+                success: function(response) {
+                    console.log(response);
+	              if(response['success']) {
+					  window.open(response['url'],'_self');
+			} else {
+				  $("#error-message").html(response['message']).css('display', 'block');
+				$(window).scrollTop()
+				}
+          }
 
-    // });
+    });
     
     }
 
