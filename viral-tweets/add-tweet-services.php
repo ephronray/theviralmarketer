@@ -267,7 +267,7 @@ h4.box-title{
     </div>
     
 
-<?php // include_once './../includes/main_footer.php'; ?>
+<?php include_once './../includes/main_footer.php'; ?>
 
 
 
