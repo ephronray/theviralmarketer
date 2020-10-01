@@ -144,7 +144,7 @@ include_once './../includes/main-header.php';
         text-align: center;
     }
 
-    thead tr th:not(:)
+    /* thead tr th:not(:) */
 </style>
 
 
@@ -200,7 +200,7 @@ include_once './../includes/main-header.php';
                         <div class="btn-group" role="group" aria-label="Basic example">
                             <button type="button" class="btn btn-dark btn_day days">Days</button>
                             <button type="button" class="btn btn-dark btn_day weeks">Weeks</button>
-<!--                            <button type="button" class="btn btn-dark">Months</button>-->
+/* <!--                            <button type="button" class="btn btn-dark">Months</button>--> */
                         </div>
                     </div>
 
