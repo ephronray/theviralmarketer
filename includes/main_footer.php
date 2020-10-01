@@ -46,14 +46,17 @@
 		<!-- steps  -->
 		<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/jquery-steps-master/build/jquery.steps.js"></script>
    
-     
-	<!-- FastClick -->
-	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/fastclick/lib/fastclick.js"></script>
+      <!-- validate  -->
+	  <script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/jquery-validation-1.17.0/dist/jquery.validate.min.js"></script>
 	
-	<!-- apexcharts -->
-	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/apexcharts-bundle/irregular-data-series.js"></script>
-	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
-	<script src="<?=$newsifyObj->base_url; ?>/js/js/pages/ohlc.js"></script>	
+	<!-- Sweet-Alert  -->
+    <script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/sweetalert/sweetalert.min.js"></script>
+    
+    <!-- wizard  -->
+    <script src="<?=$newsifyObj->base_url; ?>/js/js/pages/steps.js"></script>
+	
+
+
 	
 	<!-- webticker -->
 	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/Web-Ticker-master/jquery.webticker.min.js"></script>
