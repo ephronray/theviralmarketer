@@ -65,13 +65,17 @@
 	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
 	<script src="<?=$newsifyObj->base_url; ?>/js/js/pages/ohlc.js"></script>	
 	
+	<!-- webticker -->
+	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/Web-Ticker-master/jquery.webticker.min.js"></script>
+	
+	<!-- EChartJS JavaScript -->
+	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/echarts-master/dist/echarts-en.min.js"></script>
+	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/echarts-liquidfill-master/dist/echarts-liquidfill.min.js"></script>
+	
+	<!-- Crypto_Admin App -->
+	<script src="<?=$newsifyObj->base_url; ?>/js/js/template.js"></script>
 	
 	<!-- Crypto_Admin dashboard demo (This is only for demo purposes) -->
-	<script src="<?=$newsifyObj->base_url; ?>/js/js/pages/dashboard.js"></script>
-	<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
-	
-	<script src="<?=$newsifyObj->base_url; ?>/js/js/pages/dashboard-chart.js"></script>
 	
 	<!-- Crypto_Admin for demo purposes -->
 	<script src="<?=$newsifyObj->base_url; ?>/js/js/demo.js"></script>
