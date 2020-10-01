@@ -33,7 +33,7 @@ $(document).ready(function () {
             var replies = '';
             var replies_rate = '';
             var engagement_rate = '';
-
+console.log(day_vise_res);
 
             $.each(day_vise_res, function(key, value){
 
