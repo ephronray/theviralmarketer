@@ -57,16 +57,14 @@
 	
 
 
+	<!-- FastClick -->
+	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/fastclick/lib/fastclick.js"></script>
 	
-	<!-- webticker -->
-	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/Web-Ticker-master/jquery.webticker.min.js"></script>
+	<!-- apexcharts -->
+	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/apexcharts-bundle/irregular-data-series.js"></script>
+	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
+	<script src="<?=$newsifyObj->base_url; ?>/js/js/pages/ohlc.js"></script>	
 	
-	<!-- EChartJS JavaScript -->
-	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/echarts-master/dist/echarts-en.min.js"></script>
-	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/echarts-liquidfill-master/dist/echarts-liquidfill.min.js"></script>
-	
-	<!-- Crypto_Admin App -->
-	<script src="<?=$newsifyObj->base_url; ?>/js/js/template.js"></script>
 	
 	<!-- Crypto_Admin dashboard demo (This is only for demo purposes) -->
 	<script src="<?=$newsifyObj->base_url; ?>/js/js/pages/dashboard.js"></script>
