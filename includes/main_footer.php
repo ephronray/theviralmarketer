@@ -83,10 +83,9 @@
 	<script src="<?=$newsifyObj->base_url; ?>/js/js/pages/dashboard-chart.js"></script>
 	
 	<!-- Crypto_Admin for demo purposes -->
+	<script src="<?=$newsifyObj->base_url; ?>/js/js/demo.js"></script>
 	<!--tags Input-->
-	<script type="text/javascript" src="<?= $base_url ?>/js/tagsinput.js"></script>  
-	<script src="<?=$newsifyObj->base_url; ?>/js/viral-tweet/viral_tweet_ajax.js"></script>
-
+	
 	
 
 </body>
