@@ -38,17 +38,15 @@
 	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/popper/dist/popper.min.js"></script>
 	<script src="<?=$newsifyObj->base_url; ?>/js/corner-popup.min.js"></script>
 	<!-- Bootstrap 4.0-->
-	  <!-- validate  -->
-	  <script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/jquery-validation-1.17.0/dist/jquery.validate.min.js"></script>
+	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/bootstrap/dist/js/bootstrap.js"></script>
 	
-	<!-- Sweet-Alert  -->
-    <script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/sweetalert/sweetalert.min.js"></script>
-    
-    <!-- wizard  -->
-    <script src="<?=$newsifyObj->base_url; ?>/js/js/pages/steps.js"></script>
+	<!-- Slimscroll -->
+	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/jquery-slimscroll/jquery.slimscroll.js"></script>
 	
-
-
+		<!-- steps  -->
+		<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/jquery-steps-master/build/jquery.steps.js"></script>
+   
+     
 	<!-- FastClick -->
 	<script src="<?=$newsifyObj->base_url; ?>/assets/vendor_components/fastclick/lib/fastclick.js"></script>
 	
