@@ -19,7 +19,7 @@ var mentions_week_vise = {};
 $(document).ready(function () {
 
     var ajax_url = '../../viral-tweets/viral_tweet_ajax.php';
-
+console.log(day_vise_res);
     function day_vise_an(day_vise_res){
 
 
@@ -33,7 +33,7 @@ $(document).ready(function () {
             var replies = '';
             var replies_rate = '';
             var engagement_rate = '';
-console.log(day_vise_res);
+
 
             $.each(day_vise_res, function(key, value){
 
