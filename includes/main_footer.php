@@ -85,6 +85,7 @@
 	<!-- Crypto_Admin for demo purposes -->
 	<script src="<?=$newsifyObj->base_url; ?>/js/js/demo.js"></script>
 	<!--tags Input-->
+	<script type="text/javascript" src="<?= $base_url ?>/js/tagsinput.js"></script>  
 	
 	
 
