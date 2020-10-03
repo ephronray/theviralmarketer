@@ -275,7 +275,7 @@ $(document).ready(function () {
 
                 }else{
 
-                    alert('No record found in last 30 days');
+                    // alert('No record found in last 30 days');
 
                 }
 
