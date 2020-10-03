@@ -16,320 +16,320 @@ var week_vise_res = {};
 var mentions_day_vise = {};
 var mentions_week_vise = {};
 
-$(document).ready(function () {
+// $(document).ready(function () {
 
-    var ajax_url = '../../viral-tweets/viral_tweet_ajax.php';
+//     var ajax_url = '../../viral-tweets/viral_tweet_ajax.php';
 
-    function day_vise_an(day_vise_res){
-
-
-
-            var type = '';
-            var num_tweet = '';
-            var impression = '';
-            var profile_visits = '';
-            var mentions = '';
-            var followers = '';
-            var replies = '';
-            var replies_rate = '';
-            var engagement_rate = '';
+//     function day_vise_an(day_vise_res){
 
 
-            $.each(day_vise_res, function(key, value){
 
-                var collection = collect(value);
-                var mentions_count = 0;
+//             var type = '';
+//             var num_tweet = '';
+//             var impression = '';
+//             var profile_visits = '';
+//             var mentions = '';
+//             var followers = '';
+//             var replies = '';
+//             var replies_rate = '';
+//             var engagement_rate = '';
 
-                $.each(value, function(key, subVal){
 
-                    if(!isNaN(subVal.mentions_count)){
-                        mentions_count++;
-                    }
+//             $.each(day_vise_res, function(key, value){
 
-                });
-                // mentions_count = isNaN(mentions_count) ? 0 : mentions_count;
-                var replies_count = collection.sum('reply_count');
-                var impression_count = collection.sum('impression_count');
-                var user_profile_clicks = collection.sum('user_profile_clicks');
-                var replies_rate_str = ((replies_count/impression_count)*100).toFixed(2);
+//                 var collection = collect(value);
+//                 var mentions_count = 0;
 
-                replies_rate_str = isNaN(replies_rate_str) ? 0 : replies_rate_str+'%';
-                var tweets_num = 0;
+//                 $.each(value, function(key, subVal){
 
-                // console.log(value);
+//                     if(!isNaN(subVal.mentions_count)){
+//                         mentions_count++;
+//                     }
 
-                if(value.length > 0){
+//                 });
+//                 // mentions_count = isNaN(mentions_count) ? 0 : mentions_count;
+//                 var replies_count = collection.sum('reply_count');
+//                 var impression_count = collection.sum('impression_count');
+//                 var user_profile_clicks = collection.sum('user_profile_clicks');
+//                 var replies_rate_str = ((replies_count/impression_count)*100).toFixed(2);
 
-                    $.each(value, function(key, single_array){
+//                 replies_rate_str = isNaN(replies_rate_str) ? 0 : replies_rate_str+'%';
+//                 var tweets_num = 0;
 
-                        var single_collection = collect(single_array);
+//                 // console.log(value);
+
+//                 if(value.length > 0){
+
+//                     $.each(value, function(key, single_array){
+
+//                         var single_collection = collect(single_array);
 
                  
-                        if(!single_collection.contains('mentions_count')){
-                            tweets_num++;
-                        }
+//                         if(!single_collection.contains('mentions_count')){
+//                             tweets_num++;
+//                         }
 
-                    });
+//                     });
 
-                }
+//                 }
 
-                type += '<th class="text-center dummy">'+key+'</th>';
-                num_tweet += '<td class="dummy">'+tweets_num+'</td>';
-                impression += '<td class="dummy">'+impression_count+'</td>';
-                profile_visits += '<td class="dummy">'+user_profile_clicks+'</td>';
-                mentions += '<td class="dummy">'+ mentions_count +'</td>';//pending
-                followers += '<td class="dummy">0</td>';//pending
-                replies += '<td class="dummy">'+replies_count+'</td>';
-                replies_rate += '<td class="dummy">'+replies_rate_str+'</td>';
-                engagement_rate += '<td class="dummy">0</td>';//pending
+//                 type += '<th class="text-center dummy">'+key+'</th>';
+//                 num_tweet += '<td class="dummy">'+tweets_num+'</td>';
+//                 impression += '<td class="dummy">'+impression_count+'</td>';
+//                 profile_visits += '<td class="dummy">'+user_profile_clicks+'</td>';
+//                 mentions += '<td class="dummy">'+ mentions_count +'</td>';//pending
+//                 followers += '<td class="dummy">0</td>';//pending
+//                 replies += '<td class="dummy">'+replies_count+'</td>';
+//                 replies_rate += '<td class="dummy">'+replies_rate_str+'</td>';
+//                 engagement_rate += '<td class="dummy">0</td>';//pending
 
 
 
-            });
+//             });
 
 
 
 
-            $('table .type th.dummy').remove();
-            $('table .type').append(type);
+//             $('table .type th.dummy').remove();
+//             $('table .type').append(type);
 
 
 
-            $('table .impression td.dummy').remove();
-            $('table .impression').append(impression);
+//             $('table .impression td.dummy').remove();
+//             $('table .impression').append(impression);
 
-            $('table .profile_visits td.dummy').remove();
-            $('table .profile_visits').append(profile_visits);
+//             $('table .profile_visits td.dummy').remove();
+//             $('table .profile_visits').append(profile_visits);
 
-            $('table .mentions td.dummy').remove();
-            $('table .mentions').append(mentions);
+//             $('table .mentions td.dummy').remove();
+//             $('table .mentions').append(mentions);
 
-            $('table .followers td.dummy').remove();
-            $('table .followers').append(followers);
+//             $('table .followers td.dummy').remove();
+//             $('table .followers').append(followers);
 
-            $('table .num_tweet td.dummy').remove();
-            $('table .num_tweet').append(num_tweet);
+//             $('table .num_tweet td.dummy').remove();
+//             $('table .num_tweet').append(num_tweet);
 
-            $('table .replies td.dummy').remove();
-            $('table .replies').append(replies);
+//             $('table .replies td.dummy').remove();
+//             $('table .replies').append(replies);
 
 
-            $('table .replies_rate td.dummy').remove();
-            $('table .replies_rate').append(replies_rate);
+//             $('table .replies_rate td.dummy').remove();
+//             $('table .replies_rate').append(replies_rate);
 
-            $('table .engagement_rate td.dummy').remove();
-            $('table .engagement_rate').append(engagement_rate);
+//             $('table .engagement_rate td.dummy').remove();
+//             $('table .engagement_rate').append(engagement_rate);
 
 
-    }
+//     }
 
-    function analyze_response(response, type = 'day'){
+//     function analyze_response(response, type = 'day'){
 
-        $.each(response, function(key, value){
+//         $.each(response, function(key, value){
 
-            // var metrics = value.public_metrics;
-            var metrics = value.organic_metrics;
-            metrics.id = value.id;
-            metrics.created_at = value.created_at;
+//             // var metrics = value.public_metrics;
+//             var metrics = value.organic_metrics;
+//             metrics.id = value.id;
+//             metrics.created_at = value.created_at;
 
-            var create_date = moment(value.created_at);
-            var date_actual = create_date.format('D_M_YYYY');
-            var week_actual = create_date.format('w');
-            var week_str = 'week_'+week_actual;
+//             var create_date = moment(value.created_at);
+//             var date_actual = create_date.format('D_M_YYYY');
+//             var week_actual = create_date.format('w');
+//             var week_str = 'week_'+week_actual;
 
-            if(Array.isArray(week_vise_res[week_str])){
+//             if(Array.isArray(week_vise_res[week_str])){
 
-                week_vise_res[week_str].push(metrics);
+//                 week_vise_res[week_str].push(metrics);
 
-            }else{
+//             }else{
 
 
-                week_vise_res[week_str] = [];
-                week_vise_res[week_str].push(metrics);
+//                 week_vise_res[week_str] = [];
+//                 week_vise_res[week_str].push(metrics);
 
-            }
+//             }
 
 
-            if(Array.isArray(day_vise_res[date_actual])){
+//             if(Array.isArray(day_vise_res[date_actual])){
 
-                day_vise_res[date_actual].push(metrics);
+//                 day_vise_res[date_actual].push(metrics);
 
-            }else{
+//             }else{
 
 
-                day_vise_res[date_actual] = [];
-                day_vise_res[date_actual].push(metrics);
+//                 day_vise_res[date_actual] = [];
+//                 day_vise_res[date_actual].push(metrics);
 
-            }
+//             }
 
 
-        });
+//         });
 
-        if(type == 'day'){
+//         if(type == 'day'){
 
-            day_vise_an(day_vise_res);
+//             day_vise_an(day_vise_res);
 
-        }else{
+//         }else{
 
-            day_vise_an(week_vise_res);
+//             day_vise_an(week_vise_res);
 
-        }
+//         }
 
 
 
-    }
+//     }
 
-    $('.btn_day.days').on('click', function(){
+//     $('.btn_day.days').on('click', function(){
 
-        day_vise_an(day_vise_res);
+//         day_vise_an(day_vise_res);
 
-    });
+//     });
 
-    $('.btn_day.weeks').on('click', function(){
+//     $('.btn_day.weeks').on('click', function(){
 
-        day_vise_an(week_vise_res);
+//         day_vise_an(week_vise_res);
 
-    });
+//     });
 
 
-    // function ajax_request_data(){
+//     function ajax_request_data(){
 
-    //     var data = {
-    //         doing_ajax: 'true',
-    //         viral_first_request: 'true',
+//         var data = {
+//             doing_ajax: 'true',
+//             viral_first_request: 'true',
 
-    //     }
+//         }
 
-    //     $.post(ajax_url, data, function(response){
+//         $.post(ajax_url, data, function(response){
 
 
-    //         response = JSON.parse(response);
+//             response = JSON.parse(response);
 
-    //         if(response.status && response.status == 'error'){
-    //             // $('.data_load_modal').hide();
+//             if(response.status && response.status == 'error'){
+//                 // $('.data_load_modal').hide();
 
-    //             alert(response.message);
-    //         }
+//                 alert(response.message);
+//             }
 
-    //         if(response.detail != undefined){
+//             if(response.detail != undefined){
 
-    //             // $('.data_load_modal').hide();
-    //             alert(response.detail);
-    //         }
+//                 // $('.data_load_modal').hide();
+//                 alert(response.detail);
+//             }
 
-    //         if(response.errors){
+//             if(response.errors){
 
-    //             var error_obj = response.errors[0]
-    //             $('.data_load_modal').hide();
+//                 var error_obj = response.errors[0]
+//                 $('.data_load_modal').hide();
 
-    //             alert(error_obj.message);
+//                 alert(error_obj.message);
 
-    //         }else{
+//             }else{
 
-    //             // console.log(response);
-    //             response_all = $.merge(response_all, response);
+//                 // console.log(response);
+//                 response_all = $.merge(response_all, response);
 
-    //             ajax_request_data_mentions();
+//                 ajax_request_data_mentions();
 
-    //         }
+//             }
 
 
-    //     })
+//         })
 
-    // }
+//     }
 
-    // function ajax_request_data_mentions(){
+//     function ajax_request_data_mentions(){
 
-    //     var data = {
-    //         doing_ajax: 'true',
-    //         viral_mentions_request: 'true',
+//         var data = {
+//             doing_ajax: 'true',
+//             viral_mentions_request: 'true',
 
-    //     }
+//         }
 
-    //     $.post(ajax_url, data, function(response){
+//         $.post(ajax_url, data, function(response){
 
-    //         $('.data_load_modal').hide();
+//             $('.data_load_modal').hide();
 
-    //         response = JSON.parse(response);
+//             response = JSON.parse(response);
 
-    //         if(response.status && response.status == 'error'){
+//             if(response.status && response.status == 'error'){
 
-    //             alert(response.message);
-    //         }
+//                 alert(response.message);
+//             }
 
-    //         if(response.errors){
+//             if(response.errors){
 
-    //             var error_obj = response.errors[0]
+//                 var error_obj = response.errors[0]
 
-    //             alert(error_obj.message);
+//                 alert(error_obj.message);
 
-    //         }else{
+//             }else{
 
-    //             $('.filter_btn').removeClass('d-none');
-    //             response_all = $.merge(response_all, response);
+//                 $('.filter_btn').removeClass('d-none');
+//                 response_all = $.merge(response_all, response);
 
-    //             console.log(JSON.stringify(response_all));
-    //             if(response_all.length > 0){
+//                 console.log(JSON.stringify(response_all));
+//                 if(response_all.length > 0){
 
-    //                 analyze_response(response_all);
+//                     analyze_response(response_all);
 
-    //             }else{
+//                 }else{
 
-    //                 alert('No record found in last 30 days');
+//                     alert('No record found in last 30 days');
 
-    //             }
+//                 }
 
-    //         }
+//             }
 
 
-    //     })
+//         })
 
-    // }
+//     }
 
 
 
 
 
-    $('button.refresh_data').on('click', function(){
+//     $('button.refresh_data').on('click', function(){
 
-        // $('.data_load_modal').show();
-        //
-        window.location.href = window.location.href;
+//         // $('.data_load_modal').show();
+//         //
+//         window.location.href = window.location.href;
 
-        // alert('hello');
+//         // alert('hello');
 
-        // analyze_response(response_all);
-        //
-        // return;
+//         // analyze_response(response_all);
+//         //
+//         // return;
 
-        // ajax_request_data();
+//         // ajax_request_data();
 
 
-    });
+//     });
 
-    // $('.data_load_modal').hide();
+//     // $('.data_load_modal').hide();
 
 
-    ajax_request_data();
+//     ajax_request_data();
 
 
 
 
-    $("#button-a").click(function(){
+//     $("#button-a").click(function(){
 
-        var wb = XLSX.utils.table_to_book(document.getElementById('viral_analysis_table_4085'), {sheet:"Viral Tweet Analysis"});
-        var wbout = XLSX.write(wb, {bookType:'xlsx', bookSST:true, type: 'binary'});
-        function s2ab(s) {
-            var buf = new ArrayBuffer(s.length);
-            var view = new Uint8Array(buf);
-            for (var i=0; i<s.length; i++) view[i] = s.charCodeAt(i) & 0xFF;
-            return buf;
-        }
+//         var wb = XLSX.utils.table_to_book(document.getElementById('viral_analysis_table_4085'), {sheet:"Viral Tweet Analysis"});
+//         var wbout = XLSX.write(wb, {bookType:'xlsx', bookSST:true, type: 'binary'});
+//         function s2ab(s) {
+//             var buf = new ArrayBuffer(s.length);
+//             var view = new Uint8Array(buf);
+//             for (var i=0; i<s.length; i++) view[i] = s.charCodeAt(i) & 0xFF;
+//             return buf;
+//         }
 
 
-        saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), 'analysis.xlsx');
-    });
+//         saveAs(new Blob([s2ab(wbout)],{type:"application/octet-stream"}), 'analysis.xlsx');
+//     });
 
 
 
-});
+// });
