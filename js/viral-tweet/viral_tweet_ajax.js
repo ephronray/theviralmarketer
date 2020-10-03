@@ -222,7 +222,7 @@ $(document).ready(function () {
                 var error_obj = response.errors[0]
                 $('.data_load_modal').hide();
 
-                // alert(error_obj.message);
+                alert(error_obj.message);
 
             }else{
 
@@ -254,7 +254,7 @@ $(document).ready(function () {
 
             if(response.status && response.status == 'error'){
 
-                alert(response.message);
+                // alert(response.message);
             }
 
             if(response.errors){
