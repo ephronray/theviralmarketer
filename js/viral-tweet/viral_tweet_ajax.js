@@ -20,108 +20,108 @@ $(document).ready(function () {
 
     var ajax_url = '../../viral-tweets/viral_tweet_ajax.php';
 
-    function day_vise_an(day_vise_res){
+    // function day_vise_an(day_vise_res){
 
 
 
-            var type = '';
-            var num_tweet = '';
-            var impression = '';
-            var profile_visits = '';
-            var mentions = '';
-            var followers = '';
-            var replies = '';
-            var replies_rate = '';
-            var engagement_rate = '';
+    //         var type = '';
+    //         var num_tweet = '';
+    //         var impression = '';
+    //         var profile_visits = '';
+    //         var mentions = '';
+    //         var followers = '';
+    //         var replies = '';
+    //         var replies_rate = '';
+    //         var engagement_rate = '';
 
 
-            $.each(day_vise_res, function(key, value){
+    //         $.each(day_vise_res, function(key, value){
 
-                var collection = collect(value);
-                var mentions_count = 0;
+    //             var collection = collect(value);
+    //             var mentions_count = 0;
 
-                $.each(value, function(key, subVal){
+    //             $.each(value, function(key, subVal){
 
-                    if(!isNaN(subVal.mentions_count)){
-                        mentions_count++;
-                    }
+    //                 if(!isNaN(subVal.mentions_count)){
+    //                     mentions_count++;
+    //                 }
 
-                });
-                // mentions_count = isNaN(mentions_count) ? 0 : mentions_count;
-                var replies_count = collection.sum('reply_count');
-                var impression_count = collection.sum('impression_count');
-                var user_profile_clicks = collection.sum('user_profile_clicks');
-                var replies_rate_str = ((replies_count/impression_count)*100).toFixed(2);
+    //             });
+    //             // mentions_count = isNaN(mentions_count) ? 0 : mentions_count;
+    //             var replies_count = collection.sum('reply_count');
+    //             var impression_count = collection.sum('impression_count');
+    //             var user_profile_clicks = collection.sum('user_profile_clicks');
+    //             var replies_rate_str = ((replies_count/impression_count)*100).toFixed(2);
 
-                replies_rate_str = isNaN(replies_rate_str) ? 0 : replies_rate_str+'%';
-                var tweets_num = 0;
+    //             replies_rate_str = isNaN(replies_rate_str) ? 0 : replies_rate_str+'%';
+    //             var tweets_num = 0;
 
-                // console.log(value);
+    //             // console.log(value);
 
-                if(value.length > 0){
+    //             if(value.length > 0){
 
-                    $.each(value, function(key, single_array){
+    //                 $.each(value, function(key, single_array){
 
-                        var single_collection = collect(single_array);
+    //                     var single_collection = collect(single_array);
 
                  
-                        if(!single_collection.contains('mentions_count')){
-                            tweets_num++;
-                        }
+    //                     if(!single_collection.contains('mentions_count')){
+    //                         tweets_num++;
+    //                     }
 
-                    });
+    //                 });
 
-                }
+    //             }
 
-                type += '<th class="text-center dummy">'+key+'</th>';
-                num_tweet += '<td class="dummy">'+tweets_num+'</td>';
-                impression += '<td class="dummy">'+impression_count+'</td>';
-                profile_visits += '<td class="dummy">'+user_profile_clicks+'</td>';
-                mentions += '<td class="dummy">'+ mentions_count +'</td>';//pending
-                followers += '<td class="dummy">0</td>';//pending
-                replies += '<td class="dummy">'+replies_count+'</td>';
-                replies_rate += '<td class="dummy">'+replies_rate_str+'</td>';
-                engagement_rate += '<td class="dummy">0</td>';//pending
-
-
-
-            });
+    //             type += '<th class="text-center dummy">'+key+'</th>';
+    //             num_tweet += '<td class="dummy">'+tweets_num+'</td>';
+    //             impression += '<td class="dummy">'+impression_count+'</td>';
+    //             profile_visits += '<td class="dummy">'+user_profile_clicks+'</td>';
+    //             mentions += '<td class="dummy">'+ mentions_count +'</td>';//pending
+    //             followers += '<td class="dummy">0</td>';//pending
+    //             replies += '<td class="dummy">'+replies_count+'</td>';
+    //             replies_rate += '<td class="dummy">'+replies_rate_str+'</td>';
+    //             engagement_rate += '<td class="dummy">0</td>';//pending
 
 
 
-
-            $('table .type th.dummy').remove();
-            $('table .type').append(type);
+    //         });
 
 
 
-            $('table .impression td.dummy').remove();
-            $('table .impression').append(impression);
 
-            $('table .profile_visits td.dummy').remove();
-            $('table .profile_visits').append(profile_visits);
-
-            $('table .mentions td.dummy').remove();
-            $('table .mentions').append(mentions);
-
-            $('table .followers td.dummy').remove();
-            $('table .followers').append(followers);
-
-            $('table .num_tweet td.dummy').remove();
-            $('table .num_tweet').append(num_tweet);
-
-            $('table .replies td.dummy').remove();
-            $('table .replies').append(replies);
+    //         $('table .type th.dummy').remove();
+    //         $('table .type').append(type);
 
 
-            $('table .replies_rate td.dummy').remove();
-            $('table .replies_rate').append(replies_rate);
 
-            $('table .engagement_rate td.dummy').remove();
-            $('table .engagement_rate').append(engagement_rate);
+    //         $('table .impression td.dummy').remove();
+    //         $('table .impression').append(impression);
+
+    //         $('table .profile_visits td.dummy').remove();
+    //         $('table .profile_visits').append(profile_visits);
+
+    //         $('table .mentions td.dummy').remove();
+    //         $('table .mentions').append(mentions);
+
+    //         $('table .followers td.dummy').remove();
+    //         $('table .followers').append(followers);
+
+    //         $('table .num_tweet td.dummy').remove();
+    //         $('table .num_tweet').append(num_tweet);
+
+    //         $('table .replies td.dummy').remove();
+    //         $('table .replies').append(replies);
 
 
-    }
+    //         $('table .replies_rate td.dummy').remove();
+    //         $('table .replies_rate').append(replies_rate);
+
+    //         $('table .engagement_rate td.dummy').remove();
+    //         $('table .engagement_rate').append(engagement_rate);
+
+
+    // }
 
     function analyze_response(response, type = 'day'){
 
