@@ -214,7 +214,7 @@ $(document).ready(function () {
             if(response.detail != undefined){
 
                 // $('.data_load_modal').hide();
-                // alert(response.detail);
+                alert(response.detail);
             }
 
             if(response.errors){
@@ -222,7 +222,7 @@ $(document).ready(function () {
                 var error_obj = response.errors[0]
                 $('.data_load_modal').hide();
 
-                alert(error_obj.message);
+                // alert(error_obj.message);
 
             }else{
 
