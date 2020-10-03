@@ -123,61 +123,61 @@ $(document).ready(function () {
 
     }
 
-    // function analyze_response(response, type = 'day'){
+    function analyze_response(response, type = 'day'){
 
-    //     $.each(response, function(key, value){
+        $.each(response, function(key, value){
 
-    //         // var metrics = value.public_metrics;
-    //         var metrics = value.organic_metrics;
-    //         metrics.id = value.id;
-    //         metrics.created_at = value.created_at;
+            // var metrics = value.public_metrics;
+            var metrics = value.organic_metrics;
+            metrics.id = value.id;
+            metrics.created_at = value.created_at;
 
-    //         var create_date = moment(value.created_at);
-    //         var date_actual = create_date.format('D_M_YYYY');
-    //         var week_actual = create_date.format('w');
-    //         var week_str = 'week_'+week_actual;
+            var create_date = moment(value.created_at);
+            var date_actual = create_date.format('D_M_YYYY');
+            var week_actual = create_date.format('w');
+            var week_str = 'week_'+week_actual;
 
-    //         if(Array.isArray(week_vise_res[week_str])){
+            if(Array.isArray(week_vise_res[week_str])){
 
-    //             week_vise_res[week_str].push(metrics);
+                week_vise_res[week_str].push(metrics);
 
-    //         }else{
-
-
-    //             week_vise_res[week_str] = [];
-    //             week_vise_res[week_str].push(metrics);
-
-    //         }
+            }else{
 
 
-    //         if(Array.isArray(day_vise_res[date_actual])){
+                week_vise_res[week_str] = [];
+                week_vise_res[week_str].push(metrics);
 
-    //             day_vise_res[date_actual].push(metrics);
-
-    //         }else{
-
-
-    //             day_vise_res[date_actual] = [];
-    //             day_vise_res[date_actual].push(metrics);
-
-    //         }
+            }
 
 
-    //     });
+            if(Array.isArray(day_vise_res[date_actual])){
 
-    //     if(type == 'day'){
+                day_vise_res[date_actual].push(metrics);
 
-    //         day_vise_an(day_vise_res);
-
-    //     }else{
-
-    //         day_vise_an(week_vise_res);
-
-    //     }
+            }else{
 
 
+                day_vise_res[date_actual] = [];
+                day_vise_res[date_actual].push(metrics);
 
-    // }
+            }
+
+
+        });
+
+        if(type == 'day'){
+
+            day_vise_an(day_vise_res);
+
+        }else{
+
+            day_vise_an(week_vise_res);
+
+        }
+
+
+
+    }
 
     $('.btn_day.days').on('click', function(){
 
@@ -192,99 +192,99 @@ $(document).ready(function () {
     });
 
 
-    function ajax_request_data(){
+    // function ajax_request_data(){
 
-        var data = {
-            doing_ajax: 'true',
-            viral_first_request: 'true',
+    //     var data = {
+    //         doing_ajax: 'true',
+    //         viral_first_request: 'true',
 
-        }
+    //     }
 
-        $.post(ajax_url, data, function(response){
-
-
-            response = JSON.parse(response);
-
-            if(response.status && response.status == 'error'){
-                // $('.data_load_modal').hide();
-
-                alert(response.message);
-            }
-
-            if(response.detail != undefined){
-
-                // $('.data_load_modal').hide();
-                alert(response.detail);
-            }
-
-            if(response.errors){
-
-                var error_obj = response.errors[0]
-                $('.data_load_modal').hide();
-
-                alert(error_obj.message);
-
-            }else{
-
-                // console.log(response);
-                response_all = $.merge(response_all, response);
-
-                ajax_request_data_mentions();
-
-            }
+    //     $.post(ajax_url, data, function(response){
 
 
-        })
+    //         response = JSON.parse(response);
 
-    }
+    //         if(response.status && response.status == 'error'){
+    //             // $('.data_load_modal').hide();
 
-    function ajax_request_data_mentions(){
+    //             alert(response.message);
+    //         }
 
-        var data = {
-            doing_ajax: 'true',
-            viral_mentions_request: 'true',
+    //         if(response.detail != undefined){
 
-        }
+    //             // $('.data_load_modal').hide();
+    //             alert(response.detail);
+    //         }
 
-        $.post(ajax_url, data, function(response){
+    //         if(response.errors){
 
-            $('.data_load_modal').hide();
+    //             var error_obj = response.errors[0]
+    //             $('.data_load_modal').hide();
 
-            response = JSON.parse(response);
+    //             alert(error_obj.message);
 
-            if(response.status && response.status == 'error'){
+    //         }else{
 
-                alert(response.message);
-            }
+    //             // console.log(response);
+    //             response_all = $.merge(response_all, response);
 
-            if(response.errors){
+    //             ajax_request_data_mentions();
 
-                var error_obj = response.errors[0]
-
-                alert(error_obj.message);
-
-            }else{
-
-                $('.filter_btn').removeClass('d-none');
-                response_all = $.merge(response_all, response);
-
-                console.log(JSON.stringify(response_all));
-                if(response_all.length > 0){
-
-                    analyze_response(response_all);
-
-                }else{
-
-                    alert('No record found in last 30 days');
-
-                }
-
-            }
+    //         }
 
 
-        })
+    //     })
 
-    }
+    // }
+
+    // function ajax_request_data_mentions(){
+
+    //     var data = {
+    //         doing_ajax: 'true',
+    //         viral_mentions_request: 'true',
+
+    //     }
+
+    //     $.post(ajax_url, data, function(response){
+
+    //         $('.data_load_modal').hide();
+
+    //         response = JSON.parse(response);
+
+    //         if(response.status && response.status == 'error'){
+
+    //             alert(response.message);
+    //         }
+
+    //         if(response.errors){
+
+    //             var error_obj = response.errors[0]
+
+    //             alert(error_obj.message);
+
+    //         }else{
+
+    //             $('.filter_btn').removeClass('d-none');
+    //             response_all = $.merge(response_all, response);
+
+    //             console.log(JSON.stringify(response_all));
+    //             if(response_all.length > 0){
+
+    //                 analyze_response(response_all);
+
+    //             }else{
+
+    //                 alert('No record found in last 30 days');
+
+    //             }
+
+    //         }
+
+
+    //     })
+
+    // }
 
 
 
