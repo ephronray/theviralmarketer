@@ -254,14 +254,14 @@ $(document).ready(function () {
 
             if(response.status && response.status == 'error'){
 
-                // alert(response.message);
+                alert(response.message);
             }
 
             if(response.errors){
 
                 var error_obj = response.errors[0]
 
-                alert(error_obj.message);
+                // alert(error_obj.message);
 
             }else{
 
