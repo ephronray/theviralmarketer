@@ -208,13 +208,13 @@ $(document).ready(function () {
             if(response.status && response.status == 'error'){
                 // $('.data_load_modal').hide();
 
-                // alert(response.message);
+                alert(response.message);
             }
 
             if(response.detail != undefined){
 
                 // $('.data_load_modal').hide();
-                alert(response.detail);
+                // alert(response.detail);
             }
 
             if(response.errors){
