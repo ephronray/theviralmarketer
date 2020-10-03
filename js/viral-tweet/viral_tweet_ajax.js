@@ -16,7 +16,7 @@ var week_vise_res = {};
 var mentions_day_vise = {};
 var mentions_week_vise = {};
 
-// $(document).ready(function () {
+$(document).ready(function () {
 
     var ajax_url = '../../viral-tweets/viral_tweet_ajax.php';
 
@@ -332,4 +332,4 @@ var mentions_week_vise = {};
 
 
 
-// });
+});
